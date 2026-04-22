@@ -6,38 +6,108 @@ An [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that p
 
 ## Widget Screenshots
 
-### 🎓 Training Module Catalogue
-Each of the 12 training modules has a bespoke Costa-branded SVG image with "Video" and "REQUIRED" badges. Clicking any module card sends a follow-on prompt to Copilot to launch the video player.
+### 📊 Dashboard
+Daily sales KPIs, hourly revenue chart, and top-selling products at a glance.
 
-![Training Module Catalogue](https://github.com/user-attachments/assets/edcbc5ff-a73f-4326-a24e-eab74af7ea68)
-
----
-
-### ▶️ Training Video Player
-The video widget shows the module thumbnail, progress tracker, and three guided action buttons that chain into Copilot (guided learning, mark complete, knowledge check). When an actual `.mp4` file is deployed it will auto-play inline.
-
-![Training Video Widget](https://github.com/user-attachments/assets/4eee90b4-e985-40dd-a2ed-47aaf5fd7622)
-
----
-
-### 👨‍🍳 Recipe Card – Caramel Latte
-Every recipe card now shows a Costa-style drink image header. Allergen cells are clickable (sends a customer allergen guidance prompt). The Barista Tip box and Guide Me button both trigger follow-on prompts.
-
-![Recipe Card – Caramel Latte](https://github.com/user-attachments/assets/23930d33-ec1b-4ce1-a8d8-48844c521d8f)
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
 ### 📅 Shift Rota
-The weekly rota grid now shows a circular SVG avatar for each crew member (diverse fictional team). Today's column is gold-highlighted. Unfilled shifts surface a "Find Cover" prompt button. Each row is clickable to view that employee's training.
+The weekly rota grid shows a circular SVG avatar for each crew member. Today's column is gold-highlighted. Unfilled shifts surface a "Find Cover" prompt button. Each row is clickable to view that employee's training.
 
-![Shift Rota](https://github.com/user-attachments/assets/ebf13515-e6f0-44f7-b01f-014f376802ed)
+![Shift Rota](screenshots/rota.png)
 
 ---
 
 ### 📦 Stock Levels
 Category filter buttons, stock health doughnut chart, per-item category icons, and a single-click "Generate Stock Order" button that prompts Copilot to produce the full order.
 
-![Stock Levels](https://github.com/user-attachments/assets/12756097-5f7f-449a-8d22-9d05d8ef4e51)
+![Stock Levels](screenshots/stock.png)
+
+---
+
+### 👨‍🍳 Recipe Card – Caramel Latte
+Every recipe card shows a Costa-style drink image, category pill, and Guide Me button. Allergen cells are clickable (sends a customer allergen guidance prompt). The Barista Tip box and Guide Me button both trigger follow-on prompts.
+
+![Recipe Card – Caramel Latte](screenshots/recipe.png)
+
+---
+
+### 🎓 Training Progress – Store Overview
+Team training completion KPIs and a per-employee table. Click any row to view that employee's individual progress.
+
+![Training Progress – Store Overview](screenshots/training_overview.png)
+
+---
+
+### 🎓 Training Progress – Employee Detail
+Individual training progress with module-level progress bars and Costa-branded module images. Click any module to launch the video player.
+
+![Training Progress – Employee Detail](screenshots/training_employee.png)
+
+---
+
+### 📚 Training Module Catalogue
+All 12 training modules displayed as cards with bespoke Costa-branded SVG images, "Video" and "REQUIRED" badges, and a live search filter. Clicking any card sends a follow-on prompt to Copilot.
+
+![Training Module Catalogue](screenshots/training_catalog.png)
+
+---
+
+### ▶️ Training Video Player
+The video widget shows the module thumbnail, progress tracker, and three guided action buttons that chain into Copilot (guided learning, mark complete, knowledge check). When an actual `.mp4` file is deployed it will auto-play inline.
+
+![Training Video Player](screenshots/training_video.png)
+
+---
+
+### ✅ Compliance Checklist
+Daily, weekly, and monthly compliance checklists with tab navigation and interactive check items.
+
+![Compliance Checklist](screenshots/compliance.png)
+
+---
+
+### ⚠️ Incident Log
+Searchable incident log with severity badges, status tracking, and a quick-submit form for new incidents.
+
+![Incident Log](screenshots/incidents.png)
+
+---
+
+### 💬 Customer Feedback
+NPS score, star rating breakdown, a 12-week NPS trend chart, and paginated recent reviews.
+
+![Customer Feedback](screenshots/feedback.png)
+
+---
+
+### 🗺️ Regional Benchmarks
+Cross-store performance league table with weekly sales, NPS, compliance, and transaction metrics.
+
+![Regional Benchmarks](screenshots/regional.png)
+
+---
+
+### 🔧 Maintenance Requests
+Kanban-style maintenance tracker with priority badges and status columns.
+
+![Maintenance Requests](screenshots/maintenance.png)
+
+---
+
+### 📣 Promotions
+Active promotional offers with POS codes, discount details, and guidance prompts.
+
+![Promotions](screenshots/promotions.png)
+
+---
+
+### 🔄 Shift Handover
+Structured shift handover notes with action items, outstanding tasks, and a submit form for the next shift.
+
+![Shift Handover](screenshots/shift_handover.png)
 
 ---
 

@@ -73,8 +73,8 @@
          onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(44,24,16,0.15)'"
          onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(44,24,16,0.08)'">
       {% if mod.image %}
-      <div style="width:100%;height:130px;overflow:hidden;position:relative">
-        <img src="{{ mod.image }}" alt="{{ mod.name }}" style="width:100%;height:100%;object-fit:cover">
+      <div style="width:100%;overflow:hidden;position:relative">
+        <img src="{{ mod.image }}" alt="{{ mod.name }}" style="width:100%;height:auto;display:block">
         {% if mod.video %}
         <div style="position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.6);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:white;display:flex;align-items:center;gap:4px">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg> Video
