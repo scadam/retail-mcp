@@ -1,0 +1,1548 @@
+[
+  {
+    "handover_id": "HO0001",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-11",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP036",
+    "incoming_manager": "EMP034",
+    "handover_time": "21:30",
+    "till_reading": 2386.97,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0002",
+    "store_id": "RDG001",
+    "shift_date": "2026-03-23",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:00",
+    "till_reading": 2247.67,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty",
+      "8oz cups low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0003",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-21",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP036",
+    "incoming_manager": "EMP029",
+    "handover_time": "13:30",
+    "till_reading": 2407.49,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "Oat milk low",
+      "Semi-skimmed milk 1 unit left"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0004",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-06",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:15",
+    "till_reading": 2220.91,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0005",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-08",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "17:15",
+    "till_reading": 2561.48,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "8oz cups low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0006",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-08",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP018",
+    "incoming_manager": "EMP010",
+    "handover_time": "13:15",
+    "till_reading": 2685.63,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "Chocolate powder running low",
+      "8oz cups low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0007",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-02",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:00",
+    "till_reading": 2915.14,
+    "key_issues": [],
+    "stock_alerts": [
+      "8oz cups low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0008",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-20",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:15",
+    "till_reading": 2287.92,
+    "key_issues": [],
+    "stock_alerts": [
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0009",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-14",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:00",
+    "till_reading": 2165.79,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0010",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-10",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:15",
+    "till_reading": 2256.94,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0011",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-08",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:15",
+    "till_reading": 2891.24,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Oat milk low",
+      "8oz cups low",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0012",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-17",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP037",
+    "incoming_manager": "EMP036",
+    "handover_time": "17:00",
+    "till_reading": 1870.75,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "8oz cups low",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0013",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-17",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:00",
+    "till_reading": 2355.28,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "8oz cups low",
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0014",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-10",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "21:30",
+    "till_reading": 3046.77,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Machine group 1 running slow - may need backflush",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0015",
+    "store_id": "BAS001",
+    "shift_date": "2026-03-27",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:15",
+    "till_reading": 2155.78,
+    "key_issues": [],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0016",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-21",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP001",
+    "incoming_manager": "EMP005",
+    "handover_time": "13:30",
+    "till_reading": 2971.92,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "8oz cups low",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0017",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-05",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "21:30",
+    "till_reading": 1802.57,
+    "key_issues": [],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "Vanilla syrup empty",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "All OK",
+    "staff_notes": "",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0018",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-21",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "13:30",
+    "till_reading": 2386.37,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "All OK",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0019",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-03",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:00",
+    "till_reading": 2382.98,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Customer complaint about wait time - apologised and comped drink",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 3,
+    "equipment_status": "All OK",
+    "staff_notes": "",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0020",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-12",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:15",
+    "till_reading": 3055.67,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Machine group 1 running slow - may need backflush",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0021",
+    "store_id": "RDG001",
+    "shift_date": "2026-03-26",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:15",
+    "till_reading": 2663.16,
+    "key_issues": [],
+    "stock_alerts": [],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0022",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-01",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "17:15",
+    "till_reading": 2275.75,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow",
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0023",
+    "store_id": "RDG002",
+    "shift_date": "2026-03-29",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP036",
+    "incoming_manager": "EMP034",
+    "handover_time": "17:15",
+    "till_reading": 3086.75,
+    "key_issues": [],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0024",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-17",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "13:15",
+    "till_reading": 1954.93,
+    "key_issues": [],
+    "stock_alerts": [
+      "Vanilla syrup empty",
+      "Semi-skimmed milk 1 unit left"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0025",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-19",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "13:00",
+    "till_reading": 2468.12,
+    "key_issues": [],
+    "stock_alerts": [
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0026",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-20",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:00",
+    "till_reading": 2838.62,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0027",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-10",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:30",
+    "till_reading": 2159.65,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Oat milk low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0028",
+    "store_id": "RDG001",
+    "shift_date": "2026-03-30",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "21:30",
+    "till_reading": 2144.11,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Machine group 1 running slow - may need backflush",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Oat milk low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0029",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-12",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:30",
+    "till_reading": 1965.09,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Customer complaint about wait time - apologised and comped drink",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "All OK",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0030",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-17",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP029",
+    "incoming_manager": "EMP037",
+    "handover_time": "17:15",
+    "till_reading": 2767.22,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0031",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-07",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP001",
+    "incoming_manager": "EMP005",
+    "handover_time": "17:15",
+    "till_reading": 2354.58,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0032",
+    "store_id": "RDG001",
+    "shift_date": "2026-03-29",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "21:30",
+    "till_reading": 1881.27,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Oat milk low",
+      "8oz cups low",
+      "Semi-skimmed milk 1 unit left"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0033",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-18",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP001",
+    "incoming_manager": "EMP005",
+    "handover_time": "13:30",
+    "till_reading": 2976.27,
+    "key_issues": [
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [
+      "8oz cups low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0034",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-22",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "17:00",
+    "till_reading": 2650.78,
+    "key_issues": [],
+    "stock_alerts": [
+      "Oat milk low",
+      "8oz cups low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0035",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-18",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:15",
+    "till_reading": 2360.54,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "Oat milk low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0036",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-14",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "17:15",
+    "till_reading": 2108.3,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "8oz cups low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0037",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-03",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "13:15",
+    "till_reading": 2206.39,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0038",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-03",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:00",
+    "till_reading": 2185.64,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Vanilla syrup empty",
+      "8oz cups low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0039",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-05",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP036",
+    "incoming_manager": "EMP034",
+    "handover_time": "21:30",
+    "till_reading": 2080.8,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Chocolate powder running low",
+      "8oz cups low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "All OK",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0040",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-16",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP029",
+    "incoming_manager": "EMP034",
+    "handover_time": "17:00",
+    "till_reading": 2674.86,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 2,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0041",
+    "store_id": "RDG002",
+    "shift_date": "2026-03-26",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP034",
+    "incoming_manager": "EMP029",
+    "handover_time": "17:15",
+    "till_reading": 2447.63,
+    "key_issues": [
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Machine group 1 running slow - may need backflush",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty",
+      "8oz cups low",
+      "Oat milk low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0042",
+    "store_id": "RDG001",
+    "shift_date": "2026-03-29",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:15",
+    "till_reading": 2339.05,
+    "key_issues": [
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "All OK",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0043",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-05",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP001",
+    "incoming_manager": "EMP005",
+    "handover_time": "17:15",
+    "till_reading": 3030.86,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "Vanilla syrup empty",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "All OK",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0044",
+    "store_id": "GLD001",
+    "shift_date": "2026-03-30",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "13:15",
+    "till_reading": 2438.03,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "8oz cups low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0045",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-12",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:30",
+    "till_reading": 2566.41,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0046",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-22",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "13:00",
+    "till_reading": 2817.22,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "8oz cups low",
+      "Oat milk low"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "All OK",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0047",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-07",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:15",
+    "till_reading": 2839.7,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0048",
+    "store_id": "BAS001",
+    "shift_date": "2026-03-27",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:30",
+    "till_reading": 2423.5,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 2,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0049",
+    "store_id": "BAS001",
+    "shift_date": "2026-03-31",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:15",
+    "till_reading": 3163.49,
+    "key_issues": [],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0050",
+    "store_id": "GLD001",
+    "shift_date": "2026-03-28",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "21:30",
+    "till_reading": 1949.55,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 2,
+    "equipment_status": "All OK",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0051",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-21",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:00",
+    "till_reading": 2081.37,
+    "key_issues": [],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0052",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-08",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP034",
+    "incoming_manager": "EMP036",
+    "handover_time": "13:00",
+    "till_reading": 2414.71,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0053",
+    "store_id": "RDG002",
+    "shift_date": "2026-03-26",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP034",
+    "incoming_manager": "EMP037",
+    "handover_time": "21:30",
+    "till_reading": 2370.08,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "Chocolate powder running low",
+      "Oat milk low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0054",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-21",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP036",
+    "incoming_manager": "EMP034",
+    "handover_time": "17:00",
+    "till_reading": 2181.79,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Machine group 1 running slow - may need backflush",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [
+      "Oat milk low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0055",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-21",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP037",
+    "incoming_manager": "EMP034",
+    "handover_time": "17:00",
+    "till_reading": 2668.5,
+    "key_issues": [],
+    "stock_alerts": [
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0056",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-21",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "21:30",
+    "till_reading": 2673.37,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 3,
+    "equipment_status": "All OK",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0057",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-18",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "13:15",
+    "till_reading": 2830.24,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "8oz cups low",
+      "Vanilla syrup empty",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0058",
+    "store_id": "GLD001",
+    "shift_date": "2026-03-31",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "13:30",
+    "till_reading": 2575.63,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "All OK",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0059",
+    "store_id": "GLD001",
+    "shift_date": "2026-03-23",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "17:15",
+    "till_reading": 2860.09,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Oat milk low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0060",
+    "store_id": "RDG001",
+    "shift_date": "2026-03-27",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:00",
+    "till_reading": 3190.06,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 2,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0061",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-11",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "13:30",
+    "till_reading": 3099.74,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "8oz cups low",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0062",
+    "store_id": "BAS001",
+    "shift_date": "2026-04-10",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP040",
+    "incoming_manager": "EMP040",
+    "handover_time": "13:30",
+    "till_reading": 2731.72,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0063",
+    "store_id": "RDG002",
+    "shift_date": "2026-03-28",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP037",
+    "incoming_manager": "EMP036",
+    "handover_time": "17:15",
+    "till_reading": 2268.41,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [
+      "Oat milk low",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Amber"
+  },
+  {
+    "handover_id": "HO0064",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-14",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP018",
+    "incoming_manager": "EMP010",
+    "handover_time": "13:30",
+    "till_reading": 2383.63,
+    "key_issues": [
+      "Delivery arrived late - dairy short until tomorrow",
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 0,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0065",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-20",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP034",
+    "incoming_manager": "EMP037",
+    "handover_time": "17:00",
+    "till_reading": 1854.78,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Semi-skimmed milk 1 unit left",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0066",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-06",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "13:15",
+    "till_reading": 2426.41,
+    "key_issues": [],
+    "stock_alerts": [
+      "Oat milk low",
+      "Chocolate powder running low",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0067",
+    "store_id": "GLD002",
+    "shift_date": "2026-03-25",
+    "shift_type": "Mid",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "13:30",
+    "till_reading": 2520.98,
+    "key_issues": [],
+    "stock_alerts": [
+      "Oat milk low"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "All OK",
+    "staff_notes": "Cover needed for tomorrow opening shift",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0068",
+    "store_id": "GLD001",
+    "shift_date": "2026-04-05",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP005",
+    "incoming_manager": "EMP001",
+    "handover_time": "17:15",
+    "till_reading": 2974.39,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "All OK",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0069",
+    "store_id": "RDG002",
+    "shift_date": "2026-03-23",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP034",
+    "incoming_manager": "EMP036",
+    "handover_time": "13:00",
+    "till_reading": 1936.1,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "Vanilla syrup empty",
+      "Oat milk low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Grinder needs calibration check",
+    "staff_notes": "",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0070",
+    "store_id": "RDG002",
+    "shift_date": "2026-04-22",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP029",
+    "incoming_manager": "EMP034",
+    "handover_time": "13:15",
+    "till_reading": 2787.91,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Unfilled shift tomorrow AM - call Sam as cover"
+    ],
+    "stock_alerts": [
+      "8oz cups low",
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 2,
+    "equipment_status": "All OK",
+    "staff_notes": "",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0071",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-10",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP010",
+    "incoming_manager": "EMP018",
+    "handover_time": "13:15",
+    "till_reading": 2344.31,
+    "key_issues": [
+      "Unfilled shift tomorrow AM - call Sam as cover",
+      "Customer complaint about wait time - apologised and comped drink"
+    ],
+    "stock_alerts": [
+      "Chocolate powder running low",
+      "Vanilla syrup empty"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "All OK",
+    "staff_notes": "All staff present and on time",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0072",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-20",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP018",
+    "incoming_manager": "EMP010",
+    "handover_time": "17:00",
+    "till_reading": 2990.87,
+    "key_issues": [
+      "Machine group 1 running slow - may need backflush",
+      "Delivery arrived late - dairy short until tomorrow",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "8oz cups low",
+      "Caramel syrup almost out"
+    ],
+    "customer_issues": 0,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0073",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-04",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP028",
+    "incoming_manager": "EMP019",
+    "handover_time": "13:30",
+    "till_reading": 1855.25,
+    "key_issues": [
+      "Customer complaint about wait time - apologised and comped drink",
+      "Machine group 1 running slow - may need backflush",
+      "Till reading was \u00a33.42 short - investigated, likely rounding"
+    ],
+    "stock_alerts": [
+      "Semi-skimmed milk 1 unit left",
+      "Chocolate powder running low"
+    ],
+    "customer_issues": 3,
+    "equipment_status": "Oven door not sealing properly",
+    "staff_notes": "One team member left early - unwell",
+    "overall_status": "Red"
+  },
+  {
+    "handover_id": "HO0074",
+    "store_id": "RDG001",
+    "shift_date": "2026-04-16",
+    "shift_type": "Early",
+    "outgoing_manager": "EMP019",
+    "incoming_manager": "EMP028",
+    "handover_time": "17:00",
+    "till_reading": 2156.54,
+    "key_issues": [
+      "Till reading was \u00a33.42 short - investigated, likely rounding",
+      "Customer complaint about wait time - apologised and comped drink",
+      "Delivery arrived late - dairy short until tomorrow"
+    ],
+    "stock_alerts": [],
+    "customer_issues": 1,
+    "equipment_status": "POS terminal 2 intermittent - use terminal 1",
+    "staff_notes": "Great team effort today!",
+    "overall_status": "Green"
+  },
+  {
+    "handover_id": "HO0075",
+    "store_id": "GLD002",
+    "shift_date": "2026-04-01",
+    "shift_type": "Late",
+    "outgoing_manager": "EMP018",
+    "incoming_manager": "EMP010",
+    "handover_time": "21:30",
+    "till_reading": 2252.08,
+    "key_issues": [],
+    "stock_alerts": [
+      "Caramel syrup almost out",
+      "Vanilla syrup empty",
+      "8oz cups low"
+    ],
+    "customer_issues": 1,
+    "equipment_status": "All OK",
+    "staff_notes": "",
+    "overall_status": "Green"
+  }
+]

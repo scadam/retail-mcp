@@ -12,11 +12,19 @@ mcp = FastMCP(
     Always be friendly, practical, and action-oriented.
     When showing data, prefer using the UI widgets for rich visual display.
     Address users by their role context. Use Costa Coffee terminology
-    (e.g., 'Barista Maestro' for senior baristas, 'store' not 'branch')."""
+    (e.g., 'Barista Maestro' for senior baristas, 'store' not 'branch').
+
+    KEY WORKFLOWS (widget chaining):
+    - Training: get_training_progress → play_training_video → update_training_progress
+    - Stock: get_stock_levels → update_stock_level → log_corrective_action
+    - Rota: get_shift_rota → update_rota_shift
+    - Recipes: get_recipe (click allergens for allergen advice, click tip for more tips)
+    - Demo reset: reset_demo(confirm=True) to restore all original data""",
 )
 
 DATA_DIR   = Path(__file__).parent / "data"
 WIDGET_DIR = Path(__file__).parent / "widgets"
+STATIC_DIR = Path(__file__).parent / "static"
 
 jinja_env = Environment(loader=FileSystemLoader(str(WIDGET_DIR)))
 
@@ -50,6 +58,8 @@ from tools.regional import register_regional
 from tools.maintenance import register_maintenance
 from tools.promotions import register_promotions
 from tools.shift_handover import register_shift_handover
+from tools.updates import register_updates
+from tools.reset import register_reset
 
 register_dashboard(mcp, load_json, render_widget)
 register_rota(mcp, load_json, render_widget)
@@ -63,6 +73,9 @@ register_regional(mcp, load_json, render_widget)
 register_maintenance(mcp, load_json, render_widget)
 register_promotions(mcp, load_json, render_widget)
 register_shift_handover(mcp, load_json, render_widget)
+register_updates(mcp, load_json, render_widget)
+register_reset(mcp, load_json, render_widget)
+
 
 if __name__ == "__main__":
     import os

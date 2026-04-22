@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}{{ module.name }} – Training Video{% endblock %}
+{% block domain_icon %}play-circle{% endblock %}
+{% block widget_title %}{{ module.name }}{% endblock %}
+
+{% block content %}
+<div class="card" style="padding:0;overflow:hidden;border-top:3px solid var(--costa-gold)">
+  <div style="position:relative;background:#000;min-height:200px;display:flex;align-items:center;justify-content:center">
+    {% if video_available %}
+    <video
+      id="training-video"
+      controls
+      style="width:100%;max-height:280px;display:block"
+      poster="{{ module.image or '' }}"
+    >
+      <source src="{{ module.video }}" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    {% else %}
+    <div style="width:100%;position:relative;cursor:pointer" id="placeholder-player"
+         data-prompt="{{ module.follow_on_prompt | default('Guide me through ' ~ module.name) }}"
+         onclick="sendDataPrompt(this)">
+      {% if module.image %}
+      <img src="{{ module.image }}" alt="{{ module.name }}" style="width:100%;max-height:280px;object-fit:cover;opacity:0.7;display:block">
+      {% else %}
+      <div style="width:100%;height:200px;background:linear-gradient(135deg,#6B1C23,#3d0e14)"></div>
+      {% endif %}
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+        <div style="width:64px;height:64px;background:rgba(200,169,81,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        <div style="background:rgba(0,0,0,0.7);padding:6px 14px;border-radius:20px;color:white;font-size:12px;font-weight:600">
+          Click to start guided learning session
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><i data-lucide="info"></i> Module Info</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px">
+    <div><span style="color:#666">Level:</span> <strong>{{ module.level }}</strong></div>
+    <div><span style="color:#666">Duration:</span> <strong>{{ module.duration_mins }} mins</strong></div>
+    <div><span style="color:#666">Mandatory:</span>
+      {% if module.mandatory %}<span class="pill pill-danger">Required</span>{% else %}<span class="pill pill-info">Optional</span>{% endif %}
+    </div>
+    {% if module.renewal_months %}
+    <div><span style="color:#666">Renewal:</span> <strong>Every {{ module.renewal_months }} months</strong></div>
+    {% endif %}
+  </div>
+  <div style="margin-top:10px;padding:10px;background:var(--costa-cream);border-radius:8px;font-size:13px;color:#555">
+    {{ module.description }}
+  </div>
+</div>
+
+{% if progress %}
+<div class="card">
+  <div class="card-title"><i data-lucide="bar-chart-2"></i> Your Progress</div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="flex:1">
+      <div class="progress-bar-wrap" style="height:8px">
+        <div class="progress-bar-fill {% if progress.completion_pct == 100 %}gold{% endif %}" style="width:{{ progress.completion_pct }}%"></div>
+      </div>
+    </div>
+    <strong style="font-size:16px;color:var(--costa-maroon);min-width:40px">{{ progress.completion_pct }}%</strong>
+    {% if progress.status == "Completed" %}<span class="pill pill-success">✓ Done</span>
+    {% elif progress.status == "Overdue" %}<span class="pill pill-danger">Overdue</span>
+    {% else %}<span class="pill pill-warning">In Progress</span>{% endif %}
+  </div>
+  <div style="font-size:12px;color:#888;margin-top:6px">Due: {{ progress.due_date or 'No due date' }}</div>
+</div>
+{% endif %}
+
+<div class="card">
+  <div class="card-title"><i data-lucide="zap"></i> Quick Actions</div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <button data-prompt="{{ module.follow_on_prompt | default('Guide me through ' ~ module.name) }}"
+            onclick="sendDataPrompt(this)"
+            style="background:var(--costa-maroon);color:white;border:none;border-radius:8px;padding:12px 16px;cursor:pointer;font-size:13px;font-weight:600;text-align:left;display:flex;align-items:center;gap:8px">
+      <i data-lucide="message-circle" style="width:16px;height:16px;flex-shrink:0"></i>
+      Start guided learning session
+    </button>
+    {% if progress %}
+    <button data-prompt="Mark module {{ module.module_id }} {{ module.name }} as complete for employee {{ progress.employee_id }}"
+            onclick="sendDataPrompt(this)"
+            style="background:var(--costa-success);color:white;border:none;border-radius:8px;padding:12px 16px;cursor:pointer;font-size:13px;font-weight:600;text-align:left;display:flex;align-items:center;gap:8px">
+      <i data-lucide="check-circle" style="width:16px;height:16px;flex-shrink:0"></i>
+      Mark as Complete
+    </button>
+    {% endif %}
+    <button data-prompt="Show me the quiz questions for {{ module.name }} training module to test my knowledge"
+            onclick="sendDataPrompt(this)"
+            style="background:var(--costa-cream);color:var(--costa-espresso);border:1px solid var(--costa-latte);border-radius:8px;padding:12px 16px;cursor:pointer;font-size:13px;font-weight:600;text-align:left;display:flex;align-items:center;gap:8px">
+      <i data-lucide="help-circle" style="width:16px;height:16px;flex-shrink:0"></i>
+      Take a knowledge check
+    </button>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.getElementById('training-video');
+  if (video) {
+    video.addEventListener('ended', function() {
+      sendPrompt('I have just finished watching {{ module.name }}. What should I do next? Should I take the knowledge check or mark it as complete?');
+    });
+  }
+});
+</script>
+{% endblock %}

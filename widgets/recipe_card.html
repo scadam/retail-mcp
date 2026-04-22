@@ -4,12 +4,25 @@
 {% block widget_title %}Recipe Card – {{ recipe.name }}{% endblock %}
 
 {% block content %}
+{% if recipe.image %}
+<div style="width:100%;border-radius:12px;overflow:hidden;margin-bottom:12px;box-shadow:0 2px 12px rgba(44,24,16,0.15)">
+  <img src="{{ recipe.image }}" alt="{{ recipe.name }}" style="width:100%;height:160px;object-fit:cover;display:block">
+</div>
+{% endif %}
+
 <div class="card">
   <div style="display:flex;justify-content:space-between;align-items:flex-start">
     <div>
       <h2 style="font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--costa-maroon)">{{ recipe.name }}</h2>
       <span class="pill pill-gold" style="margin-top:6px">{{ recipe.category }}</span>
     </div>
+    {% if recipe.follow_on_prompt %}
+    <button class="guide-btn" data-prompt="{{ recipe.follow_on_prompt }}" onclick="sendDataPrompt(this)"
+            style="padding:8px 12px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;white-space:nowrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Guide Me
+    </button>
+    {% endif %}
   </div>
 </div>
 
@@ -52,10 +65,14 @@
 </div>
 
 <div class="card">
-  <div class="card-title"><i data-lucide="shield-alert"></i> Allergens</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:6px">
+  <div class="card-title"><i data-lucide="shield-alert"></i> Allergens – click highlighted for customer guidance</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:6px">
     {% for allergen, present in recipe.allergens.items() %}
-    <div style="text-align:center;padding:8px;border-radius:8px;background:{% if present %}#FFEBEE{% else %}#E8F5E9{% endif %}">
+    <div style="text-align:center;padding:8px;border-radius:8px;background:{% if present %}#FFEBEE{% else %}#E8F5E9{% endif %};cursor:{% if present %}pointer{% else %}default{% endif %}"
+         {% if present %}
+         data-prompt="A customer has a {{ allergen }} allergy and is asking about {{ recipe.name }}. What should I tell them about this allergen and any safe alternatives we offer?"
+         onclick="sendDataPrompt(this)"
+         {% endif %}>
       <div style="font-size:18px">{% if present %}⚠️{% else %}✅{% endif %}</div>
       <div style="font-size:11px;font-weight:600;color:{% if present %}var(--costa-danger){% else %}var(--costa-success){% endif %};text-transform:capitalize">{{ allergen }}</div>
     </div>
@@ -84,9 +101,40 @@
 {% endif %}
 
 {% if recipe.barista_tip %}
-<div class="tip-box">
-  <div class="tip-label">☕ Barista Tip</div>
+<div class="tip-box" style="cursor:pointer"
+     data-prompt="Give me more pro tips for making the perfect {{ recipe.name }}. What do top baristas do differently?"
+     onclick="sendDataPrompt(this)">
+  <div class="tip-label">☕ Barista Tip – click for more pro tips</div>
   {{ recipe.barista_tip }}
 </div>
 {% endif %}
+
+{% if recipe.follow_on_prompt %}
+<div style="margin-top:12px">
+  <button class="guide-btn" data-prompt="{{ recipe.follow_on_prompt }}" onclick="sendDataPrompt(this)"
+          style="width:100%;padding:12px;background:var(--costa-maroon);color:white;border:none;border-radius:10px;cursor:pointer;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Start Guided Recipe Session
+  </button>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+</script>
 {% endblock %}
