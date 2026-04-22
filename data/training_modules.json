@@ -1,0 +1,102 @@
+[
+  {
+    "module_id": "TM001",
+    "name": "Onboarding Essentials",
+    "duration_mins": 30,
+    "mandatory": true,
+    "level": "All",
+    "description": "Welcome to Costa Coffee - values, culture, store layout"
+  },
+  {
+    "module_id": "TM002",
+    "name": "Coffee Mastery Level 1",
+    "duration_mins": 120,
+    "mandatory": true,
+    "level": "Barista",
+    "description": "Espresso fundamentals, milk steaming, drink recipes"
+  },
+  {
+    "module_id": "TM003",
+    "name": "Coffee Mastery Level 2",
+    "duration_mins": 120,
+    "mandatory": false,
+    "level": "Senior Barista",
+    "description": "Advanced latte art, cupping, seasonal menus"
+  },
+  {
+    "module_id": "TM004",
+    "name": "Food Safety Level 2",
+    "duration_mins": 240,
+    "mandatory": true,
+    "level": "All",
+    "description": "Food hygiene, temperature control, HACCP basics",
+    "renewal_months": 12
+  },
+  {
+    "module_id": "TM005",
+    "name": "Allergen Awareness",
+    "duration_mins": 60,
+    "mandatory": true,
+    "level": "All",
+    "description": "14 major allergens, cross-contamination, customer communication",
+    "renewal_months": 12
+  },
+  {
+    "module_id": "TM006",
+    "name": "Customer Service Excellence",
+    "duration_mins": 90,
+    "mandatory": true,
+    "level": "All",
+    "description": "HEART model, complaint handling, upselling"
+  },
+  {
+    "module_id": "TM007",
+    "name": "Till Operations",
+    "duration_mins": 45,
+    "mandatory": true,
+    "level": "All",
+    "description": "POS system, cash handling, refunds, Costa Club"
+  },
+  {
+    "module_id": "TM008",
+    "name": "Opening Procedures",
+    "duration_mins": 30,
+    "mandatory": true,
+    "level": "Shift Manager",
+    "description": "Pre-opening checklist, equipment startup, team briefing"
+  },
+  {
+    "module_id": "TM009",
+    "name": "Closing Procedures",
+    "duration_mins": 30,
+    "mandatory": true,
+    "level": "Shift Manager",
+    "description": "EOD cleaning, cash reconciliation, closing checklist"
+  },
+  {
+    "module_id": "TM010",
+    "name": "Barista Maestro Certification",
+    "duration_mins": 480,
+    "mandatory": false,
+    "level": "Senior Barista",
+    "description": "Full Barista Maestro programme - 8 hour assessment"
+  },
+  {
+    "module_id": "TM011",
+    "name": "Fire Safety",
+    "duration_mins": 60,
+    "mandatory": true,
+    "level": "All",
+    "description": "Fire risk, evacuation procedures, extinguisher use",
+    "renewal_months": 12
+  },
+  {
+    "module_id": "TM012",
+    "name": "First Aid Awareness",
+    "duration_mins": 120,
+    "mandatory": true,
+    "level": "All",
+    "description": "Basic first aid, emergency procedures, AED use",
+    "renewal_months": 36
+  }
+]

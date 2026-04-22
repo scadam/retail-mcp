@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Maintenance – {{ store_name }}{% endblock %}
+{% block domain_icon %}wrench{% endblock %}
+{% block widget_title %}Maintenance – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% set submitted   = requests | selectattr("status","equalto","Submitted") | list %}
+{% set scheduled   = requests | selectattr("status","equalto","Scheduled") | list %}
+{% set in_progress = requests | selectattr("status","equalto","In Progress") | list %}
+{% set completed   = requests | selectattr("status","equalto","Completed") | list %}
+
+{% set total_cost = completed | map(attribute='cost_gbp') | select | sum %}
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="kpi-label">Open Requests</div><div class="kpi-value" style="color:var(--costa-danger)">{{ submitted|length + in_progress|length }}</div></div>
+  <div class="kpi-card"><div class="kpi-label">Scheduled</div><div class="kpi-value" style="color:var(--costa-warning)">{{ scheduled|length }}</div></div>
+  <div class="kpi-card"><div class="kpi-label">Completed</div><div class="kpi-value" style="color:var(--costa-success)">{{ completed|length }}</div></div>
+  <div class="kpi-card"><div class="kpi-label">Est. Monthly Cost</div><div class="kpi-value">£{{ "%.0f"|format(total_cost) }}</div></div>
+</div>
+
+{% macro kanban_col(title, items, color, icon) %}
+<div style="flex:1;min-width:200px">
+  <div style="background:{{ color }};color:white;padding:8px 12px;border-radius:8px 8px 0 0;font-weight:700;font-size:12px;display:flex;align-items:center;gap:6px">
+    <i data-lucide="{{ icon }}"></i> {{ title }} <span style="margin-left:auto;background:rgba(255,255,255,0.25);padding:1px 8px;border-radius:10px">{{ items|length }}</span>
+  </div>
+  <div style="background:var(--costa-cream);border-radius:0 0 8px 8px;min-height:80px;padding:6px">
+    {% for req in items %}
+    <div style="background:white;border-radius:8px;padding:10px;margin-bottom:6px;box-shadow:0 1px 4px rgba(44,24,16,0.08);{% if req.priority == 'Critical' %}border-left:3px solid var(--costa-danger);animation:pulse 1.5s infinite{% elif req.priority == 'High' %}border-left:3px solid var(--costa-warning){% endif %}">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px">
+        <strong style="font-size:12px;color:var(--costa-espresso)">{{ req.equipment }}</strong>
+        {% if req.priority == "Critical" %}<span class="pill pill-danger" style="font-size:10px">Critical</span>
+        {% elif req.priority == "High" %}<span class="pill pill-warning" style="font-size:10px">High</span>
+        {% elif req.priority == "Medium" %}<span class="pill pill-info" style="font-size:10px">Medium</span>
+        {% else %}<span class="pill" style="background:#F5F5F5;color:#555;font-size:10px">Low</span>{% endif %}
+      </div>
+      <div style="font-size:11px;color:#666;margin-bottom:4px">{{ req.issue[:60] }}{% if req.issue|length > 60 %}…{% endif %}</div>
+      <div style="font-size:10px;color:#888">
+        📅 {{ req.submitted_date }}
+        {% if req.engineer %} · 👷 {{ req.engineer }}{% endif %}
+        {% if req.cost_gbp %} · 💷 £{{ "%.0f"|format(req.cost_gbp) }}{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    {% if not items %}<div style="text-align:center;color:#bbb;padding:20px;font-size:13px">None</div>{% endif %}
+  </div>
+</div>
+{% endmacro %}
+
+<div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px">
+  {{ kanban_col("Submitted", submitted, "var(--costa-danger)", "inbox") }}
+  {{ kanban_col("Scheduled", scheduled, "var(--costa-warning)", "calendar") }}
+  {{ kanban_col("In Progress", in_progress, "#1565C0", "loader") }}
+  {{ kanban_col("Completed", completed[:5], "var(--costa-success)", "check-circle") }}
+</div>
+{% endblock %}

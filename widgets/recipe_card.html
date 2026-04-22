@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Recipe – {{ recipe.name }}{% endblock %}
+{% block domain_icon %}chef-hat{% endblock %}
+{% block widget_title %}Recipe Card – {{ recipe.name }}{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div>
+      <h2 style="font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--costa-maroon)">{{ recipe.name }}</h2>
+      <span class="pill pill-gold" style="margin-top:6px">{{ recipe.category }}</span>
+    </div>
+  </div>
+</div>
+
+{% if recipe.sizes %}
+<div class="card">
+  <div class="card-title"><i data-lucide="coffee"></i> Size Variants</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>{% for size in recipe.sizes %}<th>{{ size }}</th>{% endfor %}</tr></thead>
+      <tbody><tr>{% for size, vol in recipe.sizes.items() %}<td>{{ vol }}</td>{% endfor %}</tr></tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{% set ingr_sizes = recipe.ingredients.keys() | list %}
+{% if ingr_sizes %}
+<div class="card">
+  <div class="card-title"><i data-lucide="list"></i> Ingredients
+    <span style="font-size:11px;font-weight:400;color:#888">({{ ingr_sizes[0] }})</span>
+  </div>
+  {% set ingr = recipe.ingredients[ingr_sizes[0]] %}
+  {% for ingredient, amount in ingr.items() %}
+  <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--costa-cream);font-size:13px">
+    <span style="font-weight:500;text-transform:capitalize">{{ ingredient.replace("_"," ") }}</span>
+    <span style="color:#555;font-family:var(--font-mono);font-size:12px">{{ amount }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="card">
+  <div class="card-title"><i data-lucide="list-ordered"></i> Preparation Steps</div>
+  {% for step in recipe.steps %}
+  <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--costa-cream)">
+    <div style="min-width:24px;height:24px;background:var(--costa-maroon);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">{{ loop.index }}</div>
+    <span style="font-size:13px;padding-top:2px">{{ step }}</span>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="card">
+  <div class="card-title"><i data-lucide="shield-alert"></i> Allergens</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:6px">
+    {% for allergen, present in recipe.allergens.items() %}
+    <div style="text-align:center;padding:8px;border-radius:8px;background:{% if present %}#FFEBEE{% else %}#E8F5E9{% endif %}">
+      <div style="font-size:18px">{% if present %}⚠️{% else %}✅{% endif %}</div>
+      <div style="font-size:11px;font-weight:600;color:{% if present %}var(--costa-danger){% else %}var(--costa-success){% endif %};text-transform:capitalize">{{ allergen }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% if recipe.nutritional %}
+<div class="card">
+  <div class="card-title"><i data-lucide="activity"></i> Nutritional Info</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Size</th><th>kcal</th><th>Sugar (g)</th></tr></thead>
+      <tbody>
+        {% for size, info in recipe.nutritional.items() %}
+        <tr>
+          <td><strong>{{ size }}</strong></td>
+          <td>{{ info.kcal }}</td>
+          <td>{{ info.sugar_g }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{% if recipe.barista_tip %}
+<div class="tip-box">
+  <div class="tip-label">☕ Barista Tip</div>
+  {{ recipe.barista_tip }}
+</div>
+{% endif %}
+{% endblock %}

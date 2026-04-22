@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Regional Benchmarks – {{ region }}{% endblock %}
+{% block domain_icon %}map-pin{% endblock %}
+{% block widget_title %}Regional Benchmarks – {{ region }}{% endblock %}
+
+{% block content %}
+<div class="alert alert-info">
+  <i data-lucide="map-pin"></i>
+  <strong>{{ region }}</strong> · {{ stores_data|length }} stores · Last 12 weeks
+</div>
+
+<div class="card" style="padding:0;overflow:hidden">
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Store</th>
+          <th>Weekly Sales</th>
+          <th>Transactions</th>
+          <th>Avg £</th>
+          <th>NPS</th>
+          <th>Compliance %</th>
+          <th>Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for store in stores_data %}
+        {% set latest = store.weekly_kpis[-1] %}
+        <tr style="{% if loop.index == 1 %}background:#FFF9EC!important{% elif loop.last %}background:#FFF5F5!important{% endif %}">
+          <td style="font-weight:700">
+            {% if loop.index == 1 %}🥇 {% elif loop.last %}⚠️ {% endif %}{{ store.store_name }}
+          </td>
+          <td style="font-family:var(--font-mono)">£{{ "%.0f"|format(latest.weekly_sales) }}</td>
+          <td style="font-family:var(--font-mono)">{{ latest.transactions }}</td>
+          <td style="font-family:var(--font-mono)">£{{ "%.2f"|format(latest.avg_transaction) }}</td>
+          <td>
+            <span class="pill {% if latest.nps >= 60 %}pill-success{% elif latest.nps >= 40 %}pill-warning{% else %}pill-danger{% endif %}">
+              {{ "%.0f"|format(latest.nps) }}
+            </span>
+          </td>
+          <td>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div class="progress-bar-wrap" style="flex:1;margin:0">
+                <div class="progress-bar-fill" style="width:{{ latest.compliance_score_pct }}%"></div>
+              </div>
+              <span style="font-size:12px">{{ "%.0f"|format(latest.compliance_score_pct) }}%</span>
+            </div>
+          </td>
+          <td>
+            {% set prev = store.weekly_kpis[-2] if store.weekly_kpis|length > 1 else latest %}
+            {{ latest.rank }}
+            {% if latest.weekly_sales > prev.weekly_sales %}<span style="color:var(--costa-success)">▲</span>
+            {% else %}<span style="color:var(--costa-danger)">▼</span>{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title"><i data-lucide="radar"></i> Radar vs Average</div>
+    <canvas id="radarChart" height="180"></canvas>
+  </div>
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title"><i data-lucide="trending-up"></i> Sales Trend</div>
+    <canvas id="trendChart" height="180"></canvas>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Radar chart - compare top vs regional average
+const radarCtx = document.getElementById('radarChart').getContext('2d');
+const topStore = {{ stores_data[0].weekly_kpis[-1] | tojson }};
+const avgData = {
+  weekly_sales: {{ avg_sales }},
+  nps: {{ avg_nps }},
+  compliance_score_pct: {{ avg_compliance }},
+  avg_transaction: {{ avg_transaction }},
+  transactions: {{ avg_transactions }},
+};
+new Chart(radarCtx, {
+  type: 'radar',
+  data: {
+    labels: ['Sales','NPS','Compliance','Avg Transaction','Transactions'],
+    datasets: [
+      {
+        label: 'Top Performer',
+        data: [
+          topStore.weekly_sales/500,
+          topStore.nps,
+          topStore.compliance_score_pct,
+          topStore.avg_transaction*10,
+          topStore.transactions/15,
+        ],
+        borderColor: '#6B1C23',
+        backgroundColor: 'rgba(107,28,35,0.15)',
+        pointBackgroundColor: '#6B1C23',
+      },
+      {
+        label: 'Region Avg',
+        data: [
+          avgData.weekly_sales/500,
+          avgData.nps,
+          avgData.compliance_score_pct,
+          avgData.avg_transaction*10,
+          avgData.transactions/15,
+        ],
+        borderColor: '#C8A951',
+        backgroundColor: 'rgba(200,169,81,0.15)',
+        pointBackgroundColor: '#C8A951',
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 10 } } } },
+    scales: { r: { ticks: { display: false } } }
+  }
+});
+
+// Trend
+const trendCtx = document.getElementById('trendChart').getContext('2d');
+const weeks = {{ stores_data[0].weekly_kpis | map(attribute='week') | list | tojson }};
+new Chart(trendCtx, {
+  type: 'line',
+  data: {
+    labels: weeks.map(w => w.slice(5)),
+    datasets: [
+      {% for store in stores_data[:3] %}
+      {
+        label: '{{ store.store_name[:12] }}',
+        data: {{ store.weekly_kpis | map(attribute='weekly_sales') | list | tojson }},
+        borderColor: {{ ["'#6B1C23'","'#C8A951'","'#2C1810'"][loop.index0] }},
+        fill: false,
+        tension: 0.3,
+        pointRadius: 0,
+      },
+      {% endfor %}
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 10 } } } },
+    scales: {
+      y: { ticks: { callback: v => '£'+Math.round(v/1000)+'k', font: { size: 10 } } },
+      x: { ticks: { font: { size: 9 } } }
+    }
+  }
+});
+</script>
+{% endblock %}

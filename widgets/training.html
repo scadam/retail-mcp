@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Training Progress – {{ store_name }}{% endblock %}
+{% block domain_icon %}graduation-cap{% endblock %}
+{% block widget_title %}Training Progress – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% if employee_view %}
+  {# Single employee view #}
+  {% set emp = employee_view %}
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:56px;height:56px;border-radius:50%;background:var(--costa-maroon);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-heading);font-size:20px;font-weight:700">
+        {{ emp.first_name[0] }}{{ emp.last_name[0] }}
+      </div>
+      <div>
+        <div style="font-family:var(--font-heading);font-size:16px;font-weight:700">{{ emp.first_name }} {{ emp.last_name }}</div>
+        <div style="color:#666;font-size:13px">{{ emp.role }} · {{ emp.store_id }}</div>
+      </div>
+      <div style="margin-left:auto;position:relative;width:60px;height:60px">
+        <svg viewBox="0 0 36 36" style="transform:rotate(-90deg);width:60px;height:60px">
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--costa-cream)" stroke-width="3"/>
+          <circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--costa-maroon)" stroke-width="3"
+            stroke-dasharray="{{ overall_pct }} {{ 100 - overall_pct }}" stroke-linecap="round"/>
+        </svg>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-heading);font-size:12px;font-weight:700;color:var(--costa-maroon)">{{ overall_pct }}%</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><i data-lucide="book-open"></i> Module Progress</div>
+    {% for prog in progress_list %}
+    <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--costa-cream)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-weight:600;font-size:13px">{{ prog.module_name }}</span>
+        {% if prog.status == "Completed" %}<span class="pill pill-success">✓ Done</span>
+        {% elif prog.status == "Overdue" %}<span class="pill pill-danger" style="animation:pulse 1.5s infinite">⚠ Overdue</span>
+        {% else %}<span class="pill pill-warning">{{ prog.completion_pct }}%</span>{% endif %}
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill {% if prog.completion_pct == 100 %}gold{% endif %}" style="width:{{ prog.completion_pct }}%"></div>
+      </div>
+      <div style="font-size:11px;color:#888;margin-top:3px">Due: {{ prog.due_date }}</div>
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+  {# Store overview #}
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Team Completion</div>
+      <div class="kpi-value">{{ team_avg_pct }}%</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill {% if team_avg_pct >= 90 %}gold{% endif %}" style="width:{{ team_avg_pct }}%"></div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Overdue Modules</div>
+      <div class="kpi-value" style="color:{% if overdue_count > 0 %}var(--costa-danger){% else %}var(--costa-success){% endif %}">{{ overdue_count }}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Due This Week</div>
+      <div class="kpi-value" style="color:var(--costa-warning)">{{ due_this_week }}</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><i data-lucide="users"></i> Team Overview</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Employee</th><th>Role</th><th>Overall %</th><th>Overdue</th><th>Status</th></tr></thead>
+        <tbody>
+          {% for row in team_rows %}
+          <tr>
+            <td style="font-weight:600">{{ row.name }}</td>
+            <td style="font-size:12px;color:#666">{{ row.role }}</td>
+            <td>
+              <div style="display:flex;align-items:center;gap:6px">
+                <div class="progress-bar-wrap" style="flex:1;margin:0">
+                  <div class="progress-bar-fill" style="width:{{ row.pct }}%"></div>
+                </div>
+                <span style="font-size:12px;font-weight:600;min-width:32px">{{ row.pct }}%</span>
+              </div>
+            </td>
+            <td>{% if row.overdue > 0 %}<span class="pill pill-danger">{{ row.overdue }}</span>{% else %}<span class="pill pill-success">0</span>{% endif %}</td>
+            <td>{% if row.overdue > 0 %}<span class="pill pill-danger">Needs Attention</span>{% elif row.pct == 100 %}<span class="pill pill-success">✓ Complete</span>{% else %}<span class="pill pill-warning">In Progress</span>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

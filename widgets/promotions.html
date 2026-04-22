@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Promotions{% endblock %}
+{% block domain_icon %}megaphone{% endblock %}
+{% block widget_title %}Promotions & Offers{% endblock %}
+
+{% block content %}
+{% set active = promotions | selectattr("active") | list %}
+{% set upcoming = promotions | rejectattr("active") | list %}
+
+{% if active %}
+<div class="alert alert-info">
+  <i data-lucide="megaphone"></i>
+  <strong>{{ active|length }} active promotion(s)</strong> running now. Ensure POS codes are programmed.
+</div>
+{% endif %}
+
+{% for promo in active %}
+<div class="card" style="{% if loop.index == 1 %}border-top:3px solid var(--costa-gold){% endif %}">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px">
+    <div>
+      <div style="font-family:var(--font-heading);font-size:15px;font-weight:700;color:var(--costa-maroon)">{{ promo.name }}</div>
+      <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
+        {% if promo.loyalty %}<span class="pill pill-gold">Costa Club</span>{% endif %}
+        <span class="pill pill-maroon">{{ promo.discount_type }}</span>
+        <span class="pill pill-success">{{ promo.discount_value }}</span>
+      </div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-family:var(--font-mono);font-size:18px;font-weight:700;background:var(--costa-cream);padding:4px 10px;border-radius:6px;color:var(--costa-maroon)">{{ promo.pos_code }}</div>
+      <div style="font-size:10px;color:#888;margin-top:2px">POS Code</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:13px;color:#444">{{ promo.description }}</div>
+  <div style="margin-top:8px;font-size:12px;color:#888">
+    📅 {{ promo.start_date }} – {{ promo.end_date }}
+    · Products: {{ promo.applicable_products | join(", ") }}
+    {% if promo.hours %} · ⏰ {{ promo.hours }}{% endif %}
+    {% if promo.days %} · {{ promo.days | join(", ") }}{% endif %}
+  </div>
+</div>
+{% endfor %}
+
+<div class="card" style="padding:0;overflow:hidden">
+  <div style="padding:12px 16px;border-bottom:1px solid var(--costa-cream)">
+    <div class="card-title" style="margin:0"><i data-lucide="table"></i> POS Code Quick Reference</div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Promotion</th><th>Discount</th><th>POS Code</th><th>Valid Until</th></tr></thead>
+      <tbody>
+        {% for promo in promotions %}
+        <tr>
+          <td style="font-weight:600;font-size:13px">{{ promo.name }}</td>
+          <td><span class="pill {% if promo.active %}pill-success{% else %}pill-info{% endif %}">{{ promo.discount_value }}</span></td>
+          <td><code style="font-family:var(--font-mono);background:var(--costa-cream);padding:2px 6px;border-radius:4px;font-size:12px">{{ promo.pos_code }}</code></td>
+          <td style="font-size:12px;color:#666">{{ promo.end_date }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

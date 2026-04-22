@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Compliance Checklist – {{ store_name }}{% endblock %}
+{% block domain_icon %}shield-check{% endblock %}
+{% block widget_title %}Compliance – {{ store_name }}{% endblock %}
+
+{% block content %}
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+  {% for ct in checklist_types %}
+  <button onclick="switchTab('{{ ct.key }}')" id="tab-{{ ct.key }}"
+    style="padding:6px 14px;border-radius:20px;border:2px solid var(--costa-maroon);cursor:pointer;font-size:12px;font-weight:600;transition:all 0.15s;
+    {% if ct.key == active_type %}background:var(--costa-maroon);color:white{% else %}background:transparent;color:var(--costa-maroon){% endif %}">
+    {{ ct.label }}
+  </button>
+  {% endfor %}
+</div>
+
+{% for ct in checklist_types %}
+<div id="panel-{{ ct.key }}" style="{% if ct.key != active_type %}display:none{% endif %}">
+  {% set checklist = checklist_data[ct.key] %}
+  {% set latest = checklist.latest %}
+  {% set pct = latest.completion_pct %}
+
+  <div class="kpi-grid" style="margin-bottom:10px">
+    <div class="kpi-card">
+      <div class="kpi-label">Completion</div>
+      <div class="kpi-value" style="color:{% if pct >= 90 %}var(--costa-success){% elif pct >= 70 %}var(--costa-warning){% else %}var(--costa-danger){% endif %}">{{ pct }}%</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill {% if pct >= 90 %}gold{% endif %}" style="width:{{ pct }}%"></div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Signed Off</div>
+      <div class="kpi-value">{% if latest.signed_off %}✓{% else %}✗{% endif %}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Date</div>
+      <div style="font-size:14px;font-weight:600;margin-top:4px">{{ latest.date }}</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><i data-lucide="check-square"></i> Checklist Items</div>
+    {% for item, done in latest.items.items() %}
+    <div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--costa-cream)">
+      <div style="width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+        background:{% if done %}var(--costa-success){% else %}var(--costa-danger){% endif %};color:white;font-size:12px">
+        {% if done %}✓{% else %}✗{% endif %}
+      </div>
+      <span style="font-size:13px;color:{% if not done %}var(--costa-danger){% else %}inherit{% endif %};font-weight:{% if not done %}600{% else %}400{% endif %}">{{ item }}</span>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if checklist.history %}
+  <div class="card">
+    <div class="card-title"><i data-lucide="trending-up"></i> 14-Day Completion History</div>
+    <canvas id="sparkline-{{ ct.key }}" height="60"></canvas>
+  </div>
+  {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+function switchTab(key) {
+  {% for ct in checklist_types %}
+  document.getElementById('panel-{{ ct.key }}').style.display = key === '{{ ct.key }}' ? '' : 'none';
+  const btn{{ loop.index }} = document.getElementById('tab-{{ ct.key }}');
+  btn{{ loop.index }}.style.background = key === '{{ ct.key }}' ? 'var(--costa-maroon)' : 'transparent';
+  btn{{ loop.index }}.style.color = key === '{{ ct.key }}' ? 'white' : 'var(--costa-maroon)';
+  {% endfor %}
+}
+{% for ct in checklist_types %}
+{% set history = checklist_data[ct.key].history[-14:] %}
+(function() {
+  const ctx = document.getElementById('sparkline-{{ ct.key }}');
+  if (!ctx) return;
+  new Chart(ctx.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels: {{ history | map(attribute='date') | list | tojson }},
+      datasets: [{
+        data: {{ history | map(attribute='completion_pct') | list | tojson }},
+        borderColor: '#6B1C23',
+        backgroundColor: 'rgba(107,28,35,0.08)',
+        fill: true,
+        tension: 0.4,
+        pointRadius: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { min: 0, max: 100, ticks: { callback: v => v+'%', font: { size: 10 } } },
+        x: { ticks: { font: { size: 9 } } }
+      }
+    }
+  });
+})();
+{% endfor %}
+</script>
+{% endblock %}

@@ -1,0 +1,161 @@
+[
+  {
+    "promo_id": "PROMO001",
+    "name": "Costa Club Double Points Week",
+    "start_date": "2026-04-14",
+    "end_date": "2026-04-27",
+    "description": "Earn double Costa Club points on all purchases. Scan app or card at till.",
+    "applicable_products": [
+      "All"
+    ],
+    "discount_type": "Points Multiplier",
+    "discount_value": "2x",
+    "pos_code": "DBLPTS",
+    "active": true,
+    "loyalty": true
+  },
+  {
+    "promo_id": "PROMO002",
+    "name": "Toffee Penny Latte",
+    "start_date": "2026-01-06",
+    "end_date": "2026-04-30",
+    "description": "Limited edition winter warmer. Espresso with toffee penny syrup, steamed milk and butterscotch drizzle.",
+    "applicable_products": [
+      "Toffee Penny Latte"
+    ],
+    "discount_type": "Seasonal Menu",
+    "discount_value": "None",
+    "pos_code": "TOFPEN",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO003",
+    "name": "Tropical Frostino Summer Launch",
+    "start_date": "2026-04-22",
+    "end_date": "2026-09-01",
+    "description": "Our new Tropical Frostino is here! Mango and passion fruit blend topped with whipped cream.",
+    "applicable_products": [
+      "Tropical Frostino"
+    ],
+    "discount_type": "New Product Launch",
+    "discount_value": "None",
+    "pos_code": "TROPFRO",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO004",
+    "name": "Meal Deal - Drink & Toastie",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "description": "Any hot drink (up to Medio) plus any toastie for \u00a35.50. Save up to \u00a32.40.",
+    "applicable_products": [
+      "All hot drinks",
+      "All toasties"
+    ],
+    "discount_type": "Bundle",
+    "discount_value": "\u00a35.50 fixed",
+    "pos_code": "MEALDEAL",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO005",
+    "name": "NHS & Blue Light 20% Discount",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "description": "20% off all purchases for NHS and Blue Light Card holders. Must show valid ID or Blue Light Card.",
+    "applicable_products": [
+      "All"
+    ],
+    "discount_type": "Percentage Discount",
+    "discount_value": "20%",
+    "pos_code": "BLUELIGHT",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO006",
+    "name": "Student 10% Discount",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "description": "10% off for students with valid NUS or TOTUM card. Not combinable with other offers.",
+    "applicable_products": [
+      "All"
+    ],
+    "discount_type": "Percentage Discount",
+    "discount_value": "10%",
+    "pos_code": "STUDENT10",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO007",
+    "name": "Happy Hour - Buy One Get One Half Price",
+    "start_date": "2026-04-01",
+    "end_date": "2026-06-30",
+    "description": "Buy any drink 2pm-5pm Monday-Friday and get a second drink at half price. In-store only.",
+    "applicable_products": [
+      "All drinks"
+    ],
+    "discount_type": "BOGOHP",
+    "discount_value": "50% second item",
+    "pos_code": "HAPPYHR",
+    "active": true,
+    "loyalty": false,
+    "hours": "14:00-17:00",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ]
+  },
+  {
+    "promo_id": "PROMO008",
+    "name": "Pistachio Iced Latte Launch",
+    "start_date": "2026-04-22",
+    "end_date": "2026-07-31",
+    "description": "New for Spring! Our Pistachio Iced Latte with oat milk and pistachio dust. Instagrammable and delicious!",
+    "applicable_products": [
+      "Pistachio Iced Latte"
+    ],
+    "discount_type": "New Product",
+    "discount_value": "None",
+    "pos_code": "PISTLATTE",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO009",
+    "name": "Costa Foundation 10p Donation",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "description": "10p from every reusable cup purchase goes to Costa Foundation literacy programmes.",
+    "applicable_products": [
+      "All purchases with reusable cup"
+    ],
+    "discount_type": "Charity",
+    "discount_value": "10p donation",
+    "pos_code": "FOUND10P",
+    "active": true,
+    "loyalty": false
+  },
+  {
+    "promo_id": "PROMO010",
+    "name": "Spring Loyalty Card Stamp Challenge",
+    "start_date": "2026-03-21",
+    "end_date": "2026-06-21",
+    "description": "Collect 8 stamps and get a free Primo drink. Stamps earned on hot drinks only.",
+    "applicable_products": [
+      "All hot drinks"
+    ],
+    "discount_type": "Stamp Card",
+    "discount_value": "Free Primo drink",
+    "pos_code": "SPRING8",
+    "active": true,
+    "loyalty": true
+  }
+]

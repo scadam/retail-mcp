@@ -1,0 +1,52 @@
+[
+  {
+    "store_id": "GLD001",
+    "name": "Guildford High Street",
+    "region": "South East",
+    "address": "47 High Street, Guildford, GU1 3DT",
+    "manager": "Sarah Mitchell",
+    "phone": "01483 556001",
+    "seating": 32,
+    "drive_through": false
+  },
+  {
+    "store_id": "GLD002",
+    "name": "Guildford Station",
+    "region": "South East",
+    "address": "Station Approach, Guildford, GU1 4UT",
+    "manager": "James Okafor",
+    "phone": "01483 556002",
+    "seating": 18,
+    "drive_through": false
+  },
+  {
+    "store_id": "RDG001",
+    "name": "Reading Oracle",
+    "region": "South East",
+    "address": "Unit 17, The Oracle, Reading, RG1 2AG",
+    "manager": "Priya Sharma",
+    "phone": "0118 956001",
+    "seating": 45,
+    "drive_through": false
+  },
+  {
+    "store_id": "RDG002",
+    "name": "Reading Station",
+    "region": "South East",
+    "address": "Platform 4, Reading Station, RG1 1LZ",
+    "manager": "Tom Whitfield",
+    "phone": "0118 956002",
+    "seating": 22,
+    "drive_through": false
+  },
+  {
+    "store_id": "BAS001",
+    "name": "Basingstoke Festival Place",
+    "region": "South East",
+    "address": "Unit 84, Festival Place, Basingstoke, RG21 7BA",
+    "manager": "Leila Patel",
+    "phone": "01256 556001",
+    "seating": 38,
+    "drive_through": true
+  }
+]
