@@ -35,6 +35,7 @@
 
 <div class="card">
   <div class="card-title"><i data-lucide="star"></i> Recent Reviews</div>
+  <div class="scroll-list">
   {% for fb in feedback_list | sort(attribute='date', reverse=True) | list | batch(10) | first | default([]) %}
   <div style="padding:10px 0;border-bottom:1px solid var(--costa-cream)">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
@@ -48,6 +49,7 @@
     <div style="font-size:13px;color:#444;font-style:italic">"{{ fb.comment }}"</div>
   </div>
   {% endfor %}
+  </div>
 </div>
 
 <div class="card">

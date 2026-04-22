@@ -19,6 +19,7 @@
 </div>
 {% endif %}
 
+<div class="scroll-list-tall">
 {% for inc in incidents | sort(attribute='date', reverse=True) %}
 <div class="card" style="margin-bottom:10px;{% if inc.severity == 'Critical' %}border-left:4px solid var(--costa-danger){% elif inc.severity == 'High' %}border-left:4px solid var(--costa-warning){% endif %}">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px">
@@ -45,6 +46,7 @@
   </div>
 </div>
 {% endfor %}
+</div>
 
 {% if not incidents %}
 <div class="alert alert-success">
