@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}Costa Coffee{% endblock %}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="/static/lucide.min.js"></script>
+<script src="/static/chart.umd.min.js"></script>
 <script src="https://cdn.openai.com/apps-sdk/v0/openai-apps-sdk.min.js"></script>
 <style>
   :root {
@@ -46,8 +44,15 @@
   .widget-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     animation: fadeInUp 0.2s ease-out;
+  }
+  .scroll-list {
+    overflow-y: auto;
+    max-height: 280px;
+  }
+  .scroll-list-tall {
+    overflow-y: auto;
+    max-height: 360px;
   }
   /* ── Header ─────────────────────────────────────────────────────────── */
   .widget-header {
@@ -175,7 +180,7 @@
   .table-wrap { overflow-x: auto; border-radius: 8px; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   thead tr { background: var(--costa-maroon); color: var(--costa-white); }
-  thead th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; white-space: nowrap; }
+  thead th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; white-space: nowrap; position: sticky; top: 0; z-index: 2; }
   tbody tr:nth-child(even) { background: var(--costa-cream); }
   tbody tr:nth-child(odd)  { background: var(--costa-white); }
   tbody td { padding: 9px 12px; vertical-align: middle; }

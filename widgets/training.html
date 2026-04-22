@@ -31,6 +31,7 @@
 
   <div class="card">
     <div class="card-title"><i data-lucide="book-open"></i> Module Progress – click to start</div>
+    <div class="scroll-list-tall">
     {% for prog in progress_list %}
     <div data-prompt="Play training module {{ prog.module_id }} for employee {{ emp.employee_id }} and show the video player widget"
          onclick="sendDataPrompt(this)"
@@ -56,6 +57,7 @@
       <i data-lucide="chevron-right" style="width:16px;height:16px;color:#ccc;flex-shrink:0"></i>
     </div>
     {% endfor %}
+    </div>
   </div>
 
 {% elif modules_view %}
@@ -64,7 +66,7 @@
     <input type="text" id="module-search" placeholder="Search modules…" oninput="filterModules()"
            style="width:100%;padding:8px 12px;border:1px solid var(--costa-latte);border-radius:8px;font-size:13px;background:white;outline:none">
   </div>
-  <div id="modules-grid" style="display:grid;grid-template-columns:1fr;gap:10px">
+  <div id="modules-grid" class="scroll-list-tall" style="display:grid;grid-template-columns:1fr;gap:10px">
     {% for mod in modules %}
     <div class="module-card" data-name="{{ mod.name | lower }}" data-level="{{ mod.level | lower }}"
          data-prompt="{{ mod.follow_on_prompt | default('Guide me through ' ~ mod.name) }}"
@@ -130,7 +132,7 @@
 
   <div class="card">
     <div class="card-title"><i data-lucide="users"></i> Team Overview – click employee to view details</div>
-    <div class="table-wrap">
+    <div class="table-wrap scroll-list">
       <table>
         <thead><tr><th></th><th>Employee</th><th>Role</th><th>Overall %</th><th>Overdue</th><th>Status</th></tr></thead>
         <tbody>
