@@ -40,7 +40,7 @@
 
   <div class="card">
     <div class="card-title"><i data-lucide="check-square"></i> Checklist Items</div>
-    {% for item, done in latest.items.items() %}
+    {% for item, done in latest["items"].items() %}
     <div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--costa-cream)">
       <div style="width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
         background:{% if done %}var(--costa-success){% else %}var(--costa-danger){% endif %};color:white;font-size:12px">

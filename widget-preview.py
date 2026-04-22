@@ -61,14 +61,12 @@ def render_dashboard(params: dict) -> str:
     sales = load_json("daily_sales.json")
     stores = load_json("stores.json")
     store_id = params.get("store_id", ["GLD001"])[0]
-    store_data = sales.get(store_id, {})
+    store_list = sales.get(store_id, [])
+    store_data = store_list[-1] if store_list else {}
     store_info = next((s for s in stores if s["store_id"] == store_id), {"name": store_id})
     return render_widget("dashboard.html",
                          store_name=store_info.get("name", store_id),
-                         store_id=store_id,
-                         sales=store_data,
-                         top_products=store_data.get("top_products", []),
-                         hourly=store_data.get("hourly_sales", []))
+                         sales_data=store_data)
 
 
 def render_rota(params: dict) -> str:
@@ -206,14 +204,24 @@ def render_training_video(params: dict) -> str:
 
 
 def render_compliance(params: dict) -> str:
+    _CHECKLIST_LABELS = {
+        "daily_opening": "Daily Opening",
+        "daily_closing": "Daily Closing",
+        "weekly_deep_clean": "Weekly Deep Clean",
+        "monthly_equipment": "Monthly Equipment",
+        "food_safety_audit": "Food Safety Audit",
+    }
     checklists = load_json("compliance_checklists.json")
     stores = load_json("stores.json")
     store_id = params.get("store_id", ["GLD001"])[0]
     store_info = next((s for s in stores if s["store_id"] == store_id), {"name": store_id})
-    store_checklists = [c for c in checklists if c.get("store_id") == store_id]
+    store_cl = checklists.get(store_id, {})
+    checklist_types = [{"key": k, "label": v} for k, v in _CHECKLIST_LABELS.items() if k in store_cl]
     return render_widget("compliance_checklist.html",
                          store_name=store_info.get("name", store_id),
-                         checklists=store_checklists)
+                         checklist_types=checklist_types,
+                         checklist_data=store_cl,
+                         active_type=params.get("checklist_type", ["daily_opening"])[0])
 
 
 def render_incidents(params: dict) -> str:
@@ -228,28 +236,63 @@ def render_incidents(params: dict) -> str:
 
 
 def render_feedback(params: dict) -> str:
-    feedback = load_json("customer_feedback.json")
+    from datetime import date, timedelta
+    all_feedback = load_json("customer_feedback.json")
     stores = load_json("stores.json")
     store_id = params.get("store_id", ["GLD001"])[0]
     store_info = next((s for s in stores if s["store_id"] == store_id), {"name": store_id})
-    store_fb = feedback.get(store_id, {})
-    reviews = store_fb.get("recent_reviews", [])
-    avg_nps = store_fb.get("nps_score", 0)
-    avg_rating = store_fb.get("avg_rating", 0)
+    cutoff = date.today() - timedelta(days=30)
+    feedback_list = [f for f in all_feedback.get(store_id, [])
+                     if date.fromisoformat(f["date"]) >= cutoff]
+    promoters  = sum(1 for f in feedback_list if f["nps_score"] >= 9)
+    passives   = sum(1 for f in feedback_list if 7 <= f["nps_score"] <= 8)
+    detractors = sum(1 for f in feedback_list if f["nps_score"] <= 6)
+    total = max(1, len(feedback_list))
+    nps_score = round(((promoters - detractors) / total) * 100)
+    nps_weekly_labels, nps_weekly_data = [], []
+    for w in range(12):
+        wk_start = date.today() - timedelta(weeks=12-w)
+        wk_end = wk_start + timedelta(days=7)
+        wk_fb = [f for f in all_feedback.get(store_id, [])
+                 if wk_start <= date.fromisoformat(f["date"]) < wk_end]
+        p = sum(1 for f in wk_fb if f["nps_score"] >= 9)
+        d = sum(1 for f in wk_fb if f["nps_score"] <= 6)
+        wk_nps = round(((p - d) / len(wk_fb)) * 100) if wk_fb else 0
+        nps_weekly_labels.append(wk_start.strftime("%d %b"))
+        nps_weekly_data.append(wk_nps)
+    star_counts = [sum(1 for f in feedback_list if f["star_rating"] == s) for s in range(1, 6)]
     return render_widget("feedback.html",
                          store_name=store_info.get("name", store_id),
-                         nps_score=avg_nps,
-                         avg_rating=avg_rating,
-                         reviews=reviews,
-                         feedback_data=store_fb)
+                         feedback_list=feedback_list,
+                         nps_score=nps_score,
+                         promoters=promoters, passives=passives, detractors=detractors,
+                         nps_weekly_labels=nps_weekly_labels,
+                         nps_weekly_data=nps_weekly_data,
+                         star_counts=star_counts)
 
 
 def render_regional(params: dict) -> str:
     kpis = load_json("regional_kpis.json")
-    stores = load_json("stores.json")
+    region = params.get("region", ["South East"])[0]
+    stores_data = kpis.get(region, [])
+    stores_data = sorted(stores_data,
+                         key=lambda s: s["weekly_kpis"][-1]["weekly_sales"] if s.get("weekly_kpis") else 0,
+                         reverse=True)
+    latest_list = [s["weekly_kpis"][-1] for s in stores_data if s.get("weekly_kpis")]
+    n = max(1, len(latest_list))
+    avg_sales = round(sum(l["weekly_sales"] for l in latest_list) / n, 2)
+    avg_nps = round(sum(l["nps"] for l in latest_list) / n, 1)
+    avg_compliance = round(sum(l["compliance_score_pct"] for l in latest_list) / n, 1)
+    avg_transaction = round(sum(l["avg_transaction"] for l in latest_list) / n, 2)
+    avg_transactions = round(sum(l["transactions"] for l in latest_list) / n)
     return render_widget("regional_benchmarks.html",
-                         kpis=kpis,
-                         stores=stores)
+                         region=region,
+                         stores_data=stores_data,
+                         avg_sales=avg_sales,
+                         avg_nps=avg_nps,
+                         avg_compliance=avg_compliance,
+                         avg_transaction=avg_transaction,
+                         avg_transactions=avg_transactions)
 
 
 def render_maintenance(params: dict) -> str:
