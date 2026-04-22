@@ -5,26 +5,20 @@
 
 {% block content %}
 {% if recipe.image %}
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+  <span class="pill pill-gold">{{ recipe.category }}</span>
+  {% if recipe.follow_on_prompt %}
+  <button class="guide-btn" data-prompt="{{ recipe.follow_on_prompt }}" onclick="sendDataPrompt(this)"
+          style="padding:6px 12px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;white-space:nowrap">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Guide Me
+  </button>
+  {% endif %}
+</div>
 <div style="width:100%;border-radius:12px;overflow:hidden;margin-bottom:12px;box-shadow:0 2px 12px rgba(44,24,16,0.15)">
-  <img src="{{ recipe.image }}" alt="{{ recipe.name }}" style="width:100%;height:160px;object-fit:cover;display:block">
+  <img src="{{ recipe.image }}" alt="{{ recipe.name }}" style="width:100%;height:120px;object-fit:cover;display:block">
 </div>
 {% endif %}
-
-<div class="card">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start">
-    <div>
-      <h2 style="font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--costa-maroon)">{{ recipe.name }}</h2>
-      <span class="pill pill-gold" style="margin-top:6px">{{ recipe.category }}</span>
-    </div>
-    {% if recipe.follow_on_prompt %}
-    <button class="guide-btn" data-prompt="{{ recipe.follow_on_prompt }}" onclick="sendDataPrompt(this)"
-            style="padding:8px 12px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;white-space:nowrap">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Guide Me
-    </button>
-    {% endif %}
-  </div>
-</div>
 
 {% if recipe.sizes %}
 <div class="card">
