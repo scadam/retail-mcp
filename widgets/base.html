@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Costa Coffee{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="https://cdn.openai.com/apps-sdk/v0/openai-apps-sdk.min.js"></script>
+<style>
+  :root {
+    --costa-maroon: {{ theme.colors.maroon }};
+    --costa-red: {{ theme.colors.red }};
+    --costa-cream: {{ theme.colors.cream }};
+    --costa-gold: {{ theme.colors.gold }};
+    --costa-espresso: {{ theme.colors.espresso }};
+    --costa-latte: {{ theme.colors.latte }};
+    --costa-white: {{ theme.colors.white }};
+    --costa-steam: {{ theme.colors.steam }};
+    --costa-success: {{ theme.colors.success }};
+    --costa-warning: {{ theme.colors.warning }};
+    --costa-danger: {{ theme.colors.danger }};
+    --font-heading: {{ theme.fonts.heading }};
+    --font-body: {{ theme.fonts.body }};
+    --font-mono: {{ theme.fonts.mono }};
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--costa-cream);
+    color: var(--costa-espresso);
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .widget-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: fadeInUp 0.2s ease-out;
+  }
+  /* ── Header ─────────────────────────────────────────────────────────── */
+  .widget-header {
+    background: var(--costa-maroon);
+    color: var(--costa-white);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(44,24,16,0.25);
+  }
+  .widget-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .widget-header h1 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .widget-header .domain-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .widget-header .domain-icon svg { width: 16px; height: 16px; }
+  .btn-maximise {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--costa-white);
+    display: flex;
+    align-items: center;
+    transition: background 0.15s;
+  }
+  .btn-maximise:hover { background: rgba(255,255,255,0.25); }
+  .btn-maximise svg { width: 16px; height: 16px; }
+  /* ── Body ────────────────────────────────────────────────────────────── */
+  .widget-body {
+    padding: 16px;
+    flex: 1;
+  }
+  /* ── Cards ───────────────────────────────────────────────────────────── */
+  .card {
+    background: var(--costa-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,24,16,0.08);
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--costa-maroon);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  /* ── KPI Cards ───────────────────────────────────────────────────────── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .kpi-card {
+    background: var(--costa-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,24,16,0.08);
+    padding: 14px;
+    border-top: 3px solid var(--costa-maroon);
+  }
+  .kpi-label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .kpi-value {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--costa-espresso);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .kpi-delta {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .kpi-delta.up   { color: var(--costa-success); }
+  .kpi-delta.down { color: var(--costa-danger); }
+  .progress-bar-wrap {
+    height: 4px;
+    background: var(--costa-cream);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--costa-maroon);
+    border-radius: 2px;
+    transition: width 0.4s;
+  }
+  .progress-bar-fill.gold { background: var(--costa-gold); }
+  /* ── Tables ──────────────────────────────────────────────────────────── */
+  .table-wrap { overflow-x: auto; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead tr { background: var(--costa-maroon); color: var(--costa-white); }
+  thead th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; white-space: nowrap; }
+  tbody tr:nth-child(even) { background: var(--costa-cream); }
+  tbody tr:nth-child(odd)  { background: var(--costa-white); }
+  tbody td { padding: 9px 12px; vertical-align: middle; }
+  tbody tr:hover { background: var(--costa-latte); }
+  /* ── Pills / Badges ──────────────────────────────────────────────────── */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pill-success { background: #E8F5E9; color: var(--costa-success); }
+  .pill-warning { background: #FFF3E0; color: var(--costa-warning); }
+  .pill-danger  { background: #FFEBEE; color: var(--costa-danger); }
+  .pill-info    { background: #E3F2FD; color: #1565C0; }
+  .pill-maroon  { background: var(--costa-maroon); color: var(--costa-white); }
+  .pill-gold    { background: var(--costa-gold); color: var(--costa-espresso); }
+  /* ── Alerts ──────────────────────────────────────────────────────────── */
+  .alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .alert-warning { background: #FFF3E0; border-left: 4px solid var(--costa-warning); color: #7B4700; }
+  .alert-danger  { background: #FFEBEE; border-left: 4px solid var(--costa-danger); color: #7B1515; }
+  .alert-success { background: #E8F5E9; border-left: 4px solid var(--costa-success); color: #1B4D1C; }
+  .alert-info    { background: #E3F2FD; border-left: 4px solid #1565C0; color: #0D3B6B; }
+  /* ── Gold Callout ────────────────────────────────────────────────────── */
+  .tip-box {
+    border: 2px solid var(--costa-gold);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: #FFF9EC;
+    font-size: 13px;
+    color: var(--costa-espresso);
+    position: relative;
+  }
+  .tip-box .tip-label {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--costa-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  /* ── Section heading ─────────────────────────────────────────────────── */
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--costa-maroon);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 8px 0 4px;
+    border-bottom: 2px solid var(--costa-latte);
+    margin-bottom: 10px;
+  }
+  /* ── Star rating ─────────────────────────────────────────────────────── */
+  .stars { color: var(--costa-gold); font-size: 14px; letter-spacing: 1px; }
+  /* ── Responsive ──────────────────────────────────────────────────────── */
+  @media (max-width: 480px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .widget-body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="widget-container">
+  <header class="widget-header">
+    <div class="widget-header-left">
+      <div class="domain-icon">
+        <i data-lucide="{% block domain_icon %}coffee{% endblock %}"></i>
+      </div>
+      <h1>{% block widget_title %}Costa Coffee{% endblock %}</h1>
+    </div>
+    <button class="btn-maximise" id="btn-maximise" onclick="toggleMaximise()" title="Toggle fullscreen">
+      <i data-lucide="maximize-2" id="max-icon"></i>
+    </button>
+  </header>
+  <div class="widget-body">
+    {% block content %}{% endblock %}
+  </div>
+</div>
+<script>
+  lucide.createIcons();
+  let maximised = false;
+  function toggleMaximise() {
+    maximised = !maximised;
+    const icon = document.getElementById('max-icon');
+    if (typeof openai !== 'undefined' && openai.apps) {
+      try { openai.apps.setSize(maximised ? 'maximised' : 'default'); } catch(e) {}
+    }
+    if (icon) {
+      icon.setAttribute('data-lucide', maximised ? 'minimize-2' : 'maximize-2');
+      lucide.createIcons();
+    }
+  }
+</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

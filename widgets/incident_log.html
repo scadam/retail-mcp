@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Incident Log – {{ store_name }}{% endblock %}
+{% block domain_icon %}alert-triangle{% endblock %}
+{% block widget_title %}Incident Log – {{ store_name }}{% endblock %}
+
+{% block content %}
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="kpi-label">Total</div><div class="kpi-value">{{ incidents|length }}</div></div>
+  <div class="kpi-card"><div class="kpi-label">Open</div><div class="kpi-value" style="color:var(--costa-danger)">{{ incidents|selectattr("status","equalto","Open")|list|length }}</div></div>
+  <div class="kpi-card"><div class="kpi-label">Investigating</div><div class="kpi-value" style="color:var(--costa-warning)">{{ incidents|selectattr("status","equalto","Investigating")|list|length }}</div></div>
+  <div class="kpi-card"><div class="kpi-label">Resolved</div><div class="kpi-value" style="color:var(--costa-success)">{{ (incidents|selectattr("status","equalto","Resolved")|list|length) + (incidents|selectattr("status","equalto","Closed")|list|length) }}</div></div>
+</div>
+
+{% set critical_open = incidents | selectattr("severity","equalto","Critical") | selectattr("status","in",["Open","Investigating"]) | list %}
+{% if critical_open %}
+<div class="alert alert-danger">
+  <i data-lucide="alert-triangle"></i>
+  <strong>{{ critical_open|length }} CRITICAL incident(s) open – immediate attention required!</strong>
+</div>
+{% endif %}
+
+{% for inc in incidents | sort(attribute='date', reverse=True) %}
+<div class="card" style="margin-bottom:10px;{% if inc.severity == 'Critical' %}border-left:4px solid var(--costa-danger){% elif inc.severity == 'High' %}border-left:4px solid var(--costa-warning){% endif %}">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px">
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      {% if inc.severity == "Critical" %}<span class="pill pill-danger">● Critical</span>
+      {% elif inc.severity == "High" %}<span class="pill pill-warning">● High</span>
+      {% elif inc.severity == "Medium" %}<span class="pill pill-info">● Medium</span>
+      {% else %}<span class="pill" style="background:#F5F5F5;color:#555">● Low</span>{% endif %}
+      <span class="pill" style="background:var(--costa-latte);color:var(--costa-espresso)">{{ inc.category }}</span>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center">
+      {% if inc.status == "Open" %}<span class="pill pill-danger">Open</span>
+      {% elif inc.status == "Investigating" %}<span class="pill pill-warning">Investigating</span>
+      {% elif inc.status == "Resolved" %}<span class="pill pill-success">Resolved</span>
+      {% else %}<span class="pill" style="background:#F5F5F5;color:#555">Closed</span>{% endif %}
+      <span style="font-size:11px;color:#888">{{ inc.date }} {{ inc.time }}</span>
+    </div>
+  </div>
+  <div style="margin-top:8px;font-size:13px">{{ inc.description }}</div>
+  <div style="margin-top:6px;font-size:11px;color:#888">
+    <strong>Reported by:</strong> {{ inc.reported_by }}
+    {% if inc.action_taken %} · <strong>Action:</strong> {{ inc.action_taken }}{% endif %}
+    {% if inc.resolution_date %} · <strong>Resolved:</strong> {{ inc.resolution_date }}{% endif %}
+  </div>
+</div>
+{% endfor %}
+
+{% if not incidents %}
+<div class="alert alert-success">
+  <i data-lucide="check-circle"></i>
+  No incidents in the selected period. Keep it up! ☕
+</div>
+{% endif %}
+{% endblock %}

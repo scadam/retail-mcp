@@ -1,0 +1,1169 @@
+[
+  {
+    "name": "Flat White",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "160ml",
+      "Medio": "260ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot (36ml)",
+        "semi-skimmed milk": "220ml",
+        "steamed microfoam": "silky, 65\u00b0C"
+      }
+    },
+    "steps": [
+      "Grind and dose 18g coffee into portafilter",
+      "Pull double espresso shot (25-30s)",
+      "Steam milk to 65\u00b0C with silky microfoam",
+      "Pour milk in circular motion over espresso",
+      "Finish with small latte art dot"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 100,
+        "sugar_g": 9
+      },
+      "Medio": {
+        "kcal": 152,
+        "sugar_g": 13
+      }
+    },
+    "barista_tip": "For the perfect Flat White, the microfoam should be so silky you can't tell where milk ends and foam begins. Think pouring cream."
+  },
+  {
+    "name": "Latte",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot (36ml)",
+        "semi-skimmed milk": "340ml",
+        "steamed milk foam": "5mm"
+      }
+    },
+    "steps": [
+      "Grind and dose 18g coffee",
+      "Pull double shot",
+      "Steam milk to 65\u00b0C",
+      "Pour steamed milk holding back foam",
+      "Finish with 5mm foam layer",
+      "Add latte art (tulip or heart)"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 150,
+        "sugar_g": 12
+      },
+      "Medio": {
+        "kcal": 200,
+        "sugar_g": 17
+      },
+      "Massimo": {
+        "kcal": 250,
+        "sugar_g": 21
+      }
+    },
+    "barista_tip": "A great Latte is all in the pour angle. Keep the jug close to the cup surface for better control."
+  },
+  {
+    "name": "Cappuccino",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "180ml",
+      "Medio": "280ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot (36ml)",
+        "semi-skimmed milk": "140ml",
+        "milk foam": "100ml"
+      }
+    },
+    "steps": [
+      "Pull double espresso shot",
+      "Steam milk to 65\u00b0C with thick microfoam (1:1 milk to foam ratio)",
+      "Pour over espresso with thick foam dome",
+      "Dust with cocoa powder"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 90,
+        "sugar_g": 8
+      },
+      "Medio": {
+        "kcal": 130,
+        "sugar_g": 11
+      }
+    },
+    "barista_tip": "The foam dome should stand proud of the cup rim. Use a circular wrist motion when pouring for an even dome."
+  },
+  {
+    "name": "Americano",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "240ml",
+      "Medio": "340ml",
+      "Massimo": "440ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot (36ml)",
+        "hot water": "304ml"
+      }
+    },
+    "steps": [
+      "Pull double espresso shot",
+      "Add hot water (not boiling - 92\u00b0C)",
+      "Stir gently",
+      "Serve with milk on the side if requested"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 10,
+        "sugar_g": 0
+      },
+      "Medio": {
+        "kcal": 15,
+        "sugar_g": 0
+      },
+      "Massimo": {
+        "kcal": 20,
+        "sugar_g": 0
+      }
+    },
+    "barista_tip": "Add water BEFORE the espresso shot to preserve the crema on top. Never let hot water destroy the crema."
+  },
+  {
+    "name": "Mocha",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot",
+        "chocolate sauce": "20ml",
+        "semi-skimmed milk": "320ml",
+        "whipped cream": "optional"
+      }
+    },
+    "steps": [
+      "Add chocolate sauce to cup",
+      "Pull double espresso shot over sauce",
+      "Steam milk to 65\u00b0C",
+      "Pour milk over espresso/chocolate",
+      "Top with whipped cream if requested",
+      "Drizzle chocolate on cream"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": true,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 250,
+        "sugar_g": 28
+      },
+      "Medio": {
+        "kcal": 360,
+        "sugar_g": 40
+      },
+      "Massimo": {
+        "kcal": 450,
+        "sugar_g": 50
+      }
+    },
+    "barista_tip": "Stir the chocolate sauce with the espresso before adding milk to avoid a clumpy bottom."
+  },
+  {
+    "name": "Caramel Latte",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot",
+        "caramel syrup": "15ml",
+        "semi-skimmed milk": "330ml"
+      }
+    },
+    "steps": [
+      "Add caramel syrup to cup",
+      "Pull double espresso shot",
+      "Steam milk to 65\u00b0C",
+      "Pour milk over espresso",
+      "Drizzle caramel on top"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 195,
+        "sugar_g": 22
+      },
+      "Medio": {
+        "kcal": 270,
+        "sugar_g": 30
+      },
+      "Massimo": {
+        "kcal": 335,
+        "sugar_g": 38
+      }
+    },
+    "barista_tip": "Always use 15ml for Primo/Medio, 20ml for Massimo. Consistent pumps = consistent taste."
+  },
+  {
+    "name": "Cortado",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "120ml"
+    },
+    "ingredients": {
+      "Primo": {
+        "espresso": "double ristretto (25ml)",
+        "warm milk": "60ml"
+      }
+    },
+    "steps": [
+      "Pull short double ristretto (20-22s)",
+      "Warm milk to 55\u00b0C (not steamed)",
+      "Pour equal parts espresso and milk"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 60,
+        "sugar_g": 5
+      }
+    },
+    "barista_tip": "Cortado means 'cut' in Spanish - the milk cuts the espresso acidity. Serve in a glass to show the layers."
+  },
+  {
+    "name": "Chai Latte",
+    "category": "Espresso-Based",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "chai_powder": "3 teaspoons (15g)",
+        "semi-skimmed milk": "340ml",
+        "hot water": "50ml"
+      }
+    },
+    "steps": [
+      "Add chai powder and hot water to cup",
+      "Stir to dissolve",
+      "Steam milk to 65\u00b0C",
+      "Pour milk over chai base",
+      "Dust with cinnamon"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 180,
+        "sugar_g": 24
+      },
+      "Medio": {
+        "kcal": 240,
+        "sugar_g": 32
+      },
+      "Massimo": {
+        "kcal": 310,
+        "sugar_g": 40
+      }
+    },
+    "barista_tip": "Ensure the chai powder is fully dissolved before adding milk to prevent lumps."
+  },
+  {
+    "name": "Hot Chocolate",
+    "category": "Hot Chocolate",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "chocolate_powder": "4 teaspoons (20g)",
+        "semi-skimmed milk": "350ml",
+        "hot water": "30ml"
+      }
+    },
+    "steps": [
+      "Add chocolate powder and hot water",
+      "Stir to form smooth paste",
+      "Steam milk to 65\u00b0C",
+      "Pour milk over chocolate base",
+      "Top with whipped cream optional",
+      "Dust with cocoa"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": true,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 240,
+        "sugar_g": 28
+      },
+      "Medio": {
+        "kcal": 330,
+        "sugar_g": 38
+      },
+      "Massimo": {
+        "kcal": 420,
+        "sugar_g": 48
+      }
+    },
+    "barista_tip": "Use cold milk to make the paste first - hot milk added too fast causes lumps."
+  },
+  {
+    "name": "Iced Latte",
+    "category": "Iced",
+    "sizes": {
+      "Medio": "400ml",
+      "Massimo": "500ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot",
+        "semi-skimmed milk": "300ml",
+        "ice": "full cup"
+      }
+    },
+    "steps": [
+      "Fill cup with ice",
+      "Pull double espresso shot, allow to cool 10s",
+      "Pour espresso over ice",
+      "Add cold milk",
+      "Stir gently"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Medio": {
+        "kcal": 140,
+        "sugar_g": 12
+      },
+      "Massimo": {
+        "kcal": 180,
+        "sugar_g": 16
+      }
+    },
+    "barista_tip": "Pour espresso directly onto ice - the rapid cooling locks in the flavour and reduces bitterness."
+  },
+  {
+    "name": "Frostino",
+    "category": "Iced",
+    "sizes": {
+      "Medio": "400ml",
+      "Massimo": "500ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "frostino_base": "120ml",
+        "milk": "80ml",
+        "ice": "200g",
+        "whipped_cream": "30ml"
+      }
+    },
+    "steps": [
+      "Add ice to blender",
+      "Add frostino base and milk",
+      "Blend 20 seconds on high",
+      "Pour into cup",
+      "Top with whipped cream",
+      "Drizzle sauce"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Medio": {
+        "kcal": 350,
+        "sugar_g": 45
+      },
+      "Massimo": {
+        "kcal": 450,
+        "sugar_g": 58
+      }
+    },
+    "barista_tip": "Pre-portion ice using the scoop measure for consistency. Over-blending causes rapid melting."
+  },
+  {
+    "name": "Iced Cappuccino",
+    "category": "Iced",
+    "sizes": {
+      "Medio": "400ml",
+      "Massimo": "500ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot",
+        "cold milk": "150ml",
+        "cold foam": "100ml",
+        "ice": "full cup"
+      }
+    },
+    "steps": [
+      "Fill cup with ice",
+      "Pull espresso, cool briefly",
+      "Pour over ice",
+      "Add cold milk",
+      "Spoon cold foam on top",
+      "Optional: dust with cocoa"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Medio": {
+        "kcal": 110,
+        "sugar_g": 9
+      },
+      "Massimo": {
+        "kcal": 140,
+        "sugar_g": 12
+      }
+    },
+    "barista_tip": "Cold foam is made with cold milk in the steam wand at low pressure - different technique to hot milk."
+  },
+  {
+    "name": "Iced Caramel Latte",
+    "category": "Iced",
+    "sizes": {
+      "Medio": "400ml",
+      "Massimo": "500ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot",
+        "caramel_syrup": "15ml",
+        "cold milk": "290ml",
+        "ice": "full cup"
+      }
+    },
+    "steps": [
+      "Add caramel syrup to cup",
+      "Fill with ice",
+      "Pull espresso, pour over ice",
+      "Top with cold milk",
+      "Drizzle caramel",
+      "Stir"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Medio": {
+        "kcal": 210,
+        "sugar_g": 28
+      },
+      "Massimo": {
+        "kcal": 265,
+        "sugar_g": 35
+      }
+    },
+    "barista_tip": "Put syrup at the bottom before ice so it mixes evenly when stirred."
+  },
+  {
+    "name": "Tropical Frostino",
+    "category": "Iced",
+    "sizes": {
+      "Medio": "400ml",
+      "Massimo": "500ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "tropical_base": "120ml",
+        "mango_puree": "30ml",
+        "milk": "60ml",
+        "ice": "200g",
+        "whipped_cream": "30ml"
+      }
+    },
+    "steps": [
+      "Add ice to blender",
+      "Add tropical base, mango pur\u00e9e and milk",
+      "Blend 20 seconds",
+      "Pour into cup",
+      "Top with cream",
+      "Finish with tropical sauce swirl"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Medio": {
+        "kcal": 380,
+        "sugar_g": 50
+      },
+      "Massimo": {
+        "kcal": 490,
+        "sugar_g": 64
+      }
+    },
+    "barista_tip": "Seasonal special - always check the promo guide for correct garnish presentation."
+  },
+  {
+    "name": "Pistachio Iced Latte",
+    "category": "Iced",
+    "sizes": {
+      "Medio": "400ml",
+      "Massimo": "500ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "espresso": "double shot",
+        "pistachio_syrup": "20ml",
+        "oat_milk": "280ml",
+        "ice": "full cup",
+        "pistachio_dust": "pinch"
+      }
+    },
+    "steps": [
+      "Add pistachio syrup to cup",
+      "Fill with ice",
+      "Pull double espresso over ice",
+      "Pour oat milk",
+      "Stir",
+      "Dust with pistachio powder"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": false,
+      "nuts": true,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Medio": {
+        "kcal": 190,
+        "sugar_g": 22
+      },
+      "Massimo": {
+        "kcal": 240,
+        "sugar_g": 28
+      }
+    },
+    "barista_tip": "New launch item! Default is oat milk but any milk alternative works. Pistachio dust makes the difference."
+  },
+  {
+    "name": "Dark Hot Chocolate",
+    "category": "Hot Chocolate",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "dark_chocolate_powder": "5 teaspoons (25g)",
+        "semi-skimmed milk": "350ml",
+        "hot water": "30ml"
+      }
+    },
+    "steps": [
+      "Dissolve dark choc powder in hot water",
+      "Steam milk to 65\u00b0C",
+      "Pour over base",
+      "Top with cream and dark cocoa dust"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": true,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 210,
+        "sugar_g": 22
+      },
+      "Medio": {
+        "kcal": 290,
+        "sugar_g": 30
+      },
+      "Massimo": {
+        "kcal": 370,
+        "sugar_g": 38
+      }
+    },
+    "barista_tip": "Intensity rating 8/10 - always mention to customers who order 'hot chocolate' that this is our darkest option."
+  },
+  {
+    "name": "Caramel Hot Chocolate",
+    "category": "Hot Chocolate",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml",
+      "Massimo": "480ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "chocolate_powder": "20g",
+        "caramel_syrup": "15ml",
+        "semi-skimmed milk": "350ml",
+        "hot water": "30ml"
+      }
+    },
+    "steps": [
+      "Dissolve chocolate powder",
+      "Add caramel syrup",
+      "Steam milk",
+      "Pour over base",
+      "Caramel drizzle on top"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": false,
+      "nuts": true,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 290,
+        "sugar_g": 34
+      },
+      "Medio": {
+        "kcal": 400,
+        "sugar_g": 46
+      },
+      "Massimo": {
+        "kcal": 505,
+        "sugar_g": 58
+      }
+    },
+    "barista_tip": "Very popular with the after-school crowd. Suggest as a treat upgrade for regular hot chocolate orders."
+  },
+  {
+    "name": "English Breakfast Tea",
+    "category": "Teas",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "tea_bag": "1 English Breakfast",
+        "hot water": "360ml",
+        "milk": "optional"
+      }
+    },
+    "steps": [
+      "Place tea bag in cup",
+      "Pour 95\u00b0C water",
+      "Steep 3-4 minutes",
+      "Remove bag without squeezing",
+      "Add milk if requested"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 2,
+        "sugar_g": 0
+      },
+      "Medio": {
+        "kcal": 3,
+        "sugar_g": 0
+      }
+    },
+    "barista_tip": "Never squeeze the tea bag - it releases tannins and makes the tea bitter."
+  },
+  {
+    "name": "Green Tea",
+    "category": "Teas",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "tea_bag": "1 Sencha Green",
+        "hot water": "360ml"
+      }
+    },
+    "steps": [
+      "Place tea bag in cup",
+      "Pour 80\u00b0C water (NOT boiling)",
+      "Steep 2-3 minutes only",
+      "Remove bag gently"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 1,
+        "sugar_g": 0
+      },
+      "Medio": {
+        "kcal": 2,
+        "sugar_g": 0
+      }
+    },
+    "barista_tip": "Green tea burns at 100\u00b0C - use cooled water. Steep max 3 mins or it goes bitter."
+  },
+  {
+    "name": "Peppermint Tea",
+    "category": "Teas",
+    "sizes": {
+      "Primo": "280ml",
+      "Medio": "380ml"
+    },
+    "ingredients": {
+      "Medio": {
+        "tea_bag": "1 Peppermint",
+        "hot water": "360ml"
+      }
+    },
+    "steps": [
+      "Place tea bag",
+      "Pour 95\u00b0C water",
+      "Steep 4-5 minutes",
+      "Remove bag"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": false,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Primo": {
+        "kcal": 2,
+        "sugar_g": 0
+      },
+      "Medio": {
+        "kcal": 3,
+        "sugar_g": 0
+      }
+    },
+    "barista_tip": "Often ordered by customers with digestive issues - a popular post-lunch choice."
+  },
+  {
+    "name": "All Day Breakfast Toastie",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "bread": "sourdough bloomer",
+        "eggs": "1 free range scrambled",
+        "bacon": "2 rashers smoked",
+        "tomato": "2 slices"
+      }
+    },
+    "steps": [
+      "Place in panini press",
+      "Heat 3.5 minutes at 185\u00b0C",
+      "Cut diagonally",
+      "Serve with napkin"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": true,
+      "nuts": false,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 480,
+        "sugar_g": 4
+      }
+    },
+    "barista_tip": "Most popular morning item 7-10am. Pre-load the press during morning rush."
+  },
+  {
+    "name": "Ham & Cheese Toastie",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "bread": "malted bloomer",
+        "ham": "2 slices British",
+        "cheddar": "30g mature cheddar"
+      }
+    },
+    "steps": [
+      "Place in panini press",
+      "Heat 3.5 minutes at 185\u00b0C",
+      "Cut diagonally",
+      "Serve hot"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": false,
+      "soya": false,
+      "eggs": false
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 420,
+        "sugar_g": 3
+      }
+    },
+    "barista_tip": "Check internal temp is >75\u00b0C. Use temperature probe if in doubt."
+  },
+  {
+    "name": "Mac & Cheese Toastie",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "bread": "white bloomer",
+        "mac_cheese_filling": "150g",
+        "mature_cheddar": "15g"
+      }
+    },
+    "steps": [
+      "Place in panini press",
+      "Heat 4 minutes at 185\u00b0C",
+      "Rest 30s before cutting",
+      "Cut diagonally"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": false,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 510,
+        "sugar_g": 5
+      }
+    },
+    "barista_tip": "Very hot filling! Warn customers to let it cool 1 minute before eating."
+  },
+  {
+    "name": "Chicken Bacon Club",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "bread": "ciabatta",
+        "chicken_breast": "80g sliced",
+        "bacon": "2 rashers",
+        "mayo": "15ml",
+        "lettuce": "20g"
+      }
+    },
+    "steps": [
+      "Place in panini press",
+      "Heat 3.5 minutes",
+      "Add cold lettuce after pressing",
+      "Serve in bag"
+    ],
+    "allergens": {
+      "milk": false,
+      "gluten": true,
+      "nuts": false,
+      "soya": true,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 520,
+        "sugar_g": 4
+      }
+    },
+    "barista_tip": "Add lettuce AFTER pressing - never put cold lettuce in the press."
+  },
+  {
+    "name": "Plain Croissant",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "croissant": "1 all-butter croissant"
+      }
+    },
+    "steps": [
+      "Place in warming drawer for 2 minutes",
+      "Serve in paper bag",
+      "Offer butter if requested"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": false,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 290,
+        "sugar_g": 6
+      }
+    },
+    "barista_tip": "Never microwave. Warming drawer only - keeps the flakiness."
+  },
+  {
+    "name": "Almond Croissant",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "croissant": "1 almond croissant",
+        "flaked_almonds": "topping"
+      }
+    },
+    "steps": [
+      "Place in warming drawer 2 minutes",
+      "Serve on plate",
+      "Dust with icing sugar optional"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": true,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 380,
+        "sugar_g": 14
+      }
+    },
+    "barista_tip": "High allergen item - always highlight NUT ALLERGEN clearly to customers."
+  },
+  {
+    "name": "Chocolate Cookie",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "cookie": "1 double choc cookie"
+      }
+    },
+    "steps": [
+      "Serve at room temperature",
+      "Place in paper bag or on plate",
+      "Warm 20s in microwave if requested"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": false,
+      "soya": true,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 380,
+        "sugar_g": 26
+      }
+    },
+    "barista_tip": "Great upsell with any drink. 'Would you like a cookie with that?' - easy win."
+  },
+  {
+    "name": "Brownie",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "brownie": "1 Belgian chocolate brownie"
+      }
+    },
+    "steps": [
+      "Serve at room temperature",
+      "Can warm 25s in microwave",
+      "Serve on plate with napkin"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": false,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 450,
+        "sugar_g": 36
+      }
+    },
+    "barista_tip": "Warmed brownie pairs perfectly with Flat White - suggest as a combo deal."
+  },
+  {
+    "name": "Carrot Cake Slice",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 slice"
+    },
+    "ingredients": {
+      "Standard": {
+        "carrot_cake": "1 slice with cream cheese frosting"
+      }
+    },
+    "steps": [
+      "Remove from chiller",
+      "Serve on plate with fork",
+      "Can serve at room temperature"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": true,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 420,
+        "sugar_g": 38
+      }
+    },
+    "barista_tip": "Contains walnuts - always check with customers for nut allergies."
+  },
+  {
+    "name": "Blueberry Muffin",
+    "category": "Food",
+    "sizes": {
+      "Standard": "1 unit"
+    },
+    "ingredients": {
+      "Standard": {
+        "muffin": "1 blueberry muffin"
+      }
+    },
+    "steps": [
+      "Remove from display",
+      "Serve in paper bag",
+      "Can warm 20s if requested"
+    ],
+    "allergens": {
+      "milk": true,
+      "gluten": true,
+      "nuts": false,
+      "soya": false,
+      "eggs": true
+    },
+    "nutritional": {
+      "Standard": {
+        "kcal": 390,
+        "sugar_g": 28
+      }
+    },
+    "barista_tip": "Best seller at morning meetings - suggest for groups ordering tea/coffee."
+  }
+]

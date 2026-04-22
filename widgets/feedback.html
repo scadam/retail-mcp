@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block title %}Customer Feedback – {{ store_name }}{% endblock %}
+{% block domain_icon %}message-circle{% endblock %}
+{% block widget_title %}Customer Feedback – {{ store_name }}{% endblock %}
+
+{% block content %}
+<div style="display:grid;grid-template-columns:1fr 2fr;gap:10px;margin-bottom:10px">
+  <div class="card" style="margin-bottom:0;text-align:center">
+    <div class="kpi-label" style="margin-bottom:8px">NPS Score</div>
+    <div style="font-family:var(--font-heading);font-size:52px;font-weight:700;color:{% if nps_score >= 60 %}var(--costa-success){% elif nps_score >= 40 %}var(--costa-warning){% else %}var(--costa-danger){% endif %}">
+      {{ nps_score }}
+    </div>
+    <div style="font-size:12px;color:#666;margin-top:4px">
+      {% if nps_score >= 70 %}Excellent 🎉{% elif nps_score >= 50 %}Good 👍{% elif nps_score >= 30 %}Needs Work{% else %}Poor ⚠️{% endif %}
+    </div>
+    <div style="margin-top:10px">
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:#666;margin-bottom:2px"><span>Promoters</span><span style="color:var(--costa-success)">{{ promoters }}</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:#666;margin-bottom:2px"><span>Passives</span><span style="color:var(--costa-warning)">{{ passives }}</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:#666"><span>Detractors</span><span style="color:var(--costa-danger)">{{ detractors }}</span></div>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title"><i data-lucide="trending-up"></i> NPS Trend</div>
+    <canvas id="npsChart" height="100"></canvas>
+  </div>
+</div>
+
+{% set unresponded = feedback_list | selectattr("star_rating","le",2) | rejectattr("responded") | list %}
+{% if unresponded %}
+<div class="alert alert-danger">
+  <i data-lucide="message-circle"></i>
+  <strong>{{ unresponded|length }} low-rated review(s) need a response!</strong>
+</div>
+{% endif %}
+
+<div class="card">
+  <div class="card-title"><i data-lucide="star"></i> Recent Reviews</div>
+  {% for fb in feedback_list | sort(attribute='date', reverse=True) | list[:10] %}
+  <div style="padding:10px 0;border-bottom:1px solid var(--costa-cream)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+      <div>
+        <span class="stars">{{ "★" * fb.star_rating }}{{ "☆" * (5 - fb.star_rating) }}</span>
+        <span class="pill pill-info" style="margin-left:6px;font-size:10px">{{ fb.source }}</span>
+        {% if not fb.responded and fb.star_rating <= 2 %}<span class="pill pill-danger" style="margin-left:4px;font-size:10px">Needs Response</span>{% endif %}
+      </div>
+      <span style="font-size:11px;color:#888">{{ fb.date }}</span>
+    </div>
+    <div style="font-size:13px;color:#444;font-style:italic">"{{ fb.comment }}"</div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="card">
+  <div class="card-title"><i data-lucide="bar-chart-2"></i> Ratings Distribution</div>
+  <canvas id="ratingChart" height="100"></canvas>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// NPS trend
+const npsCtx = document.getElementById('npsChart').getContext('2d');
+new Chart(npsCtx, {
+  type: 'line',
+  data: {
+    labels: {{ nps_weekly_labels | tojson }},
+    datasets: [{
+      label: 'NPS',
+      data: {{ nps_weekly_data | tojson }},
+      borderColor: '#6B1C23',
+      backgroundColor: 'rgba(107,28,35,0.1)',
+      fill: true,
+      tension: 0.4,
+      pointRadius: 3,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { min: 0, max: 100 },
+      x: { ticks: { font: { size: 9 } } }
+    }
+  }
+});
+
+// Ratings dist
+const rCtx = document.getElementById('ratingChart').getContext('2d');
+new Chart(rCtx, {
+  type: 'bar',
+  data: {
+    labels: ['1★','2★','3★','4★','5★'],
+    datasets: [{
+      data: {{ star_counts | tojson }},
+      backgroundColor: ['#C62828','#F57C00','#C8A951','#2E7D32','#1B5E20'],
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true } }
+  }
+});
+</script>
+{% endblock %}

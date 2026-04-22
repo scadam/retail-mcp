@@ -1,0 +1,512 @@
+[
+  {
+    "employee_id": "EMP001",
+    "store_id": "GLD001",
+    "first_name": "Chloe",
+    "last_name": "Williams",
+    "role": "Store Manager",
+    "hire_date": "2026-01-01",
+    "email": "emp001@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP002",
+    "store_id": "GLD001",
+    "first_name": "Priya",
+    "last_name": "Singh",
+    "role": "Barista",
+    "hire_date": "2025-05-12",
+    "email": "emp002@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP003",
+    "store_id": "GLD001",
+    "first_name": "Finn",
+    "last_name": "Okafor",
+    "role": "Barista",
+    "hire_date": "2022-10-31",
+    "email": "emp003@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP004",
+    "store_id": "GLD001",
+    "first_name": "Marcus",
+    "last_name": "Khan",
+    "role": "Barista",
+    "hire_date": "2025-08-14",
+    "email": "emp004@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP005",
+    "store_id": "GLD001",
+    "first_name": "Sarah",
+    "last_name": "Singh",
+    "role": "Shift Manager",
+    "hire_date": "2025-12-29",
+    "email": "emp005@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP006",
+    "store_id": "GLD001",
+    "first_name": "Grace",
+    "last_name": "Taylor",
+    "role": "Senior Barista",
+    "hire_date": "2024-11-27",
+    "email": "emp006@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP007",
+    "store_id": "GLD001",
+    "first_name": "Zoe",
+    "last_name": "Taylor",
+    "role": "Senior Barista",
+    "hire_date": "2025-04-01",
+    "email": "emp007@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP008",
+    "store_id": "GLD001",
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "role": "Barista",
+    "hire_date": "2024-12-08",
+    "email": "emp008@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP009",
+    "store_id": "GLD001",
+    "first_name": "Oliver",
+    "last_name": "Martin",
+    "role": "Barista",
+    "hire_date": "2025-08-07",
+    "email": "emp009@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP010",
+    "store_id": "GLD002",
+    "first_name": "Ravi",
+    "last_name": "Whitfield",
+    "role": "Store Manager",
+    "hire_date": "2023-07-27",
+    "email": "emp010@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP011",
+    "store_id": "GLD002",
+    "first_name": "Ravi",
+    "last_name": "Davies",
+    "role": "Barista",
+    "hire_date": "2025-09-13",
+    "email": "emp011@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP012",
+    "store_id": "GLD002",
+    "first_name": "Grace",
+    "last_name": "Brown",
+    "role": "Barista",
+    "hire_date": "2024-02-12",
+    "email": "emp012@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP013",
+    "store_id": "GLD002",
+    "first_name": "Daniel",
+    "last_name": "Sharma",
+    "role": "Barista",
+    "hire_date": "2025-11-20",
+    "email": "emp013@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP014",
+    "store_id": "GLD002",
+    "first_name": "Chloe",
+    "last_name": "Roberts",
+    "role": "Senior Barista",
+    "hire_date": "2025-07-30",
+    "email": "emp014@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP015",
+    "store_id": "GLD002",
+    "first_name": "Oliver",
+    "last_name": "Brown",
+    "role": "Barista",
+    "hire_date": "2025-03-25",
+    "email": "emp015@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP016",
+    "store_id": "GLD002",
+    "first_name": "Liam",
+    "last_name": "Johnson",
+    "role": "Barista",
+    "hire_date": "2022-07-05",
+    "email": "emp016@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP017",
+    "store_id": "GLD002",
+    "first_name": "Sophie",
+    "last_name": "Thompson",
+    "role": "Barista",
+    "hire_date": "2024-10-08",
+    "email": "emp017@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP018",
+    "store_id": "GLD002",
+    "first_name": "Marcus",
+    "last_name": "Evans",
+    "role": "Shift Manager",
+    "hire_date": "2022-07-22",
+    "email": "emp018@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP019",
+    "store_id": "RDG001",
+    "first_name": "Zoe",
+    "last_name": "Thompson",
+    "role": "Store Manager",
+    "hire_date": "2025-12-18",
+    "email": "emp019@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP020",
+    "store_id": "RDG001",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "role": "Barista",
+    "hire_date": "2025-10-09",
+    "email": "emp020@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP021",
+    "store_id": "RDG001",
+    "first_name": "Aiden",
+    "last_name": "Thompson",
+    "role": "Barista",
+    "hire_date": "2024-12-13",
+    "email": "emp021@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP022",
+    "store_id": "RDG001",
+    "first_name": "Tom",
+    "last_name": "Williams",
+    "role": "Barista",
+    "hire_date": "2025-05-05",
+    "email": "emp022@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP023",
+    "store_id": "RDG001",
+    "first_name": "Grace",
+    "last_name": "Clarke",
+    "role": "Barista",
+    "hire_date": "2023-02-14",
+    "email": "emp023@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP024",
+    "store_id": "RDG001",
+    "first_name": "Marcus",
+    "last_name": "Patel",
+    "role": "Barista",
+    "hire_date": "2023-11-27",
+    "email": "emp024@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP025",
+    "store_id": "RDG001",
+    "first_name": "Emma",
+    "last_name": "Whitfield",
+    "role": "Barista",
+    "hire_date": "2023-05-18",
+    "email": "emp025@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP026",
+    "store_id": "RDG001",
+    "first_name": "Finn",
+    "last_name": "Martin",
+    "role": "Barista",
+    "hire_date": "2022-08-16",
+    "email": "emp026@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP027",
+    "store_id": "RDG001",
+    "first_name": "Liam",
+    "last_name": "Roberts",
+    "role": "Senior Barista",
+    "hire_date": "2023-12-26",
+    "email": "emp027@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP028",
+    "store_id": "RDG001",
+    "first_name": "Sam",
+    "last_name": "Whitfield",
+    "role": "Shift Manager",
+    "hire_date": "2024-09-25",
+    "email": "emp028@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP029",
+    "store_id": "RDG002",
+    "first_name": "Zoe",
+    "last_name": "Whitfield",
+    "role": "Store Manager",
+    "hire_date": "2022-07-20",
+    "email": "emp029@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP030",
+    "store_id": "RDG002",
+    "first_name": "Leila",
+    "last_name": "Roberts",
+    "role": "Barista",
+    "hire_date": "2023-09-15",
+    "email": "emp030@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP031",
+    "store_id": "RDG002",
+    "first_name": "Isla",
+    "last_name": "Johnson",
+    "role": "Barista",
+    "hire_date": "2024-08-31",
+    "email": "emp031@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP032",
+    "store_id": "RDG002",
+    "first_name": "Isla",
+    "last_name": "Martin",
+    "role": "Barista",
+    "hire_date": "2025-07-19",
+    "email": "emp032@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP033",
+    "store_id": "RDG002",
+    "first_name": "Leila",
+    "last_name": "Singh",
+    "role": "Barista",
+    "hire_date": "2025-04-14",
+    "email": "emp033@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP034",
+    "store_id": "RDG002",
+    "first_name": "Zoe",
+    "last_name": "Ahmed",
+    "role": "Shift Manager",
+    "hire_date": "2026-02-20",
+    "email": "emp034@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP035",
+    "store_id": "RDG002",
+    "first_name": "Daniel",
+    "last_name": "Williams",
+    "role": "Barista",
+    "hire_date": "2025-07-07",
+    "email": "emp035@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP036",
+    "store_id": "RDG002",
+    "first_name": "James",
+    "last_name": "Sharma",
+    "role": "Shift Manager",
+    "hire_date": "2024-10-16",
+    "email": "emp036@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP037",
+    "store_id": "RDG002",
+    "first_name": "Tom",
+    "last_name": "Patel",
+    "role": "Shift Manager",
+    "hire_date": "2025-10-03",
+    "email": "emp037@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP038",
+    "store_id": "RDG002",
+    "first_name": "Chloe",
+    "last_name": "Khan",
+    "role": "Barista",
+    "hire_date": "2023-01-23",
+    "email": "emp038@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP039",
+    "store_id": "RDG002",
+    "first_name": "Ravi",
+    "last_name": "Brown",
+    "role": "Barista",
+    "hire_date": "2023-10-09",
+    "email": "emp039@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP040",
+    "store_id": "BAS001",
+    "first_name": "Oliver",
+    "last_name": "Roberts",
+    "role": "Store Manager",
+    "hire_date": "2022-07-02",
+    "email": "emp040@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP041",
+    "store_id": "BAS001",
+    "first_name": "Priya",
+    "last_name": "Williams",
+    "role": "Barista",
+    "hire_date": "2023-08-12",
+    "email": "emp041@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP042",
+    "store_id": "BAS001",
+    "first_name": "Zoe",
+    "last_name": "Mitchell",
+    "role": "Barista",
+    "hire_date": "2025-10-13",
+    "email": "emp042@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP043",
+    "store_id": "BAS001",
+    "first_name": "Grace",
+    "last_name": "Williams",
+    "role": "Barista",
+    "hire_date": "2023-01-14",
+    "email": "emp043@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP044",
+    "store_id": "BAS001",
+    "first_name": "Marcus",
+    "last_name": "Sharma",
+    "role": "Barista",
+    "hire_date": "2025-09-29",
+    "email": "emp044@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP045",
+    "store_id": "BAS001",
+    "first_name": "Isla",
+    "last_name": "Williams",
+    "role": "Barista",
+    "hire_date": "2024-04-16",
+    "email": "emp045@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP046",
+    "store_id": "BAS001",
+    "first_name": "Ravi",
+    "last_name": "Patel",
+    "role": "Barista",
+    "hire_date": "2023-06-03",
+    "email": "emp046@costacoffee.com",
+    "contracted_hours": 40
+  },
+  {
+    "employee_id": "EMP047",
+    "store_id": "BAS001",
+    "first_name": "Marcus",
+    "last_name": "Ahmed",
+    "role": "Senior Barista",
+    "hire_date": "2022-11-29",
+    "email": "emp047@costacoffee.com",
+    "contracted_hours": 37
+  },
+  {
+    "employee_id": "EMP048",
+    "store_id": "BAS001",
+    "first_name": "Priya",
+    "last_name": "Clarke",
+    "role": "Barista",
+    "hire_date": "2025-01-28",
+    "email": "emp048@costacoffee.com",
+    "contracted_hours": 30
+  },
+  {
+    "employee_id": "EMP049",
+    "store_id": "BAS001",
+    "first_name": "Sophie",
+    "last_name": "Okafor",
+    "role": "Senior Barista",
+    "hire_date": "2023-10-08",
+    "email": "emp049@costacoffee.com",
+    "contracted_hours": 16
+  },
+  {
+    "employee_id": "EMP050",
+    "store_id": "BAS001",
+    "first_name": "Zoe",
+    "last_name": "Whitfield",
+    "role": "Senior Barista",
+    "hire_date": "2025-10-20",
+    "email": "emp050@costacoffee.com",
+    "contracted_hours": 20
+  },
+  {
+    "employee_id": "EMP051",
+    "store_id": "BAS001",
+    "first_name": "Ravi",
+    "last_name": "Roberts",
+    "role": "Barista",
+    "hire_date": "2025-01-25",
+    "email": "emp051@costacoffee.com",
+    "contracted_hours": 20
+  }
+]

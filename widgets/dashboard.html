@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}Daily Dashboard – {{ store_name }}{% endblock %}
+{% block domain_icon %}coffee{% endblock %}
+{% block widget_title %}Daily Dashboard – {{ store_name }}{% endblock %}
+
+{% block content %}
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-label">Total Sales</div>
+    <div class="kpi-value">£{{ "%.0f"|format(sales_data.total_sales) }}</div>
+    <div class="kpi-delta {% if sales_data.vs_yesterday_pct >= 0 %}up{% else %}down{% endif %}">
+      {% if sales_data.vs_yesterday_pct >= 0 %}▲{% else %}▼{% endif %}
+      {{ sales_data.vs_yesterday_pct|abs }}% vs yesterday
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" style="width:{{ [(sales_data.total_sales/sales_data.target*100),100]|min|int }}%"></div>
+    </div>
+    <div style="font-size:11px;color:#888;margin-top:3px">Target: £{{ "%.0f"|format(sales_data.target) }}</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Transactions</div>
+    <div class="kpi-value">{{ sales_data.total_transactions }}</div>
+    <div class="kpi-delta up">▲ vs target</div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill gold" style="width:{{ [(sales_data.total_transactions/500*100),100]|min|int }}%"></div>
+    </div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Avg Transaction</div>
+    <div class="kpi-value">£{{ "%.2f"|format(sales_data.avg_transaction) }}</div>
+    <div class="kpi-delta {% if sales_data.avg_transaction >= 3.2 %}up{% else %}down{% endif %}">
+      {% if sales_data.avg_transaction >= 3.2 %}▲{% else %}▼{% endif %} vs £3.20 target
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" style="width:{{ [(sales_data.avg_transaction/5*100),100]|min|int }}%"></div>
+    </div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Footfall</div>
+    <div class="kpi-value">{{ sales_data.footfall }}</div>
+    <div class="kpi-delta up">
+      {% set weather_icon = {"sunny":"☀️","cloudy":"☁️","rainy":"🌧️","overcast":"🌥️"} %}
+      {{ weather_icon.get(sales_data.weather, "☁️") }} {{ sales_data.weather|title }}
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill gold" style="width:{{ [(sales_data.footfall/700*100),100]|min|int }}%"></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><i data-lucide="bar-chart-2"></i> Sales by Hour</div>
+  <canvas id="hourChart" height="120"></canvas>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+  <div class="card">
+    <div class="card-title"><i data-lucide="trending-up"></i> Top 5 Products</div>
+    {% for p in sales_data.top_products[:5] %}
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--costa-cream)">
+      <span style="font-size:13px">{{ p.product }}</span>
+      <span class="pill pill-maroon">{{ p.units_sold }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="card">
+    <div class="card-title"><i data-lucide="users"></i> Shift Info</div>
+    <div style="text-align:center;padding:8px 0">
+      <div style="font-family:var(--font-heading);font-size:36px;font-weight:700;color:var(--costa-maroon)">{{ sales_data.staff_on_shift }}</div>
+      <div style="font-size:12px;color:#666">Staff on shift</div>
+    </div>
+    <div class="alert alert-info" style="margin-top:8px">
+      <i data-lucide="clock"></i>
+      {{ sales_data.date }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const hours = {{ sales_data.hours | tojson }};
+const hourly = {{ sales_data.hourly_sales | tojson }};
+const ctx = document.getElementById('hourChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: hours,
+    datasets: [{
+      label: 'Sales (£)',
+      data: hourly,
+      backgroundColor: hours.map((h,i) => {
+        const hr = parseInt(h);
+        if ((hr >= 7 && hr <= 9) || (hr >= 12 && hr <= 13) || hr === 15) return '#6B1C23';
+        return '#C8A951';
+      }),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => '£'+v } },
+      x: { ticks: { font: { size: 10 } } }
+    }
+  }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,5934 @@
+{
+  "South East": [
+    {
+      "store_id": "SE001",
+      "store_name": "Guildford High Street",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 24930.48,
+          "transactions": 942,
+          "avg_transaction": 4.16,
+          "nps": 59.4,
+          "staff_turnover_pct": 1.9,
+          "compliance_score_pct": 85.1,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 21647.07,
+          "transactions": 758,
+          "avg_transaction": 3.76,
+          "nps": 59.0,
+          "staff_turnover_pct": 7.1,
+          "compliance_score_pct": 84.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 24270.61,
+          "transactions": 1321,
+          "avg_transaction": 3.88,
+          "nps": 54.7,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 81.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 23580.21,
+          "transactions": 1084,
+          "avg_transaction": 3.2,
+          "nps": 57.2,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 84.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 22348.32,
+          "transactions": 1007,
+          "avg_transaction": 2.86,
+          "nps": 56.0,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 84.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 24842.08,
+          "transactions": 1063,
+          "avg_transaction": 3.96,
+          "nps": 61.1,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 81.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 24517.93,
+          "transactions": 1178,
+          "avg_transaction": 2.83,
+          "nps": 57.2,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 82.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 22761.12,
+          "transactions": 1290,
+          "avg_transaction": 3.17,
+          "nps": 54.7,
+          "staff_turnover_pct": 0.1,
+          "compliance_score_pct": 83.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 23800.33,
+          "transactions": 1135,
+          "avg_transaction": 3.01,
+          "nps": 60.8,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 81.2,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 23850.95,
+          "transactions": 863,
+          "avg_transaction": 3.37,
+          "nps": 59.3,
+          "staff_turnover_pct": 7.8,
+          "compliance_score_pct": 85.5,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 23836.1,
+          "transactions": 766,
+          "avg_transaction": 2.97,
+          "nps": 56.7,
+          "staff_turnover_pct": 6.9,
+          "compliance_score_pct": 80.6,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 21826.93,
+          "transactions": 1320,
+          "avg_transaction": 4.04,
+          "nps": 59.5,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 80.5,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "store_id": "SE002",
+      "store_name": "Guildford Station",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 24938.79,
+          "transactions": 1269,
+          "avg_transaction": 2.89,
+          "nps": 63.1,
+          "staff_turnover_pct": 0.4,
+          "compliance_score_pct": 93.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 25512.88,
+          "transactions": 1115,
+          "avg_transaction": 3.73,
+          "nps": 63.5,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 97.6,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 27820.57,
+          "transactions": 1236,
+          "avg_transaction": 3.45,
+          "nps": 65.9,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 97.2,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 25290.49,
+          "transactions": 1387,
+          "avg_transaction": 3.62,
+          "nps": 60.4,
+          "staff_turnover_pct": 3.1,
+          "compliance_score_pct": 93.3,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 29079.84,
+          "transactions": 807,
+          "avg_transaction": 3.59,
+          "nps": 62.7,
+          "staff_turnover_pct": 5.2,
+          "compliance_score_pct": 96.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 28862.74,
+          "transactions": 1013,
+          "avg_transaction": 3.41,
+          "nps": 67.0,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 96.3,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 29092.44,
+          "transactions": 1070,
+          "avg_transaction": 3.35,
+          "nps": 65.7,
+          "staff_turnover_pct": 5.5,
+          "compliance_score_pct": 98.5,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 28466.88,
+          "transactions": 852,
+          "avg_transaction": 2.85,
+          "nps": 66.3,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 93.2,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 25810.74,
+          "transactions": 1110,
+          "avg_transaction": 3.14,
+          "nps": 66.7,
+          "staff_turnover_pct": 6.7,
+          "compliance_score_pct": 98.1,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 27797.02,
+          "transactions": 989,
+          "avg_transaction": 3.82,
+          "nps": 65.6,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 94.6,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 25134.79,
+          "transactions": 1065,
+          "avg_transaction": 2.95,
+          "nps": 63.1,
+          "staff_turnover_pct": 2.1,
+          "compliance_score_pct": 97.4,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 27199.05,
+          "transactions": 1354,
+          "avg_transaction": 3.46,
+          "nps": 62.2,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 93.3,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "store_id": "SE003",
+      "store_name": "Reading Oracle",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 19423.15,
+          "transactions": 988,
+          "avg_transaction": 3.5,
+          "nps": 67.8,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 89.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 20924.65,
+          "transactions": 1382,
+          "avg_transaction": 3.75,
+          "nps": 65.6,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 84.5,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 18752.41,
+          "transactions": 1095,
+          "avg_transaction": 3.65,
+          "nps": 67.6,
+          "staff_turnover_pct": 6.0,
+          "compliance_score_pct": 84.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 18468.55,
+          "transactions": 736,
+          "avg_transaction": 3.98,
+          "nps": 67.8,
+          "staff_turnover_pct": 0.5,
+          "compliance_score_pct": 85.5,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 18811.87,
+          "transactions": 1355,
+          "avg_transaction": 3.61,
+          "nps": 64.1,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 83.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 18294.51,
+          "transactions": 1130,
+          "avg_transaction": 4.15,
+          "nps": 67.5,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 84.6,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 18133.23,
+          "transactions": 1342,
+          "avg_transaction": 2.91,
+          "nps": 69.0,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 84.5,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 19021.05,
+          "transactions": 1102,
+          "avg_transaction": 3.54,
+          "nps": 67.0,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 87.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 19187.03,
+          "transactions": 941,
+          "avg_transaction": 3.26,
+          "nps": 65.6,
+          "staff_turnover_pct": 3.4,
+          "compliance_score_pct": 84.2,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 18440.84,
+          "transactions": 1391,
+          "avg_transaction": 3.19,
+          "nps": 67.3,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 86.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 18403.68,
+          "transactions": 890,
+          "avg_transaction": 3.58,
+          "nps": 66.1,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 86.7,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 18925.32,
+          "transactions": 1077,
+          "avg_transaction": 2.97,
+          "nps": 64.7,
+          "staff_turnover_pct": 7.8,
+          "compliance_score_pct": 88.0,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "store_id": "SE004",
+      "store_name": "Reading Station",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 19797.0,
+          "transactions": 1141,
+          "avg_transaction": 3.27,
+          "nps": 57.2,
+          "staff_turnover_pct": 6.3,
+          "compliance_score_pct": 89.5,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 19213.02,
+          "transactions": 1149,
+          "avg_transaction": 3.32,
+          "nps": 55.8,
+          "staff_turnover_pct": 5.2,
+          "compliance_score_pct": 87.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 21407.98,
+          "transactions": 1376,
+          "avg_transaction": 3.49,
+          "nps": 53.6,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 86.5,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 19288.74,
+          "transactions": 775,
+          "avg_transaction": 4.08,
+          "nps": 55.1,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 89.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 18988.25,
+          "transactions": 953,
+          "avg_transaction": 3.5,
+          "nps": 55.3,
+          "staff_turnover_pct": 0.5,
+          "compliance_score_pct": 88.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 19451.53,
+          "transactions": 1301,
+          "avg_transaction": 3.0,
+          "nps": 57.5,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 89.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 19973.86,
+          "transactions": 892,
+          "avg_transaction": 3.33,
+          "nps": 55.4,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 89.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 21492.06,
+          "transactions": 890,
+          "avg_transaction": 4.03,
+          "nps": 51.8,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 86.7,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 20038.48,
+          "transactions": 1171,
+          "avg_transaction": 4.17,
+          "nps": 56.2,
+          "staff_turnover_pct": 4.3,
+          "compliance_score_pct": 88.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 19604.6,
+          "transactions": 978,
+          "avg_transaction": 3.12,
+          "nps": 57.1,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 87.7,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 20886.54,
+          "transactions": 761,
+          "avg_transaction": 3.9,
+          "nps": 50.3,
+          "staff_turnover_pct": 2.4,
+          "compliance_score_pct": 91.2,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 20815.31,
+          "transactions": 1307,
+          "avg_transaction": 3.46,
+          "nps": 54.7,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 91.1,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "store_id": "SE005",
+      "store_name": "Basingstoke Festival",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 21231.93,
+          "transactions": 772,
+          "avg_transaction": 3.51,
+          "nps": 75.0,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 82.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 21512.62,
+          "transactions": 1356,
+          "avg_transaction": 2.96,
+          "nps": 75.6,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 84.2,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 20380.9,
+          "transactions": 1078,
+          "avg_transaction": 3.43,
+          "nps": 75.6,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 80.9,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 20112.55,
+          "transactions": 1349,
+          "avg_transaction": 2.91,
+          "nps": 68.7,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 79.2,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 19102.08,
+          "transactions": 1169,
+          "avg_transaction": 3.32,
+          "nps": 68.4,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 84.9,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 19820.61,
+          "transactions": 865,
+          "avg_transaction": 3.34,
+          "nps": 70.4,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 84.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 19408.23,
+          "transactions": 866,
+          "avg_transaction": 2.8,
+          "nps": 69.4,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 80.4,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 20775.97,
+          "transactions": 1098,
+          "avg_transaction": 3.67,
+          "nps": 73.5,
+          "staff_turnover_pct": 1.2,
+          "compliance_score_pct": 80.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 19410.35,
+          "transactions": 1201,
+          "avg_transaction": 3.97,
+          "nps": 68.6,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 83.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 19232.1,
+          "transactions": 1094,
+          "avg_transaction": 3.34,
+          "nps": 68.4,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 82.8,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 19590.58,
+          "transactions": 965,
+          "avg_transaction": 3.46,
+          "nps": 68.3,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 81.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 21056.0,
+          "transactions": 955,
+          "avg_transaction": 4.1,
+          "nps": 72.1,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 79.3,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "store_id": "SE006",
+      "store_name": "Woking Town",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 24798.56,
+          "transactions": 836,
+          "avg_transaction": 2.9,
+          "nps": 69.2,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 85.2,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24007.7,
+          "transactions": 874,
+          "avg_transaction": 3.03,
+          "nps": 69.2,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 83.1,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25604.67,
+          "transactions": 742,
+          "avg_transaction": 4.07,
+          "nps": 66.8,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 85.7,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 26213.42,
+          "transactions": 1043,
+          "avg_transaction": 3.18,
+          "nps": 65.7,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 83.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 25507.33,
+          "transactions": 712,
+          "avg_transaction": 3.0,
+          "nps": 66.8,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 85.5,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 24286.92,
+          "transactions": 1141,
+          "avg_transaction": 3.78,
+          "nps": 71.2,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 83.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 26563.46,
+          "transactions": 1382,
+          "avg_transaction": 3.32,
+          "nps": 67.9,
+          "staff_turnover_pct": 1.4,
+          "compliance_score_pct": 81.1,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 25380.15,
+          "transactions": 1011,
+          "avg_transaction": 3.63,
+          "nps": 65.5,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 85.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 26690.79,
+          "transactions": 805,
+          "avg_transaction": 3.71,
+          "nps": 65.4,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 84.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 26109.03,
+          "transactions": 997,
+          "avg_transaction": 2.95,
+          "nps": 64.2,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 85.6,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28019.89,
+          "transactions": 1106,
+          "avg_transaction": 4.06,
+          "nps": 68.8,
+          "staff_turnover_pct": 4.6,
+          "compliance_score_pct": 82.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 24708.89,
+          "transactions": 1029,
+          "avg_transaction": 3.02,
+          "nps": 71.4,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 85.7,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "store_id": "SE007",
+      "store_name": "Farnham Market",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 17401.8,
+          "transactions": 1334,
+          "avg_transaction": 4.06,
+          "nps": 60.9,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 95.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 19841.72,
+          "transactions": 1225,
+          "avg_transaction": 4.14,
+          "nps": 58.8,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 95.0,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 17171.69,
+          "transactions": 1255,
+          "avg_transaction": 3.01,
+          "nps": 57.2,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 94.0,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 18905.26,
+          "transactions": 1168,
+          "avg_transaction": 4.04,
+          "nps": 58.3,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 93.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 18180.75,
+          "transactions": 979,
+          "avg_transaction": 3.77,
+          "nps": 60.3,
+          "staff_turnover_pct": 8.0,
+          "compliance_score_pct": 99.0,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 17517.5,
+          "transactions": 853,
+          "avg_transaction": 3.81,
+          "nps": 60.2,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 93.8,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 17515.43,
+          "transactions": 1229,
+          "avg_transaction": 3.24,
+          "nps": 56.8,
+          "staff_turnover_pct": 0.8,
+          "compliance_score_pct": 95.7,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 19541.37,
+          "transactions": 874,
+          "avg_transaction": 4.04,
+          "nps": 57.6,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 94.7,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 19062.09,
+          "transactions": 712,
+          "avg_transaction": 3.82,
+          "nps": 56.9,
+          "staff_turnover_pct": 5.8,
+          "compliance_score_pct": 97.6,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 17695.61,
+          "transactions": 878,
+          "avg_transaction": 4.12,
+          "nps": 59.5,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 94.7,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 19254.01,
+          "transactions": 710,
+          "avg_transaction": 4.19,
+          "nps": 58.2,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 99.0,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 19551.18,
+          "transactions": 862,
+          "avg_transaction": 3.14,
+          "nps": 59.1,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 98.1,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "store_id": "SE008",
+      "store_name": "Camberley High St",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 25106.62,
+          "transactions": 902,
+          "avg_transaction": 3.71,
+          "nps": 49.8,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 94.9,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24776.22,
+          "transactions": 1355,
+          "avg_transaction": 3.79,
+          "nps": 52.0,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 96.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 23858.22,
+          "transactions": 1252,
+          "avg_transaction": 3.78,
+          "nps": 51.9,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 96.5,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 22962.04,
+          "transactions": 1159,
+          "avg_transaction": 3.71,
+          "nps": 46.2,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 95.5,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 22746.91,
+          "transactions": 923,
+          "avg_transaction": 3.78,
+          "nps": 51.8,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 91.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 25378.0,
+          "transactions": 1312,
+          "avg_transaction": 3.8,
+          "nps": 48.7,
+          "staff_turnover_pct": 7.3,
+          "compliance_score_pct": 93.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 24487.23,
+          "transactions": 840,
+          "avg_transaction": 3.28,
+          "nps": 46.2,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 96.7,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 24388.35,
+          "transactions": 1382,
+          "avg_transaction": 4.18,
+          "nps": 49.5,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 92.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 26600.66,
+          "transactions": 1144,
+          "avg_transaction": 3.85,
+          "nps": 52.4,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 92.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 24837.89,
+          "transactions": 889,
+          "avg_transaction": 3.11,
+          "nps": 50.0,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 92.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 26324.0,
+          "transactions": 1290,
+          "avg_transaction": 3.07,
+          "nps": 47.8,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 95.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 23322.23,
+          "transactions": 1170,
+          "avg_transaction": 3.57,
+          "nps": 48.2,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 96.7,
+          "rank": 8
+        }
+      ]
+    }
+  ],
+  "London": [
+    {
+      "store_id": "LDN001",
+      "store_name": "Canary Wharf",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 30032.25,
+          "transactions": 1060,
+          "avg_transaction": 4.07,
+          "nps": 48.7,
+          "staff_turnover_pct": 5.2,
+          "compliance_score_pct": 82.4,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 28843.87,
+          "transactions": 1076,
+          "avg_transaction": 3.61,
+          "nps": 45.6,
+          "staff_turnover_pct": 0.6,
+          "compliance_score_pct": 84.4,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 28682.53,
+          "transactions": 891,
+          "avg_transaction": 3.74,
+          "nps": 50.2,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 83.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 28179.37,
+          "transactions": 758,
+          "avg_transaction": 3.28,
+          "nps": 51.6,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 87.9,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 26075.15,
+          "transactions": 1190,
+          "avg_transaction": 3.32,
+          "nps": 50.8,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 86.5,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 27408.69,
+          "transactions": 989,
+          "avg_transaction": 3.72,
+          "nps": 49.9,
+          "staff_turnover_pct": 6.3,
+          "compliance_score_pct": 84.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 29605.47,
+          "transactions": 1167,
+          "avg_transaction": 3.33,
+          "nps": 48.4,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 82.6,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 26380.6,
+          "transactions": 1259,
+          "avg_transaction": 4.11,
+          "nps": 51.5,
+          "staff_turnover_pct": 7.3,
+          "compliance_score_pct": 84.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 28828.88,
+          "transactions": 963,
+          "avg_transaction": 3.57,
+          "nps": 51.0,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 82.9,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 30140.21,
+          "transactions": 1296,
+          "avg_transaction": 3.27,
+          "nps": 45.8,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 86.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 29268.93,
+          "transactions": 1035,
+          "avg_transaction": 3.66,
+          "nps": 47.8,
+          "staff_turnover_pct": 0.8,
+          "compliance_score_pct": 84.4,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 29048.96,
+          "transactions": 1062,
+          "avg_transaction": 2.95,
+          "nps": 51.0,
+          "staff_turnover_pct": 7.4,
+          "compliance_score_pct": 82.5,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "store_id": "LDN002",
+      "store_name": "Liverpool St",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 27080.55,
+          "transactions": 1139,
+          "avg_transaction": 3.12,
+          "nps": 63.0,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 84.5,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 27843.65,
+          "transactions": 731,
+          "avg_transaction": 3.15,
+          "nps": 60.9,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 90.0,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 24845.13,
+          "transactions": 942,
+          "avg_transaction": 3.17,
+          "nps": 60.3,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 89.5,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 27562.59,
+          "transactions": 1177,
+          "avg_transaction": 4.02,
+          "nps": 64.6,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 85.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 28275.17,
+          "transactions": 1394,
+          "avg_transaction": 3.04,
+          "nps": 62.0,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 85.3,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 24582.93,
+          "transactions": 764,
+          "avg_transaction": 4.04,
+          "nps": 63.9,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 88.4,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 26649.11,
+          "transactions": 935,
+          "avg_transaction": 3.29,
+          "nps": 63.8,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 88.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 27835.66,
+          "transactions": 1027,
+          "avg_transaction": 4.03,
+          "nps": 64.6,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 89.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 26105.33,
+          "transactions": 1024,
+          "avg_transaction": 4.13,
+          "nps": 60.3,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 87.5,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 27688.65,
+          "transactions": 772,
+          "avg_transaction": 2.92,
+          "nps": 61.8,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 85.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28410.86,
+          "transactions": 716,
+          "avg_transaction": 4.19,
+          "nps": 61.0,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 85.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 27687.25,
+          "transactions": 1042,
+          "avg_transaction": 3.89,
+          "nps": 61.6,
+          "staff_turnover_pct": 2.1,
+          "compliance_score_pct": 89.5,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "store_id": "LDN003",
+      "store_name": "Paddington",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 18402.24,
+          "transactions": 719,
+          "avg_transaction": 3.14,
+          "nps": 68.5,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 89.8,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 17177.02,
+          "transactions": 738,
+          "avg_transaction": 4.08,
+          "nps": 66.2,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 89.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 18981.38,
+          "transactions": 724,
+          "avg_transaction": 3.56,
+          "nps": 68.7,
+          "staff_turnover_pct": 1.1,
+          "compliance_score_pct": 89.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 18147.13,
+          "transactions": 1134,
+          "avg_transaction": 3.69,
+          "nps": 68.9,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 92.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 17467.73,
+          "transactions": 765,
+          "avg_transaction": 3.19,
+          "nps": 70.0,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 93.0,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 16936.14,
+          "transactions": 1380,
+          "avg_transaction": 2.98,
+          "nps": 65.3,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 89.4,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 18361.51,
+          "transactions": 918,
+          "avg_transaction": 3.81,
+          "nps": 67.6,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 87.8,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 17966.52,
+          "transactions": 746,
+          "avg_transaction": 3.93,
+          "nps": 67.5,
+          "staff_turnover_pct": 3.2,
+          "compliance_score_pct": 87.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 18753.78,
+          "transactions": 813,
+          "avg_transaction": 3.08,
+          "nps": 67.0,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 93.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 18242.85,
+          "transactions": 1010,
+          "avg_transaction": 2.99,
+          "nps": 70.9,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 93.5,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 18917.32,
+          "transactions": 830,
+          "avg_transaction": 3.75,
+          "nps": 69.9,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 92.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 19831.33,
+          "transactions": 1175,
+          "avg_transaction": 2.98,
+          "nps": 65.8,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 92.2,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "store_id": "LDN004",
+      "store_name": "Victoria",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 29106.89,
+          "transactions": 1296,
+          "avg_transaction": 3.58,
+          "nps": 70.5,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 93.5,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 27911.05,
+          "transactions": 1187,
+          "avg_transaction": 3.83,
+          "nps": 72.2,
+          "staff_turnover_pct": 6.9,
+          "compliance_score_pct": 89.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 27863.09,
+          "transactions": 1372,
+          "avg_transaction": 2.91,
+          "nps": 71.1,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 89.1,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 30057.02,
+          "transactions": 928,
+          "avg_transaction": 3.66,
+          "nps": 70.0,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 88.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 27980.69,
+          "transactions": 930,
+          "avg_transaction": 2.85,
+          "nps": 67.7,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 90.5,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 29020.84,
+          "transactions": 1119,
+          "avg_transaction": 4.1,
+          "nps": 71.3,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 93.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 27755.14,
+          "transactions": 928,
+          "avg_transaction": 3.19,
+          "nps": 69.1,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 88.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 30016.23,
+          "transactions": 1292,
+          "avg_transaction": 3.72,
+          "nps": 71.1,
+          "staff_turnover_pct": 5.8,
+          "compliance_score_pct": 88.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 28516.0,
+          "transactions": 809,
+          "avg_transaction": 3.29,
+          "nps": 68.7,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 90.6,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 26576.56,
+          "transactions": 1282,
+          "avg_transaction": 2.95,
+          "nps": 72.7,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 90.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 27464.69,
+          "transactions": 843,
+          "avg_transaction": 2.85,
+          "nps": 72.0,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 92.2,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 29145.81,
+          "transactions": 1297,
+          "avg_transaction": 3.06,
+          "nps": 65.5,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 90.1,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "store_id": "LDN005",
+      "store_name": "Waterloo",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 30807.14,
+          "transactions": 1167,
+          "avg_transaction": 2.81,
+          "nps": 57.7,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 89.8,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 29080.81,
+          "transactions": 1063,
+          "avg_transaction": 3.08,
+          "nps": 54.4,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 84.4,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 33177.91,
+          "transactions": 1067,
+          "avg_transaction": 3.76,
+          "nps": 52.7,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 85.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 30303.55,
+          "transactions": 989,
+          "avg_transaction": 4.11,
+          "nps": 56.7,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 89.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 31284.8,
+          "transactions": 1307,
+          "avg_transaction": 3.75,
+          "nps": 53.6,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 87.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 31332.15,
+          "transactions": 1301,
+          "avg_transaction": 4.1,
+          "nps": 51.2,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 88.4,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 33575.47,
+          "transactions": 808,
+          "avg_transaction": 3.87,
+          "nps": 50.2,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 88.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 32098.54,
+          "transactions": 709,
+          "avg_transaction": 4.1,
+          "nps": 50.1,
+          "staff_turnover_pct": 6.0,
+          "compliance_score_pct": 85.9,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 32501.34,
+          "transactions": 769,
+          "avg_transaction": 4.18,
+          "nps": 56.2,
+          "staff_turnover_pct": 2.4,
+          "compliance_score_pct": 84.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 30922.55,
+          "transactions": 1384,
+          "avg_transaction": 3.49,
+          "nps": 55.5,
+          "staff_turnover_pct": 7.1,
+          "compliance_score_pct": 85.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 33413.98,
+          "transactions": 723,
+          "avg_transaction": 4.13,
+          "nps": 57.8,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 86.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 29116.33,
+          "transactions": 1128,
+          "avg_transaction": 3.16,
+          "nps": 52.1,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 84.8,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "store_id": "LDN006",
+      "store_name": "Euston",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 20534.99,
+          "transactions": 964,
+          "avg_transaction": 3.59,
+          "nps": 68.7,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 99.2,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 23788.36,
+          "transactions": 1214,
+          "avg_transaction": 3.45,
+          "nps": 71.6,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 95.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 21962.9,
+          "transactions": 748,
+          "avg_transaction": 3.77,
+          "nps": 70.7,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 98.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 21964.09,
+          "transactions": 837,
+          "avg_transaction": 3.23,
+          "nps": 68.4,
+          "staff_turnover_pct": 3.4,
+          "compliance_score_pct": 97.6,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 23831.54,
+          "transactions": 1194,
+          "avg_transaction": 3.72,
+          "nps": 67.5,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 98.5,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 22993.37,
+          "transactions": 1354,
+          "avg_transaction": 3.89,
+          "nps": 67.5,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 97.5,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 20682.77,
+          "transactions": 1175,
+          "avg_transaction": 3.42,
+          "nps": 70.2,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 100.0,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 22352.34,
+          "transactions": 967,
+          "avg_transaction": 3.37,
+          "nps": 70.0,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 94.5,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 23347.95,
+          "transactions": 824,
+          "avg_transaction": 2.95,
+          "nps": 72.9,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 94.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 21831.26,
+          "transactions": 995,
+          "avg_transaction": 3.14,
+          "nps": 67.4,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 99.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 22762.11,
+          "transactions": 1080,
+          "avg_transaction": 2.94,
+          "nps": 71.7,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 96.6,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 20610.57,
+          "transactions": 1186,
+          "avg_transaction": 2.88,
+          "nps": 67.4,
+          "staff_turnover_pct": 1.9,
+          "compliance_score_pct": 98.9,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "store_id": "LDN007",
+      "store_name": "Kings Cross",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 23145.22,
+          "transactions": 1399,
+          "avg_transaction": 3.46,
+          "nps": 63.2,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 87.3,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 22449.73,
+          "transactions": 915,
+          "avg_transaction": 3.33,
+          "nps": 65.5,
+          "staff_turnover_pct": 7.0,
+          "compliance_score_pct": 85.5,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 20764.57,
+          "transactions": 774,
+          "avg_transaction": 3.95,
+          "nps": 65.0,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 82.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 22962.76,
+          "transactions": 727,
+          "avg_transaction": 3.7,
+          "nps": 63.2,
+          "staff_turnover_pct": 0.1,
+          "compliance_score_pct": 82.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 22617.71,
+          "transactions": 1365,
+          "avg_transaction": 3.62,
+          "nps": 63.4,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 86.7,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 20663.57,
+          "transactions": 1391,
+          "avg_transaction": 3.23,
+          "nps": 64.3,
+          "staff_turnover_pct": 6.9,
+          "compliance_score_pct": 86.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 21574.28,
+          "transactions": 950,
+          "avg_transaction": 3.85,
+          "nps": 65.9,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 83.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 20522.55,
+          "transactions": 1134,
+          "avg_transaction": 2.97,
+          "nps": 69.6,
+          "staff_turnover_pct": 0.9,
+          "compliance_score_pct": 85.6,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 22377.38,
+          "transactions": 1336,
+          "avg_transaction": 3.6,
+          "nps": 67.8,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 82.3,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 22809.83,
+          "transactions": 787,
+          "avg_transaction": 3.55,
+          "nps": 69.8,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 82.7,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 22709.0,
+          "transactions": 1024,
+          "avg_transaction": 3.55,
+          "nps": 64.2,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 85.8,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 22226.73,
+          "transactions": 761,
+          "avg_transaction": 3.55,
+          "nps": 65.1,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 86.4,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "store_id": "LDN008",
+      "store_name": "Hammersmith",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 25854.31,
+          "transactions": 899,
+          "avg_transaction": 3.29,
+          "nps": 72.1,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 84.0,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 25264.51,
+          "transactions": 911,
+          "avg_transaction": 4.13,
+          "nps": 75.0,
+          "staff_turnover_pct": 5.0,
+          "compliance_score_pct": 87.2,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25766.8,
+          "transactions": 1230,
+          "avg_transaction": 2.84,
+          "nps": 69.4,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 83.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 28819.2,
+          "transactions": 1381,
+          "avg_transaction": 3.51,
+          "nps": 73.8,
+          "staff_turnover_pct": 7.1,
+          "compliance_score_pct": 85.7,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 26983.78,
+          "transactions": 916,
+          "avg_transaction": 3.3,
+          "nps": 75.5,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 87.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 26579.37,
+          "transactions": 987,
+          "avg_transaction": 3.79,
+          "nps": 72.9,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 83.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 28409.06,
+          "transactions": 980,
+          "avg_transaction": 3.59,
+          "nps": 71.3,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 82.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 26879.66,
+          "transactions": 754,
+          "avg_transaction": 2.87,
+          "nps": 69.2,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 87.2,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 29041.43,
+          "transactions": 1099,
+          "avg_transaction": 3.22,
+          "nps": 72.6,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 86.0,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 26605.59,
+          "transactions": 1073,
+          "avg_transaction": 3.92,
+          "nps": 73.1,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 86.6,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28569.94,
+          "transactions": 1275,
+          "avg_transaction": 3.29,
+          "nps": 74.4,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 86.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 25111.05,
+          "transactions": 803,
+          "avg_transaction": 3.0,
+          "nps": 69.3,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 82.1,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "store_id": "LDN009",
+      "store_name": "Clapham Common",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 19729.1,
+          "transactions": 902,
+          "avg_transaction": 3.64,
+          "nps": 53.7,
+          "staff_turnover_pct": 6.0,
+          "compliance_score_pct": 92.3,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 21279.29,
+          "transactions": 1329,
+          "avg_transaction": 4.0,
+          "nps": 59.9,
+          "staff_turnover_pct": 1.1,
+          "compliance_score_pct": 95.8,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 19401.51,
+          "transactions": 731,
+          "avg_transaction": 3.42,
+          "nps": 54.5,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 94.1,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 21616.12,
+          "transactions": 806,
+          "avg_transaction": 3.79,
+          "nps": 55.7,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 94.3,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 18767.71,
+          "transactions": 834,
+          "avg_transaction": 3.32,
+          "nps": 58.6,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 96.0,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 20822.55,
+          "transactions": 1298,
+          "avg_transaction": 3.22,
+          "nps": 58.8,
+          "staff_turnover_pct": 4.8,
+          "compliance_score_pct": 97.6,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 19420.21,
+          "transactions": 973,
+          "avg_transaction": 4.11,
+          "nps": 57.1,
+          "staff_turnover_pct": 4.6,
+          "compliance_score_pct": 92.9,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 21572.72,
+          "transactions": 1137,
+          "avg_transaction": 2.93,
+          "nps": 60.2,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 93.5,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 19922.74,
+          "transactions": 968,
+          "avg_transaction": 3.27,
+          "nps": 59.8,
+          "staff_turnover_pct": 4.8,
+          "compliance_score_pct": 96.4,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 19729.47,
+          "transactions": 1338,
+          "avg_transaction": 3.3,
+          "nps": 57.0,
+          "staff_turnover_pct": 4.1,
+          "compliance_score_pct": 92.7,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 20034.2,
+          "transactions": 897,
+          "avg_transaction": 3.82,
+          "nps": 57.3,
+          "staff_turnover_pct": 7.0,
+          "compliance_score_pct": 96.0,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 21374.01,
+          "transactions": 847,
+          "avg_transaction": 3.42,
+          "nps": 54.2,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 97.1,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "store_id": "LDN010",
+      "store_name": "Brixton",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 29620.65,
+          "transactions": 913,
+          "avg_transaction": 3.35,
+          "nps": 56.6,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 81.7,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 30854.46,
+          "transactions": 977,
+          "avg_transaction": 3.79,
+          "nps": 57.4,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 79.6,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 32179.36,
+          "transactions": 1098,
+          "avg_transaction": 3.27,
+          "nps": 54.2,
+          "staff_turnover_pct": 0.6,
+          "compliance_score_pct": 82.7,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 29710.7,
+          "transactions": 781,
+          "avg_transaction": 4.14,
+          "nps": 59.0,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 85.0,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 32074.79,
+          "transactions": 834,
+          "avg_transaction": 3.54,
+          "nps": 56.1,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 84.0,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 30011.45,
+          "transactions": 1351,
+          "avg_transaction": 3.27,
+          "nps": 54.1,
+          "staff_turnover_pct": 6.3,
+          "compliance_score_pct": 85.0,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 33415.7,
+          "transactions": 838,
+          "avg_transaction": 3.42,
+          "nps": 58.7,
+          "staff_turnover_pct": 3.4,
+          "compliance_score_pct": 82.3,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 29916.84,
+          "transactions": 911,
+          "avg_transaction": 3.67,
+          "nps": 53.8,
+          "staff_turnover_pct": 2.1,
+          "compliance_score_pct": 84.8,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 29699.92,
+          "transactions": 1354,
+          "avg_transaction": 4.19,
+          "nps": 54.9,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 80.2,
+          "rank": 10
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 30749.14,
+          "transactions": 921,
+          "avg_transaction": 3.65,
+          "nps": 57.4,
+          "staff_turnover_pct": 4.6,
+          "compliance_score_pct": 79.9,
+          "rank": 10
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 33322.39,
+          "transactions": 822,
+          "avg_transaction": 2.86,
+          "nps": 52.4,
+          "staff_turnover_pct": 0.0,
+          "compliance_score_pct": 82.0,
+          "rank": 10
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 29381.51,
+          "transactions": 963,
+          "avg_transaction": 3.07,
+          "nps": 56.3,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 85.4,
+          "rank": 10
+        }
+      ]
+    },
+    {
+      "store_id": "LDN011",
+      "store_name": "Shoreditch",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 26470.25,
+          "transactions": 1051,
+          "avg_transaction": 3.1,
+          "nps": 72.8,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 90.2,
+          "rank": 11
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24289.11,
+          "transactions": 726,
+          "avg_transaction": 3.3,
+          "nps": 68.9,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 89.3,
+          "rank": 11
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25534.16,
+          "transactions": 927,
+          "avg_transaction": 2.84,
+          "nps": 75.3,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 88.4,
+          "rank": 11
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 25803.76,
+          "transactions": 938,
+          "avg_transaction": 3.45,
+          "nps": 75.7,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 88.7,
+          "rank": 11
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 23809.5,
+          "transactions": 1187,
+          "avg_transaction": 4.18,
+          "nps": 76.0,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 88.6,
+          "rank": 11
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 24543.05,
+          "transactions": 1048,
+          "avg_transaction": 2.87,
+          "nps": 76.7,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 92.2,
+          "rank": 11
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 25994.66,
+          "transactions": 1082,
+          "avg_transaction": 3.65,
+          "nps": 75.5,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 91.3,
+          "rank": 11
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 24950.53,
+          "transactions": 718,
+          "avg_transaction": 2.8,
+          "nps": 69.3,
+          "staff_turnover_pct": 1.2,
+          "compliance_score_pct": 88.3,
+          "rank": 11
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 25935.41,
+          "transactions": 1189,
+          "avg_transaction": 2.92,
+          "nps": 70.1,
+          "staff_turnover_pct": 6.0,
+          "compliance_score_pct": 91.2,
+          "rank": 11
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 26704.99,
+          "transactions": 985,
+          "avg_transaction": 3.29,
+          "nps": 70.8,
+          "staff_turnover_pct": 8.0,
+          "compliance_score_pct": 92.3,
+          "rank": 11
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 25591.34,
+          "transactions": 738,
+          "avg_transaction": 2.98,
+          "nps": 70.5,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 93.0,
+          "rank": 11
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 26954.67,
+          "transactions": 1338,
+          "avg_transaction": 3.52,
+          "nps": 72.6,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 90.9,
+          "rank": 11
+        }
+      ]
+    },
+    {
+      "store_id": "LDN012",
+      "store_name": "Soho",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 23060.22,
+          "transactions": 1264,
+          "avg_transaction": 3.54,
+          "nps": 60.6,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 82.2,
+          "rank": 12
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24643.93,
+          "transactions": 768,
+          "avg_transaction": 3.45,
+          "nps": 60.2,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 86.6,
+          "rank": 12
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 22769.96,
+          "transactions": 926,
+          "avg_transaction": 4.11,
+          "nps": 60.5,
+          "staff_turnover_pct": 4.1,
+          "compliance_score_pct": 85.4,
+          "rank": 12
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 24211.99,
+          "transactions": 1057,
+          "avg_transaction": 3.52,
+          "nps": 66.4,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 86.3,
+          "rank": 12
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 23608.83,
+          "transactions": 705,
+          "avg_transaction": 3.62,
+          "nps": 64.7,
+          "staff_turnover_pct": 0.8,
+          "compliance_score_pct": 84.2,
+          "rank": 12
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 23448.25,
+          "transactions": 1148,
+          "avg_transaction": 3.05,
+          "nps": 62.1,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 83.9,
+          "rank": 12
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 23823.13,
+          "transactions": 1156,
+          "avg_transaction": 3.05,
+          "nps": 63.6,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 85.4,
+          "rank": 12
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 22781.89,
+          "transactions": 837,
+          "avg_transaction": 2.86,
+          "nps": 66.5,
+          "staff_turnover_pct": 7.4,
+          "compliance_score_pct": 86.1,
+          "rank": 12
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 23346.32,
+          "transactions": 1378,
+          "avg_transaction": 3.25,
+          "nps": 60.5,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 83.7,
+          "rank": 12
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 23854.23,
+          "transactions": 808,
+          "avg_transaction": 3.48,
+          "nps": 63.2,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 87.7,
+          "rank": 12
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 24643.02,
+          "transactions": 906,
+          "avg_transaction": 4.0,
+          "nps": 67.4,
+          "staff_turnover_pct": 0.9,
+          "compliance_score_pct": 86.9,
+          "rank": 12
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 25871.06,
+          "transactions": 1086,
+          "avg_transaction": 3.43,
+          "nps": 67.9,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 87.5,
+          "rank": 12
+        }
+      ]
+    }
+  ],
+  "South West": [
+    {
+      "store_id": "SW001",
+      "store_name": "Bristol Cabot",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 25880.83,
+          "transactions": 1068,
+          "avg_transaction": 3.55,
+          "nps": 70.4,
+          "staff_turnover_pct": 5.0,
+          "compliance_score_pct": 91.5,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24125.19,
+          "transactions": 1104,
+          "avg_transaction": 3.7,
+          "nps": 74.3,
+          "staff_turnover_pct": 3.7,
+          "compliance_score_pct": 86.6,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25542.06,
+          "transactions": 793,
+          "avg_transaction": 3.51,
+          "nps": 71.8,
+          "staff_turnover_pct": 5.2,
+          "compliance_score_pct": 88.4,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 26295.89,
+          "transactions": 1024,
+          "avg_transaction": 3.1,
+          "nps": 70.6,
+          "staff_turnover_pct": 0.6,
+          "compliance_score_pct": 86.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 26146.42,
+          "transactions": 812,
+          "avg_transaction": 3.4,
+          "nps": 68.9,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 89.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 27896.48,
+          "transactions": 964,
+          "avg_transaction": 4.18,
+          "nps": 74.7,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 85.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 25590.03,
+          "transactions": 999,
+          "avg_transaction": 2.85,
+          "nps": 71.8,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 87.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 27084.01,
+          "transactions": 1157,
+          "avg_transaction": 3.32,
+          "nps": 73.1,
+          "staff_turnover_pct": 1.4,
+          "compliance_score_pct": 88.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 26651.78,
+          "transactions": 1303,
+          "avg_transaction": 3.0,
+          "nps": 67.2,
+          "staff_turnover_pct": 7.8,
+          "compliance_score_pct": 90.4,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 27737.51,
+          "transactions": 1384,
+          "avg_transaction": 4.16,
+          "nps": 72.6,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 87.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 25184.47,
+          "transactions": 1208,
+          "avg_transaction": 2.96,
+          "nps": 69.7,
+          "staff_turnover_pct": 7.1,
+          "compliance_score_pct": 91.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 27857.89,
+          "transactions": 858,
+          "avg_transaction": 3.99,
+          "nps": 66.8,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 87.8,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "store_id": "SW002",
+      "store_name": "Bath High St",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 27615.28,
+          "transactions": 1076,
+          "avg_transaction": 3.13,
+          "nps": 72.1,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 89.2,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 26716.17,
+          "transactions": 707,
+          "avg_transaction": 3.61,
+          "nps": 72.7,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 89.8,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 26511.3,
+          "transactions": 1202,
+          "avg_transaction": 3.94,
+          "nps": 68.1,
+          "staff_turnover_pct": 5.2,
+          "compliance_score_pct": 84.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 29213.51,
+          "transactions": 731,
+          "avg_transaction": 3.08,
+          "nps": 73.7,
+          "staff_turnover_pct": 0.6,
+          "compliance_score_pct": 90.0,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 26128.88,
+          "transactions": 1352,
+          "avg_transaction": 3.37,
+          "nps": 71.7,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 87.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 26947.25,
+          "transactions": 1248,
+          "avg_transaction": 3.17,
+          "nps": 73.5,
+          "staff_turnover_pct": 4.8,
+          "compliance_score_pct": 89.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 28830.08,
+          "transactions": 1151,
+          "avg_transaction": 3.94,
+          "nps": 66.6,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 84.8,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 25248.99,
+          "transactions": 1210,
+          "avg_transaction": 3.18,
+          "nps": 69.4,
+          "staff_turnover_pct": 6.7,
+          "compliance_score_pct": 89.3,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 26135.99,
+          "transactions": 1155,
+          "avg_transaction": 2.84,
+          "nps": 66.8,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 88.1,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 28236.67,
+          "transactions": 1376,
+          "avg_transaction": 3.48,
+          "nps": 68.9,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 85.8,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 27496.92,
+          "transactions": 784,
+          "avg_transaction": 3.72,
+          "nps": 71.5,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 86.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 27252.52,
+          "transactions": 1169,
+          "avg_transaction": 3.41,
+          "nps": 73.4,
+          "staff_turnover_pct": 7.3,
+          "compliance_score_pct": 89.9,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "store_id": "SW003",
+      "store_name": "Exeter Central",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 28977.75,
+          "transactions": 961,
+          "avg_transaction": 4.16,
+          "nps": 71.5,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 93.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 26343.86,
+          "transactions": 1252,
+          "avg_transaction": 3.81,
+          "nps": 67.3,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 95.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 27291.94,
+          "transactions": 939,
+          "avg_transaction": 3.68,
+          "nps": 66.8,
+          "staff_turnover_pct": 5.8,
+          "compliance_score_pct": 95.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 27912.77,
+          "transactions": 877,
+          "avg_transaction": 3.39,
+          "nps": 70.5,
+          "staff_turnover_pct": 5.5,
+          "compliance_score_pct": 93.4,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 28504.12,
+          "transactions": 839,
+          "avg_transaction": 3.09,
+          "nps": 66.6,
+          "staff_turnover_pct": 7.0,
+          "compliance_score_pct": 97.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 28018.08,
+          "transactions": 863,
+          "avg_transaction": 2.97,
+          "nps": 69.3,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 95.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 29349.05,
+          "transactions": 916,
+          "avg_transaction": 4.01,
+          "nps": 65.9,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 94.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 26896.99,
+          "transactions": 1223,
+          "avg_transaction": 3.16,
+          "nps": 71.0,
+          "staff_turnover_pct": 3.4,
+          "compliance_score_pct": 97.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 27834.2,
+          "transactions": 1072,
+          "avg_transaction": 3.96,
+          "nps": 70.1,
+          "staff_turnover_pct": 0.9,
+          "compliance_score_pct": 98.0,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 28579.63,
+          "transactions": 1088,
+          "avg_transaction": 3.35,
+          "nps": 67.2,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 95.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 26707.51,
+          "transactions": 786,
+          "avg_transaction": 4.05,
+          "nps": 68.0,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 94.2,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 27643.05,
+          "transactions": 1110,
+          "avg_transaction": 3.49,
+          "nps": 71.1,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 95.0,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "store_id": "SW004",
+      "store_name": "Plymouth City",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 30437.28,
+          "transactions": 1094,
+          "avg_transaction": 3.36,
+          "nps": 70.3,
+          "staff_turnover_pct": 7.8,
+          "compliance_score_pct": 92.3,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 28711.66,
+          "transactions": 708,
+          "avg_transaction": 3.5,
+          "nps": 74.1,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 95.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29809.39,
+          "transactions": 1018,
+          "avg_transaction": 3.26,
+          "nps": 70.8,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 95.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 27343.7,
+          "transactions": 1286,
+          "avg_transaction": 3.67,
+          "nps": 72.4,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 95.6,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 29410.26,
+          "transactions": 847,
+          "avg_transaction": 3.46,
+          "nps": 70.6,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 93.1,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 29080.21,
+          "transactions": 1267,
+          "avg_transaction": 3.31,
+          "nps": 68.6,
+          "staff_turnover_pct": 7.1,
+          "compliance_score_pct": 93.1,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 30942.06,
+          "transactions": 1178,
+          "avg_transaction": 3.9,
+          "nps": 70.1,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 96.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 28348.65,
+          "transactions": 763,
+          "avg_transaction": 3.33,
+          "nps": 72.1,
+          "staff_turnover_pct": 2.4,
+          "compliance_score_pct": 97.2,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 29083.35,
+          "transactions": 1298,
+          "avg_transaction": 2.85,
+          "nps": 69.5,
+          "staff_turnover_pct": 6.9,
+          "compliance_score_pct": 93.6,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 27313.53,
+          "transactions": 791,
+          "avg_transaction": 3.56,
+          "nps": 69.8,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 97.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28189.56,
+          "transactions": 720,
+          "avg_transaction": 4.06,
+          "nps": 69.1,
+          "staff_turnover_pct": 0.9,
+          "compliance_score_pct": 97.3,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 28288.51,
+          "transactions": 721,
+          "avg_transaction": 3.36,
+          "nps": 70.3,
+          "staff_turnover_pct": 4.3,
+          "compliance_score_pct": 94.1,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "store_id": "SW005",
+      "store_name": "Cheltenham Prom",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 24396.65,
+          "transactions": 1283,
+          "avg_transaction": 3.35,
+          "nps": 56.4,
+          "staff_turnover_pct": 2.2,
+          "compliance_score_pct": 92.6,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24804.15,
+          "transactions": 959,
+          "avg_transaction": 3.29,
+          "nps": 59.3,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 92.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 26722.16,
+          "transactions": 1285,
+          "avg_transaction": 4.03,
+          "nps": 55.3,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 94.4,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 23331.81,
+          "transactions": 947,
+          "avg_transaction": 3.26,
+          "nps": 61.4,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 95.6,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 24702.52,
+          "transactions": 953,
+          "avg_transaction": 3.72,
+          "nps": 55.3,
+          "staff_turnover_pct": 6.7,
+          "compliance_score_pct": 94.4,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 25274.5,
+          "transactions": 1250,
+          "avg_transaction": 3.41,
+          "nps": 55.7,
+          "staff_turnover_pct": 3.7,
+          "compliance_score_pct": 93.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 23539.09,
+          "transactions": 1398,
+          "avg_transaction": 3.34,
+          "nps": 54.0,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 93.8,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 25306.41,
+          "transactions": 813,
+          "avg_transaction": 3.88,
+          "nps": 61.0,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 91.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 24672.72,
+          "transactions": 1317,
+          "avg_transaction": 3.23,
+          "nps": 57.4,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 91.2,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 23759.1,
+          "transactions": 1400,
+          "avg_transaction": 4.11,
+          "nps": 55.9,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 95.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 26318.78,
+          "transactions": 1196,
+          "avg_transaction": 4.15,
+          "nps": 57.3,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 93.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 26326.57,
+          "transactions": 749,
+          "avg_transaction": 2.93,
+          "nps": 60.7,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 96.1,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "store_id": "SW006",
+      "store_name": "Gloucester Quays",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 30654.2,
+          "transactions": 1395,
+          "avg_transaction": 3.9,
+          "nps": 61.8,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 84.7,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 31148.1,
+          "transactions": 709,
+          "avg_transaction": 3.06,
+          "nps": 64.5,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 80.8,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 27685.34,
+          "transactions": 1074,
+          "avg_transaction": 3.69,
+          "nps": 61.4,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 85.6,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 30522.37,
+          "transactions": 1091,
+          "avg_transaction": 3.04,
+          "nps": 59.3,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 81.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 30322.77,
+          "transactions": 854,
+          "avg_transaction": 2.85,
+          "nps": 60.0,
+          "staff_turnover_pct": 3.4,
+          "compliance_score_pct": 81.5,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 30809.56,
+          "transactions": 1316,
+          "avg_transaction": 3.1,
+          "nps": 62.3,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 81.2,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 27967.93,
+          "transactions": 834,
+          "avg_transaction": 3.34,
+          "nps": 59.4,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 80.8,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 28381.92,
+          "transactions": 940,
+          "avg_transaction": 2.88,
+          "nps": 60.8,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 85.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 30643.44,
+          "transactions": 990,
+          "avg_transaction": 2.89,
+          "nps": 59.0,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 81.1,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 28412.85,
+          "transactions": 1004,
+          "avg_transaction": 3.07,
+          "nps": 64.4,
+          "staff_turnover_pct": 0.4,
+          "compliance_score_pct": 81.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 27147.88,
+          "transactions": 1314,
+          "avg_transaction": 3.1,
+          "nps": 63.8,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 83.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 31106.15,
+          "transactions": 1355,
+          "avg_transaction": 4.12,
+          "nps": 61.4,
+          "staff_turnover_pct": 6.3,
+          "compliance_score_pct": 80.4,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "store_id": "SW007",
+      "store_name": "Swindon Designer",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 20675.58,
+          "transactions": 724,
+          "avg_transaction": 4.07,
+          "nps": 44.2,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 97.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 20577.2,
+          "transactions": 1393,
+          "avg_transaction": 3.26,
+          "nps": 49.6,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 94.6,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 22994.67,
+          "transactions": 1186,
+          "avg_transaction": 3.68,
+          "nps": 45.9,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 95.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 21504.46,
+          "transactions": 766,
+          "avg_transaction": 3.41,
+          "nps": 47.7,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 95.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 21086.43,
+          "transactions": 1270,
+          "avg_transaction": 4.1,
+          "nps": 46.4,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 94.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 21326.61,
+          "transactions": 1138,
+          "avg_transaction": 2.95,
+          "nps": 51.2,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 95.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 22654.45,
+          "transactions": 830,
+          "avg_transaction": 3.65,
+          "nps": 45.5,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 98.8,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 23313.8,
+          "transactions": 1054,
+          "avg_transaction": 2.88,
+          "nps": 49.2,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 95.4,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 22939.66,
+          "transactions": 1351,
+          "avg_transaction": 3.15,
+          "nps": 44.5,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 97.6,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 22546.61,
+          "transactions": 1327,
+          "avg_transaction": 3.7,
+          "nps": 46.7,
+          "staff_turnover_pct": 1.4,
+          "compliance_score_pct": 95.6,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 21524.01,
+          "transactions": 893,
+          "avg_transaction": 3.1,
+          "nps": 51.2,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 98.8,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 22067.83,
+          "transactions": 1318,
+          "avg_transaction": 4.01,
+          "nps": 45.9,
+          "staff_turnover_pct": 7.4,
+          "compliance_score_pct": 98.0,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "store_id": "SW008",
+      "store_name": "Salisbury Market",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 18729.9,
+          "transactions": 1071,
+          "avg_transaction": 3.24,
+          "nps": 75.0,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 86.3,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 18537.17,
+          "transactions": 791,
+          "avg_transaction": 3.39,
+          "nps": 75.0,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 84.7,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 20866.93,
+          "transactions": 1100,
+          "avg_transaction": 4.0,
+          "nps": 75.4,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 85.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 17984.24,
+          "transactions": 982,
+          "avg_transaction": 3.97,
+          "nps": 71.2,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 85.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 18806.87,
+          "transactions": 957,
+          "avg_transaction": 3.09,
+          "nps": 70.9,
+          "staff_turnover_pct": 6.2,
+          "compliance_score_pct": 89.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 19279.95,
+          "transactions": 795,
+          "avg_transaction": 3.15,
+          "nps": 70.9,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 90.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 17995.5,
+          "transactions": 757,
+          "avg_transaction": 3.45,
+          "nps": 70.8,
+          "staff_turnover_pct": 7.4,
+          "compliance_score_pct": 90.3,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 19216.1,
+          "transactions": 1212,
+          "avg_transaction": 3.13,
+          "nps": 70.9,
+          "staff_turnover_pct": 4.1,
+          "compliance_score_pct": 89.6,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 19557.72,
+          "transactions": 1156,
+          "avg_transaction": 4.09,
+          "nps": 72.2,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 84.9,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 20835.25,
+          "transactions": 892,
+          "avg_transaction": 3.56,
+          "nps": 72.6,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 84.8,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 18107.8,
+          "transactions": 761,
+          "avg_transaction": 3.73,
+          "nps": 71.3,
+          "staff_turnover_pct": 7.8,
+          "compliance_score_pct": 86.6,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 20256.64,
+          "transactions": 1134,
+          "avg_transaction": 3.7,
+          "nps": 73.5,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 86.5,
+          "rank": 8
+        }
+      ]
+    }
+  ],
+  "Midlands": [
+    {
+      "store_id": "MID001",
+      "store_name": "Birmingham Bullring",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 22370.64,
+          "transactions": 1373,
+          "avg_transaction": 3.23,
+          "nps": 62.0,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 82.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24782.25,
+          "transactions": 1353,
+          "avg_transaction": 3.1,
+          "nps": 59.8,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 83.2,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 24196.41,
+          "transactions": 1386,
+          "avg_transaction": 3.38,
+          "nps": 65.3,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 85.9,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 21990.06,
+          "transactions": 1003,
+          "avg_transaction": 3.85,
+          "nps": 64.2,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 83.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 23616.22,
+          "transactions": 1021,
+          "avg_transaction": 4.16,
+          "nps": 64.4,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 84.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 22153.3,
+          "transactions": 1211,
+          "avg_transaction": 3.35,
+          "nps": 63.7,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 85.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 23108.92,
+          "transactions": 1293,
+          "avg_transaction": 3.37,
+          "nps": 64.7,
+          "staff_turnover_pct": 0.1,
+          "compliance_score_pct": 85.6,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 24166.38,
+          "transactions": 934,
+          "avg_transaction": 3.79,
+          "nps": 61.9,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 82.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 24931.93,
+          "transactions": 978,
+          "avg_transaction": 3.52,
+          "nps": 63.4,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 84.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 22439.89,
+          "transactions": 830,
+          "avg_transaction": 3.26,
+          "nps": 64.2,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 83.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 23967.12,
+          "transactions": 1077,
+          "avg_transaction": 3.97,
+          "nps": 59.9,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 82.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 23243.42,
+          "transactions": 746,
+          "avg_transaction": 3.18,
+          "nps": 60.6,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 82.8,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "store_id": "MID002",
+      "store_name": "Coventry City",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 18939.61,
+          "transactions": 925,
+          "avg_transaction": 3.91,
+          "nps": 61.3,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 87.4,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 17348.1,
+          "transactions": 905,
+          "avg_transaction": 3.31,
+          "nps": 66.1,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 92.4,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 17871.76,
+          "transactions": 856,
+          "avg_transaction": 3.03,
+          "nps": 65.2,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 90.8,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 19326.47,
+          "transactions": 1012,
+          "avg_transaction": 3.59,
+          "nps": 67.3,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 86.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 19722.26,
+          "transactions": 1393,
+          "avg_transaction": 3.7,
+          "nps": 64.8,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 90.2,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 20070.92,
+          "transactions": 1179,
+          "avg_transaction": 3.55,
+          "nps": 61.8,
+          "staff_turnover_pct": 8.0,
+          "compliance_score_pct": 88.3,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 18800.32,
+          "transactions": 1168,
+          "avg_transaction": 3.76,
+          "nps": 60.3,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 89.2,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 17768.37,
+          "transactions": 1010,
+          "avg_transaction": 3.36,
+          "nps": 67.9,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 88.4,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 18990.41,
+          "transactions": 1141,
+          "avg_transaction": 4.1,
+          "nps": 66.6,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 89.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 18230.09,
+          "transactions": 1230,
+          "avg_transaction": 3.37,
+          "nps": 61.4,
+          "staff_turnover_pct": 5.5,
+          "compliance_score_pct": 88.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 19492.15,
+          "transactions": 1242,
+          "avg_transaction": 3.26,
+          "nps": 64.7,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 90.3,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 17796.46,
+          "transactions": 1188,
+          "avg_transaction": 3.91,
+          "nps": 63.1,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 91.7,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "store_id": "MID003",
+      "store_name": "Leicester High St",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 20775.46,
+          "transactions": 862,
+          "avg_transaction": 3.48,
+          "nps": 72.8,
+          "staff_turnover_pct": 2.4,
+          "compliance_score_pct": 86.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 20657.95,
+          "transactions": 1253,
+          "avg_transaction": 3.95,
+          "nps": 72.6,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 87.0,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 21713.11,
+          "transactions": 976,
+          "avg_transaction": 3.45,
+          "nps": 69.3,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 82.7,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 21412.7,
+          "transactions": 1140,
+          "avg_transaction": 3.38,
+          "nps": 68.6,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 86.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 20273.79,
+          "transactions": 1095,
+          "avg_transaction": 2.92,
+          "nps": 68.1,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 84.4,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 19839.85,
+          "transactions": 1262,
+          "avg_transaction": 3.34,
+          "nps": 73.7,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 84.4,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 20852.39,
+          "transactions": 1330,
+          "avg_transaction": 4.15,
+          "nps": 69.9,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 86.6,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 20128.17,
+          "transactions": 719,
+          "avg_transaction": 3.86,
+          "nps": 73.2,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 85.2,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 22321.24,
+          "transactions": 1068,
+          "avg_transaction": 2.92,
+          "nps": 75.4,
+          "staff_turnover_pct": 5.0,
+          "compliance_score_pct": 83.2,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 21955.62,
+          "transactions": 935,
+          "avg_transaction": 3.73,
+          "nps": 69.9,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 87.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 20037.79,
+          "transactions": 1371,
+          "avg_transaction": 3.13,
+          "nps": 68.6,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 81.5,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 20598.19,
+          "transactions": 895,
+          "avg_transaction": 3.17,
+          "nps": 71.1,
+          "staff_turnover_pct": 0.5,
+          "compliance_score_pct": 82.1,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "store_id": "MID004",
+      "store_name": "Nottingham Market",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 29626.85,
+          "transactions": 953,
+          "avg_transaction": 3.68,
+          "nps": 72.8,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 87.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 30479.11,
+          "transactions": 861,
+          "avg_transaction": 3.02,
+          "nps": 74.3,
+          "staff_turnover_pct": 0.6,
+          "compliance_score_pct": 88.2,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29661.68,
+          "transactions": 1075,
+          "avg_transaction": 3.05,
+          "nps": 67.9,
+          "staff_turnover_pct": 1.2,
+          "compliance_score_pct": 90.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 29009.9,
+          "transactions": 921,
+          "avg_transaction": 2.9,
+          "nps": 69.4,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 89.3,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 30889.14,
+          "transactions": 922,
+          "avg_transaction": 3.75,
+          "nps": 70.2,
+          "staff_turnover_pct": 0.0,
+          "compliance_score_pct": 90.2,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 27661.08,
+          "transactions": 1196,
+          "avg_transaction": 2.86,
+          "nps": 69.8,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 92.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 29579.74,
+          "transactions": 735,
+          "avg_transaction": 3.97,
+          "nps": 69.3,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 87.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 31308.16,
+          "transactions": 950,
+          "avg_transaction": 2.94,
+          "nps": 74.1,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 88.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 31573.31,
+          "transactions": 714,
+          "avg_transaction": 2.81,
+          "nps": 67.9,
+          "staff_turnover_pct": 0.8,
+          "compliance_score_pct": 90.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 32017.61,
+          "transactions": 781,
+          "avg_transaction": 4.13,
+          "nps": 70.9,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 92.7,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28292.23,
+          "transactions": 878,
+          "avg_transaction": 4.11,
+          "nps": 74.7,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 88.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 28321.43,
+          "transactions": 1222,
+          "avg_transaction": 4.07,
+          "nps": 71.7,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 87.3,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "store_id": "MID005",
+      "store_name": "Derby Eagle",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 20632.13,
+          "transactions": 1176,
+          "avg_transaction": 4.17,
+          "nps": 57.3,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 89.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 20264.63,
+          "transactions": 1194,
+          "avg_transaction": 3.0,
+          "nps": 64.6,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 91.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 20413.9,
+          "transactions": 1338,
+          "avg_transaction": 3.13,
+          "nps": 64.7,
+          "staff_turnover_pct": 5.8,
+          "compliance_score_pct": 86.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 23285.52,
+          "transactions": 906,
+          "avg_transaction": 3.2,
+          "nps": 62.5,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 87.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 20947.41,
+          "transactions": 815,
+          "avg_transaction": 3.33,
+          "nps": 62.3,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 91.1,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 23288.57,
+          "transactions": 919,
+          "avg_transaction": 3.05,
+          "nps": 62.4,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 86.8,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 22815.76,
+          "transactions": 1058,
+          "avg_transaction": 3.06,
+          "nps": 60.4,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 86.9,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 23283.33,
+          "transactions": 867,
+          "avg_transaction": 2.92,
+          "nps": 57.7,
+          "staff_turnover_pct": 3.5,
+          "compliance_score_pct": 89.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 22778.9,
+          "transactions": 869,
+          "avg_transaction": 3.54,
+          "nps": 64.1,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 91.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 21964.77,
+          "transactions": 727,
+          "avg_transaction": 2.94,
+          "nps": 62.9,
+          "staff_turnover_pct": 3.2,
+          "compliance_score_pct": 89.0,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 20623.94,
+          "transactions": 1143,
+          "avg_transaction": 4.18,
+          "nps": 60.6,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 89.2,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 22818.67,
+          "transactions": 1312,
+          "avg_transaction": 2.81,
+          "nps": 59.4,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 89.0,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "store_id": "MID006",
+      "store_name": "Wolverhampton",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 28957.51,
+          "transactions": 716,
+          "avg_transaction": 3.04,
+          "nps": 63.9,
+          "staff_turnover_pct": 4.6,
+          "compliance_score_pct": 86.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 31144.41,
+          "transactions": 1046,
+          "avg_transaction": 3.09,
+          "nps": 70.5,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 90.0,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29572.83,
+          "transactions": 902,
+          "avg_transaction": 2.91,
+          "nps": 67.8,
+          "staff_turnover_pct": 6.2,
+          "compliance_score_pct": 86.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 29484.29,
+          "transactions": 1158,
+          "avg_transaction": 3.25,
+          "nps": 66.2,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 88.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 28618.54,
+          "transactions": 998,
+          "avg_transaction": 3.38,
+          "nps": 67.5,
+          "staff_turnover_pct": 0.5,
+          "compliance_score_pct": 90.6,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 30265.78,
+          "transactions": 1146,
+          "avg_transaction": 3.43,
+          "nps": 67.5,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 89.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 31339.47,
+          "transactions": 724,
+          "avg_transaction": 3.71,
+          "nps": 66.7,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 90.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 29469.89,
+          "transactions": 1222,
+          "avg_transaction": 3.13,
+          "nps": 66.2,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 86.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 32194.53,
+          "transactions": 1152,
+          "avg_transaction": 3.03,
+          "nps": 68.7,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 87.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 31334.66,
+          "transactions": 1261,
+          "avg_transaction": 3.06,
+          "nps": 63.8,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 89.2,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28969.1,
+          "transactions": 711,
+          "avg_transaction": 3.31,
+          "nps": 64.3,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 90.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 29062.79,
+          "transactions": 1137,
+          "avg_transaction": 4.05,
+          "nps": 70.4,
+          "staff_turnover_pct": 4.3,
+          "compliance_score_pct": 86.4,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "store_id": "MID007",
+      "store_name": "Stoke Victoria",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 25810.62,
+          "transactions": 1110,
+          "avg_transaction": 3.24,
+          "nps": 45.6,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 83.8,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 25684.04,
+          "transactions": 1186,
+          "avg_transaction": 3.92,
+          "nps": 50.8,
+          "staff_turnover_pct": 3.7,
+          "compliance_score_pct": 83.5,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25677.01,
+          "transactions": 1060,
+          "avg_transaction": 4.11,
+          "nps": 51.9,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 84.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 26890.75,
+          "transactions": 899,
+          "avg_transaction": 3.68,
+          "nps": 45.7,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 84.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 25604.95,
+          "transactions": 757,
+          "avg_transaction": 3.43,
+          "nps": 50.3,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 83.3,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 26834.78,
+          "transactions": 782,
+          "avg_transaction": 4.12,
+          "nps": 49.4,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 80.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 24785.47,
+          "transactions": 827,
+          "avg_transaction": 2.94,
+          "nps": 51.1,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 84.4,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 25948.86,
+          "transactions": 1116,
+          "avg_transaction": 3.5,
+          "nps": 50.6,
+          "staff_turnover_pct": 3.7,
+          "compliance_score_pct": 82.0,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 24822.93,
+          "transactions": 1046,
+          "avg_transaction": 2.98,
+          "nps": 49.5,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 80.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 24685.56,
+          "transactions": 856,
+          "avg_transaction": 3.91,
+          "nps": 48.6,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 79.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28354.85,
+          "transactions": 1177,
+          "avg_transaction": 3.86,
+          "nps": 45.3,
+          "staff_turnover_pct": 7.1,
+          "compliance_score_pct": 83.5,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 26886.35,
+          "transactions": 957,
+          "avg_transaction": 3.79,
+          "nps": 47.8,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 82.2,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "store_id": "MID008",
+      "store_name": "Shrewsbury",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 29377.43,
+          "transactions": 894,
+          "avg_transaction": 3.82,
+          "nps": 55.9,
+          "staff_turnover_pct": 7.3,
+          "compliance_score_pct": 93.3,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 30933.9,
+          "transactions": 886,
+          "avg_transaction": 3.54,
+          "nps": 59.6,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 94.2,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29562.06,
+          "transactions": 1214,
+          "avg_transaction": 3.5,
+          "nps": 63.3,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 93.2,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 32056.61,
+          "transactions": 894,
+          "avg_transaction": 3.1,
+          "nps": 61.2,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 94.9,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 30850.12,
+          "transactions": 867,
+          "avg_transaction": 3.78,
+          "nps": 57.5,
+          "staff_turnover_pct": 7.2,
+          "compliance_score_pct": 93.2,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 30600.06,
+          "transactions": 1110,
+          "avg_transaction": 3.73,
+          "nps": 57.0,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 92.7,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 31521.48,
+          "transactions": 993,
+          "avg_transaction": 3.55,
+          "nps": 57.6,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 91.0,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 30512.55,
+          "transactions": 1026,
+          "avg_transaction": 3.81,
+          "nps": 58.6,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 90.3,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 28976.63,
+          "transactions": 779,
+          "avg_transaction": 3.57,
+          "nps": 59.9,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 91.9,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 31633.92,
+          "transactions": 859,
+          "avg_transaction": 3.46,
+          "nps": 58.1,
+          "staff_turnover_pct": 7.8,
+          "compliance_score_pct": 90.9,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28952.09,
+          "transactions": 1019,
+          "avg_transaction": 4.05,
+          "nps": 63.0,
+          "staff_turnover_pct": 5.0,
+          "compliance_score_pct": 89.9,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 28321.67,
+          "transactions": 1134,
+          "avg_transaction": 3.07,
+          "nps": 57.6,
+          "staff_turnover_pct": 0.5,
+          "compliance_score_pct": 91.1,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "store_id": "MID009",
+      "store_name": "Worcester High",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 28813.49,
+          "transactions": 1051,
+          "avg_transaction": 3.05,
+          "nps": 53.4,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 86.4,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 32072.18,
+          "transactions": 1269,
+          "avg_transaction": 3.39,
+          "nps": 53.5,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 88.1,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29235.39,
+          "transactions": 972,
+          "avg_transaction": 3.31,
+          "nps": 52.8,
+          "staff_turnover_pct": 0.9,
+          "compliance_score_pct": 90.8,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 31023.89,
+          "transactions": 1013,
+          "avg_transaction": 3.08,
+          "nps": 53.4,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 85.9,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 28372.57,
+          "transactions": 1047,
+          "avg_transaction": 3.17,
+          "nps": 51.0,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 88.8,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 30179.03,
+          "transactions": 995,
+          "avg_transaction": 3.03,
+          "nps": 52.9,
+          "staff_turnover_pct": 5.1,
+          "compliance_score_pct": 88.6,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 29312.77,
+          "transactions": 1340,
+          "avg_transaction": 3.88,
+          "nps": 49.4,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 90.8,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 28224.01,
+          "transactions": 1339,
+          "avg_transaction": 2.96,
+          "nps": 54.2,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 89.9,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 30971.92,
+          "transactions": 877,
+          "avg_transaction": 4.06,
+          "nps": 51.7,
+          "staff_turnover_pct": 2.3,
+          "compliance_score_pct": 88.9,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 32119.19,
+          "transactions": 1152,
+          "avg_transaction": 3.04,
+          "nps": 49.9,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 86.7,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 32259.58,
+          "transactions": 1333,
+          "avg_transaction": 3.54,
+          "nps": 50.4,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 88.8,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 28435.58,
+          "transactions": 945,
+          "avg_transaction": 4.0,
+          "nps": 46.9,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 86.1,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "store_id": "MID010",
+      "store_name": "Telford Forge",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 23267.76,
+          "transactions": 984,
+          "avg_transaction": 3.47,
+          "nps": 73.1,
+          "staff_turnover_pct": 7.3,
+          "compliance_score_pct": 85.6,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 21487.89,
+          "transactions": 1176,
+          "avg_transaction": 3.94,
+          "nps": 73.0,
+          "staff_turnover_pct": 2.1,
+          "compliance_score_pct": 84.6,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25004.25,
+          "transactions": 726,
+          "avg_transaction": 3.81,
+          "nps": 69.3,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 86.1,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 24657.58,
+          "transactions": 944,
+          "avg_transaction": 3.84,
+          "nps": 72.8,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 86.1,
+          "rank": 10
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 24789.8,
+          "transactions": 1015,
+          "avg_transaction": 3.09,
+          "nps": 68.9,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 80.6,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 22302.88,
+          "transactions": 1125,
+          "avg_transaction": 2.82,
+          "nps": 71.9,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 82.5,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 23995.4,
+          "transactions": 1086,
+          "avg_transaction": 3.93,
+          "nps": 73.3,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 84.7,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 24691.1,
+          "transactions": 1321,
+          "avg_transaction": 2.94,
+          "nps": 75.0,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 85.0,
+          "rank": 10
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 23230.11,
+          "transactions": 1202,
+          "avg_transaction": 3.64,
+          "nps": 74.1,
+          "staff_turnover_pct": 0.3,
+          "compliance_score_pct": 82.2,
+          "rank": 10
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 22881.29,
+          "transactions": 972,
+          "avg_transaction": 3.41,
+          "nps": 71.3,
+          "staff_turnover_pct": 0.1,
+          "compliance_score_pct": 80.8,
+          "rank": 10
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 21917.64,
+          "transactions": 702,
+          "avg_transaction": 2.99,
+          "nps": 76.5,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 80.5,
+          "rank": 10
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 24678.65,
+          "transactions": 753,
+          "avg_transaction": 3.06,
+          "nps": 76.4,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 85.8,
+          "rank": 10
+        }
+      ]
+    }
+  ],
+  "North": [
+    {
+      "store_id": "NTH001",
+      "store_name": "Manchester Arndale",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 28231.56,
+          "transactions": 932,
+          "avg_transaction": 3.69,
+          "nps": 55.7,
+          "staff_turnover_pct": 1.4,
+          "compliance_score_pct": 98.2,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 28353.34,
+          "transactions": 970,
+          "avg_transaction": 3.85,
+          "nps": 59.7,
+          "staff_turnover_pct": 2.4,
+          "compliance_score_pct": 97.2,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 28190.62,
+          "transactions": 1333,
+          "avg_transaction": 3.35,
+          "nps": 57.9,
+          "staff_turnover_pct": 4.8,
+          "compliance_score_pct": 98.7,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 28679.36,
+          "transactions": 1217,
+          "avg_transaction": 4.03,
+          "nps": 56.1,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 98.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 25779.43,
+          "transactions": 984,
+          "avg_transaction": 3.97,
+          "nps": 55.9,
+          "staff_turnover_pct": 3.1,
+          "compliance_score_pct": 98.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 25510.02,
+          "transactions": 1200,
+          "avg_transaction": 3.04,
+          "nps": 60.5,
+          "staff_turnover_pct": 4.3,
+          "compliance_score_pct": 97.5,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 27626.58,
+          "transactions": 1062,
+          "avg_transaction": 3.61,
+          "nps": 56.2,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 100.0,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 27718.25,
+          "transactions": 1314,
+          "avg_transaction": 3.18,
+          "nps": 62.6,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 99.1,
+          "rank": 1
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 25469.45,
+          "transactions": 1201,
+          "avg_transaction": 3.78,
+          "nps": 59.7,
+          "staff_turnover_pct": 1.4,
+          "compliance_score_pct": 96.3,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 26010.48,
+          "transactions": 1210,
+          "avg_transaction": 3.47,
+          "nps": 58.6,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 98.8,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 28182.72,
+          "transactions": 913,
+          "avg_transaction": 3.35,
+          "nps": 58.3,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 99.2,
+          "rank": 1
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 24984.11,
+          "transactions": 1077,
+          "avg_transaction": 3.62,
+          "nps": 59.6,
+          "staff_turnover_pct": 5.8,
+          "compliance_score_pct": 98.1,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "store_id": "NTH002",
+      "store_name": "Leeds Kirkgate",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 21461.02,
+          "transactions": 757,
+          "avg_transaction": 4.17,
+          "nps": 66.8,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 96.5,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 23774.72,
+          "transactions": 1243,
+          "avg_transaction": 3.3,
+          "nps": 68.5,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 95.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 22010.77,
+          "transactions": 715,
+          "avg_transaction": 4.0,
+          "nps": 67.4,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 96.1,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 23891.82,
+          "transactions": 1102,
+          "avg_transaction": 2.82,
+          "nps": 68.0,
+          "staff_turnover_pct": 6.8,
+          "compliance_score_pct": 96.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 20948.48,
+          "transactions": 790,
+          "avg_transaction": 3.5,
+          "nps": 65.1,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 92.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 21751.42,
+          "transactions": 1371,
+          "avg_transaction": 3.2,
+          "nps": 64.9,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 96.8,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 23703.06,
+          "transactions": 1053,
+          "avg_transaction": 3.62,
+          "nps": 64.6,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 96.8,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 22908.47,
+          "transactions": 1029,
+          "avg_transaction": 3.37,
+          "nps": 66.0,
+          "staff_turnover_pct": 1.3,
+          "compliance_score_pct": 93.7,
+          "rank": 2
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 21512.29,
+          "transactions": 1164,
+          "avg_transaction": 3.87,
+          "nps": 71.6,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 97.0,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 23229.8,
+          "transactions": 1127,
+          "avg_transaction": 4.09,
+          "nps": 71.5,
+          "staff_turnover_pct": 6.2,
+          "compliance_score_pct": 94.0,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 23851.8,
+          "transactions": 1197,
+          "avg_transaction": 4.03,
+          "nps": 66.1,
+          "staff_turnover_pct": 6.5,
+          "compliance_score_pct": 96.9,
+          "rank": 2
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 21901.5,
+          "transactions": 858,
+          "avg_transaction": 3.26,
+          "nps": 65.4,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 97.7,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "store_id": "NTH003",
+      "store_name": "Sheffield Meadowhall",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 29755.53,
+          "transactions": 1355,
+          "avg_transaction": 2.87,
+          "nps": 70.8,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 90.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 30023.8,
+          "transactions": 1191,
+          "avg_transaction": 3.62,
+          "nps": 70.6,
+          "staff_turnover_pct": 1.4,
+          "compliance_score_pct": 87.4,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29266.86,
+          "transactions": 1138,
+          "avg_transaction": 3.26,
+          "nps": 66.9,
+          "staff_turnover_pct": 6.3,
+          "compliance_score_pct": 88.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 27307.49,
+          "transactions": 1298,
+          "avg_transaction": 4.13,
+          "nps": 70.1,
+          "staff_turnover_pct": 0.4,
+          "compliance_score_pct": 86.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 27167.76,
+          "transactions": 1229,
+          "avg_transaction": 3.28,
+          "nps": 65.9,
+          "staff_turnover_pct": 0.0,
+          "compliance_score_pct": 89.1,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 29603.18,
+          "transactions": 1050,
+          "avg_transaction": 3.6,
+          "nps": 66.2,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 86.6,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 28714.69,
+          "transactions": 1027,
+          "avg_transaction": 3.46,
+          "nps": 68.1,
+          "staff_turnover_pct": 6.7,
+          "compliance_score_pct": 89.0,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 26463.43,
+          "transactions": 906,
+          "avg_transaction": 3.75,
+          "nps": 70.4,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 89.9,
+          "rank": 3
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 27666.36,
+          "transactions": 1329,
+          "avg_transaction": 3.2,
+          "nps": 66.1,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 88.3,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 26910.86,
+          "transactions": 977,
+          "avg_transaction": 2.88,
+          "nps": 68.4,
+          "staff_turnover_pct": 0.2,
+          "compliance_score_pct": 90.5,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 27078.73,
+          "transactions": 1117,
+          "avg_transaction": 2.91,
+          "nps": 69.8,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 88.7,
+          "rank": 3
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 28189.85,
+          "transactions": 1233,
+          "avg_transaction": 3.05,
+          "nps": 68.6,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 89.3,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "store_id": "NTH004",
+      "store_name": "Liverpool ONE",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 27449.81,
+          "transactions": 804,
+          "avg_transaction": 3.8,
+          "nps": 66.0,
+          "staff_turnover_pct": 3.8,
+          "compliance_score_pct": 94.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 31072.77,
+          "transactions": 749,
+          "avg_transaction": 4.19,
+          "nps": 62.8,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 94.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 28352.03,
+          "transactions": 1216,
+          "avg_transaction": 3.94,
+          "nps": 63.5,
+          "staff_turnover_pct": 0.7,
+          "compliance_score_pct": 94.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 28439.22,
+          "transactions": 1368,
+          "avg_transaction": 3.93,
+          "nps": 64.6,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 94.1,
+          "rank": 4
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 30243.56,
+          "transactions": 903,
+          "avg_transaction": 2.92,
+          "nps": 64.9,
+          "staff_turnover_pct": 4.4,
+          "compliance_score_pct": 90.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 28005.72,
+          "transactions": 768,
+          "avg_transaction": 2.84,
+          "nps": 63.1,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 94.4,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 30683.15,
+          "transactions": 1123,
+          "avg_transaction": 3.5,
+          "nps": 64.8,
+          "staff_turnover_pct": 3.7,
+          "compliance_score_pct": 91.5,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 29227.19,
+          "transactions": 1167,
+          "avg_transaction": 3.33,
+          "nps": 64.0,
+          "staff_turnover_pct": 2.4,
+          "compliance_score_pct": 93.8,
+          "rank": 4
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 27530.89,
+          "transactions": 956,
+          "avg_transaction": 4.06,
+          "nps": 65.2,
+          "staff_turnover_pct": 4.9,
+          "compliance_score_pct": 94.9,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 30553.31,
+          "transactions": 906,
+          "avg_transaction": 3.3,
+          "nps": 67.0,
+          "staff_turnover_pct": 0.9,
+          "compliance_score_pct": 95.5,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 27917.38,
+          "transactions": 1339,
+          "avg_transaction": 3.09,
+          "nps": 63.7,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 95.0,
+          "rank": 4
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 29802.24,
+          "transactions": 838,
+          "avg_transaction": 3.07,
+          "nps": 63.1,
+          "staff_turnover_pct": 5.2,
+          "compliance_score_pct": 95.3,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "store_id": "NTH005",
+      "store_name": "Newcastle Eldon",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 20250.5,
+          "transactions": 1370,
+          "avg_transaction": 3.53,
+          "nps": 64.3,
+          "staff_turnover_pct": 6.3,
+          "compliance_score_pct": 97.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 19688.99,
+          "transactions": 956,
+          "avg_transaction": 2.82,
+          "nps": 62.8,
+          "staff_turnover_pct": 6.4,
+          "compliance_score_pct": 94.8,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 20680.45,
+          "transactions": 808,
+          "avg_transaction": 3.25,
+          "nps": 69.6,
+          "staff_turnover_pct": 6.0,
+          "compliance_score_pct": 96.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 21933.13,
+          "transactions": 1188,
+          "avg_transaction": 3.41,
+          "nps": 62.5,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 100.6,
+          "rank": 5
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 22414.95,
+          "transactions": 1275,
+          "avg_transaction": 4.18,
+          "nps": 67.5,
+          "staff_turnover_pct": 2.0,
+          "compliance_score_pct": 95.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 21539.89,
+          "transactions": 1292,
+          "avg_transaction": 3.44,
+          "nps": 62.1,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 95.1,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 21103.98,
+          "transactions": 1189,
+          "avg_transaction": 4.09,
+          "nps": 64.4,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 95.7,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 21684.44,
+          "transactions": 1069,
+          "avg_transaction": 3.51,
+          "nps": 63.3,
+          "staff_turnover_pct": 3.7,
+          "compliance_score_pct": 95.4,
+          "rank": 5
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 20460.69,
+          "transactions": 885,
+          "avg_transaction": 3.55,
+          "nps": 65.9,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 98.3,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 19493.13,
+          "transactions": 1385,
+          "avg_transaction": 4.05,
+          "nps": 67.4,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 96.5,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 21226.14,
+          "transactions": 784,
+          "avg_transaction": 3.34,
+          "nps": 67.4,
+          "staff_turnover_pct": 5.0,
+          "compliance_score_pct": 95.1,
+          "rank": 5
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 21571.99,
+          "transactions": 1297,
+          "avg_transaction": 3.19,
+          "nps": 68.3,
+          "staff_turnover_pct": 3.1,
+          "compliance_score_pct": 100.7,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "store_id": "NTH006",
+      "store_name": "York Museum",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 30158.58,
+          "transactions": 1298,
+          "avg_transaction": 2.81,
+          "nps": 57.3,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 92.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 33886.68,
+          "transactions": 1238,
+          "avg_transaction": 3.33,
+          "nps": 59.6,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 94.2,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 29467.63,
+          "transactions": 770,
+          "avg_transaction": 3.5,
+          "nps": 59.0,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 95.4,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 33331.42,
+          "transactions": 827,
+          "avg_transaction": 4.05,
+          "nps": 57.7,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 91.5,
+          "rank": 6
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 34195.19,
+          "transactions": 1395,
+          "avg_transaction": 3.85,
+          "nps": 58.6,
+          "staff_turnover_pct": 1.1,
+          "compliance_score_pct": 95.1,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 31178.47,
+          "transactions": 745,
+          "avg_transaction": 3.84,
+          "nps": 62.5,
+          "staff_turnover_pct": 5.6,
+          "compliance_score_pct": 91.6,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 32956.35,
+          "transactions": 1382,
+          "avg_transaction": 2.91,
+          "nps": 59.1,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 96.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 31954.0,
+          "transactions": 976,
+          "avg_transaction": 3.78,
+          "nps": 58.6,
+          "staff_turnover_pct": 5.4,
+          "compliance_score_pct": 91.9,
+          "rank": 6
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 29919.97,
+          "transactions": 1379,
+          "avg_transaction": 3.22,
+          "nps": 61.2,
+          "staff_turnover_pct": 4.7,
+          "compliance_score_pct": 92.0,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 32925.85,
+          "transactions": 789,
+          "avg_transaction": 3.34,
+          "nps": 57.4,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 96.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 31915.67,
+          "transactions": 995,
+          "avg_transaction": 3.71,
+          "nps": 61.0,
+          "staff_turnover_pct": 5.7,
+          "compliance_score_pct": 95.3,
+          "rank": 6
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 30449.4,
+          "transactions": 828,
+          "avg_transaction": 3.86,
+          "nps": 61.3,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 96.7,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "store_id": "NTH007",
+      "store_name": "Preston",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 21109.26,
+          "transactions": 1100,
+          "avg_transaction": 3.53,
+          "nps": 50.4,
+          "staff_turnover_pct": 2.8,
+          "compliance_score_pct": 89.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 21318.75,
+          "transactions": 1032,
+          "avg_transaction": 3.31,
+          "nps": 49.7,
+          "staff_turnover_pct": 3.3,
+          "compliance_score_pct": 89.8,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 22427.55,
+          "transactions": 1296,
+          "avg_transaction": 4.05,
+          "nps": 54.2,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 87.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 23634.26,
+          "transactions": 1097,
+          "avg_transaction": 3.15,
+          "nps": 51.5,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 90.0,
+          "rank": 7
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 22060.1,
+          "transactions": 1123,
+          "avg_transaction": 2.96,
+          "nps": 53.6,
+          "staff_turnover_pct": 1.8,
+          "compliance_score_pct": 88.2,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 22430.25,
+          "transactions": 892,
+          "avg_transaction": 3.06,
+          "nps": 48.4,
+          "staff_turnover_pct": 3.0,
+          "compliance_score_pct": 85.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 21459.83,
+          "transactions": 1104,
+          "avg_transaction": 3.65,
+          "nps": 46.9,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 90.4,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 23252.15,
+          "transactions": 1139,
+          "avg_transaction": 4.06,
+          "nps": 50.0,
+          "staff_turnover_pct": 5.9,
+          "compliance_score_pct": 86.6,
+          "rank": 7
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 23973.47,
+          "transactions": 1097,
+          "avg_transaction": 3.61,
+          "nps": 50.8,
+          "staff_turnover_pct": 4.2,
+          "compliance_score_pct": 88.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 23928.98,
+          "transactions": 1342,
+          "avg_transaction": 3.65,
+          "nps": 49.6,
+          "staff_turnover_pct": 1.6,
+          "compliance_score_pct": 88.1,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 24301.66,
+          "transactions": 759,
+          "avg_transaction": 3.29,
+          "nps": 50.3,
+          "staff_turnover_pct": 0.4,
+          "compliance_score_pct": 88.9,
+          "rank": 7
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 22333.31,
+          "transactions": 887,
+          "avg_transaction": 3.05,
+          "nps": 49.1,
+          "staff_turnover_pct": 4.5,
+          "compliance_score_pct": 85.2,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "store_id": "NTH008",
+      "store_name": "Chester Gates",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 20247.25,
+          "transactions": 988,
+          "avg_transaction": 3.37,
+          "nps": 57.4,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 94.7,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 21129.21,
+          "transactions": 810,
+          "avg_transaction": 3.85,
+          "nps": 50.8,
+          "staff_turnover_pct": 6.6,
+          "compliance_score_pct": 99.2,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 20624.29,
+          "transactions": 1398,
+          "avg_transaction": 3.71,
+          "nps": 56.8,
+          "staff_turnover_pct": 2.9,
+          "compliance_score_pct": 96.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 22580.79,
+          "transactions": 704,
+          "avg_transaction": 3.39,
+          "nps": 51.3,
+          "staff_turnover_pct": 1.5,
+          "compliance_score_pct": 96.5,
+          "rank": 8
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 20984.15,
+          "transactions": 1181,
+          "avg_transaction": 3.09,
+          "nps": 56.0,
+          "staff_turnover_pct": 3.9,
+          "compliance_score_pct": 96.3,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 21920.25,
+          "transactions": 996,
+          "avg_transaction": 3.03,
+          "nps": 55.0,
+          "staff_turnover_pct": 2.5,
+          "compliance_score_pct": 94.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 22535.9,
+          "transactions": 708,
+          "avg_transaction": 3.97,
+          "nps": 55.8,
+          "staff_turnover_pct": 1.7,
+          "compliance_score_pct": 98.5,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 21398.71,
+          "transactions": 718,
+          "avg_transaction": 3.11,
+          "nps": 51.1,
+          "staff_turnover_pct": 6.1,
+          "compliance_score_pct": 95.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 21315.14,
+          "transactions": 1090,
+          "avg_transaction": 3.09,
+          "nps": 56.5,
+          "staff_turnover_pct": 1.0,
+          "compliance_score_pct": 98.4,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 22493.88,
+          "transactions": 1123,
+          "avg_transaction": 2.91,
+          "nps": 54.6,
+          "staff_turnover_pct": 5.5,
+          "compliance_score_pct": 95.0,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 23107.39,
+          "transactions": 1253,
+          "avg_transaction": 2.8,
+          "nps": 56.9,
+          "staff_turnover_pct": 6.9,
+          "compliance_score_pct": 98.1,
+          "rank": 8
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 22262.74,
+          "transactions": 1037,
+          "avg_transaction": 3.51,
+          "nps": 58.0,
+          "staff_turnover_pct": 7.7,
+          "compliance_score_pct": 98.0,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "store_id": "NTH009",
+      "store_name": "Stockport Merseyway",
+      "weekly_kpis": [
+        {
+          "week": "2026-01-28",
+          "weekly_sales": 26551.98,
+          "transactions": 765,
+          "avg_transaction": 3.79,
+          "nps": 49.9,
+          "staff_turnover_pct": 7.4,
+          "compliance_score_pct": 92.4,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-04",
+          "weekly_sales": 24126.26,
+          "transactions": 1196,
+          "avg_transaction": 3.91,
+          "nps": 49.4,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 93.2,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-11",
+          "weekly_sales": 25555.54,
+          "transactions": 1102,
+          "avg_transaction": 3.12,
+          "nps": 54.4,
+          "staff_turnover_pct": 7.5,
+          "compliance_score_pct": 91.2,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-18",
+          "weekly_sales": 24526.05,
+          "transactions": 775,
+          "avg_transaction": 3.71,
+          "nps": 50.5,
+          "staff_turnover_pct": 7.6,
+          "compliance_score_pct": 91.3,
+          "rank": 9
+        },
+        {
+          "week": "2026-02-25",
+          "weekly_sales": 25934.38,
+          "transactions": 1044,
+          "avg_transaction": 2.81,
+          "nps": 50.8,
+          "staff_turnover_pct": 5.5,
+          "compliance_score_pct": 93.1,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-04",
+          "weekly_sales": 26769.29,
+          "transactions": 1383,
+          "avg_transaction": 3.73,
+          "nps": 51.4,
+          "staff_turnover_pct": 7.9,
+          "compliance_score_pct": 94.4,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-11",
+          "weekly_sales": 25831.51,
+          "transactions": 923,
+          "avg_transaction": 3.28,
+          "nps": 54.7,
+          "staff_turnover_pct": 5.3,
+          "compliance_score_pct": 90.0,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-18",
+          "weekly_sales": 24632.36,
+          "transactions": 956,
+          "avg_transaction": 3.84,
+          "nps": 50.2,
+          "staff_turnover_pct": 5.5,
+          "compliance_score_pct": 95.1,
+          "rank": 9
+        },
+        {
+          "week": "2026-03-25",
+          "weekly_sales": 25166.96,
+          "transactions": 1162,
+          "avg_transaction": 3.96,
+          "nps": 53.9,
+          "staff_turnover_pct": 2.7,
+          "compliance_score_pct": 94.3,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-01",
+          "weekly_sales": 27229.61,
+          "transactions": 955,
+          "avg_transaction": 2.88,
+          "nps": 52.4,
+          "staff_turnover_pct": 3.6,
+          "compliance_score_pct": 89.8,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-08",
+          "weekly_sales": 27069.64,
+          "transactions": 828,
+          "avg_transaction": 3.78,
+          "nps": 55.4,
+          "staff_turnover_pct": 2.6,
+          "compliance_score_pct": 91.1,
+          "rank": 9
+        },
+        {
+          "week": "2026-04-15",
+          "weekly_sales": 27337.17,
+          "transactions": 999,
+          "avg_transaction": 3.91,
+          "nps": 54.0,
+          "staff_turnover_pct": 4.0,
+          "compliance_score_pct": 90.4,
+          "rank": 9
+        }
+      ]
+    }
+  ]
+}

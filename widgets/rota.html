@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Shift Rota – {{ store_name }}{% endblock %}
+{% block domain_icon %}calendar-clock{% endblock %}
+{% block widget_title %}Shift Rota – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% set shift_colors = {"Early": "var(--costa-maroon)", "Mid": "var(--costa-gold)", "Late": "var(--costa-espresso)", "OFF": "#ccc"} %}
+{% set shift_text   = {"Early": "var(--costa-white)", "Mid": "var(--costa-espresso)", "Late": "var(--costa-white)", "OFF": "#888"} %}
+
+{% if rota_data.unfilled_shifts %}
+<div class="alert alert-warning">
+  <i data-lucide="alert-triangle"></i>
+  <strong>{{ rota_data.unfilled_shifts|length }} unfilled shift(s):</strong>
+  {% for u in rota_data.unfilled_shifts %} {{ u.day }} {{ u.shift }}{% if not loop.last %},{% endif %}{% endfor %}
+</div>
+{% endif %}
+
+<div class="card" style="padding:0;overflow:hidden">
+  <div style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          {% for day in days %}
+          <th style="{% if day == today_name %}border-bottom:3px solid var(--costa-gold){% endif %}">
+            {{ day[:3] }}{% if day == today_name %} ★{% endif %}
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for emp_id, schedule in rota_data.schedule.items() %}
+        {% set emp = employee_map.get(emp_id, {}) %}
+        <tr>
+          <td style="font-weight:600;white-space:nowrap;font-size:12px">
+            {{ emp.get("first_name","?") }} {{ emp.get("last_name","")[:1] }}.
+            <div style="font-size:10px;color:#888">{{ emp.get("role","") }}</div>
+          </td>
+          {% for day in days %}
+          {% set cell = schedule.get(day, {"shift":"OFF"}) %}
+          <td style="text-align:center;padding:4px">
+            <div style="
+              background:{{ shift_colors.get(cell.shift,"#ccc") }};
+              color:{{ shift_text.get(cell.shift,"#888") }};
+              border-radius:6px;
+              padding:4px 2px;
+              font-size:10px;
+              font-weight:600;
+              {% if day == today_name %}outline:2px solid var(--costa-gold);outline-offset:1px{% endif %}
+              {% if cell.get('overtime') %}border:2px solid var(--costa-warning){% endif %}
+            ">
+              {% if cell.shift == "OFF" %}OFF
+              {% else %}
+              {{ cell.shift }}<br><span style="font-size:9px">{{ cell.start }}</span>
+              {% endif %}
+              {% if cell.get("overtime") %}<div style="font-size:9px;color:var(--costa-warning);margin-top:1px">OT</div>{% endif %}
+            </div>
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><i data-lucide="info"></i> Shift Key</div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <span class="pill" style="background:var(--costa-maroon);color:white">Early 05:30–13:30</span>
+    <span class="pill" style="background:var(--costa-gold);color:var(--costa-espresso)">Mid 09:00–17:00</span>
+    <span class="pill" style="background:var(--costa-espresso);color:white">Late 13:00–21:30</span>
+    <span class="pill pill-warning">OT = Overtime</span>
+    <span class="pill" style="background:#ccc;color:#555">OFF</span>
+  </div>
+  <div style="margin-top:8px;font-size:12px;color:#666">Week: {{ rota_data.week_start }} to {{ rota_data.week_end }}</div>
+</div>
+{% endblock %}

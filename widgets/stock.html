@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Stock Levels – {{ store_name }}{% endblock %}
+{% block domain_icon %}package{% endblock %}
+{% block widget_title %}Stock Levels – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% set critical_items = stock_items | selectattr("status","equalto","Critical") | list %}
+{% set low_items      = stock_items | selectattr("status","equalto","Low") | list %}
+{% set ok_items       = stock_items | selectattr("status","equalto","OK") | list %}
+
+{% if critical_items %}
+<div class="alert alert-danger">
+  <i data-lucide="alert-triangle"></i>
+  <strong>{{ critical_items|length }} critical stock item(s) need immediate action!</strong>
+</div>
+{% endif %}
+
+{% if low_items %}
+<div class="alert alert-warning">
+  <i data-lucide="package"></i>
+  <strong>{{ low_items|length }} item(s) running low.</strong> Consider placing order today.
+</div>
+{% endif %}
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+  <div class="card" style="margin-bottom:0;text-align:center">
+    <canvas id="stockDoughnut" width="120" height="120" style="max-width:120px;margin:0 auto"></canvas>
+    <div style="font-size:12px;color:#666;margin-top:4px">Stock Health</div>
+  </div>
+  <div class="card" style="margin-bottom:0">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="display:flex;justify-content:space-between"><span class="pill pill-danger">Critical</span><strong>{{ critical_items|length }}</strong></div>
+      <div style="display:flex;justify-content:space-between"><span class="pill pill-warning">Low</span><strong>{{ low_items|length }}</strong></div>
+      <div style="display:flex;justify-content:space-between"><span class="pill pill-success">OK</span><strong>{{ ok_items|length }}</strong></div>
+    </div>
+  </div>
+</div>
+
+{% set categories = stock_items | map(attribute='category') | unique | list %}
+<div style="margin-bottom:10px;display:flex;gap:6px;flex-wrap:wrap">
+  <button onclick="filterCat('all')" class="cat-btn active" data-cat="all" style="padding:5px 12px;border-radius:20px;border:2px solid var(--costa-maroon);background:var(--costa-maroon);color:white;cursor:pointer;font-size:12px;font-weight:600">All</button>
+  {% for cat in categories %}
+  <button onclick="filterCat('{{ cat }}')" class="cat-btn" data-cat="{{ cat }}" style="padding:5px 12px;border-radius:20px;border:2px solid var(--costa-maroon);background:transparent;color:var(--costa-maroon);cursor:pointer;font-size:12px;font-weight:600">{{ cat }}</button>
+  {% endfor %}
+</div>
+
+<div class="card" style="padding:0;overflow:hidden">
+  <div class="table-wrap">
+    <table id="stock-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+          <th>Current</th>
+          <th>Par</th>
+          <th>Status</th>
+          <th>Days to Reorder</th>
+          <th>Last Delivery</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in stock_items | sort(attribute='status') %}
+        <tr data-cat="{{ item.category }}" style="{% if item.status == 'Critical' %}border-left:4px solid var(--costa-danger){% endif %}">
+          <td style="font-weight:{% if item.status == 'Critical' %}700{% else %}400{% endif %}">{{ item.name }}</td>
+          <td><span style="font-size:11px;color:#666">{{ item.category }}</span></td>
+          <td style="font-family:var(--font-mono);font-size:12px">{{ item.current_level }} {{ item.unit }}</td>
+          <td style="font-family:var(--font-mono);font-size:12px">{{ item.par_level }} {{ item.unit }}</td>
+          <td>
+            {% if item.status == "Critical" %}<span class="pill pill-danger">● Critical</span>
+            {% elif item.status == "Low" %}<span class="pill pill-warning">● Low</span>
+            {% else %}<span class="pill pill-success">● OK</span>{% endif %}
+          </td>
+          <td style="font-family:var(--font-mono);font-size:12px">{{ item.days_until_reorder }}d</td>
+          <td style="font-size:12px;color:#666">{{ item.last_delivery }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const ctx = document.getElementById('stockDoughnut').getContext('2d');
+new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['OK','Low','Critical'],
+    datasets: [{
+      data: [{{ ok_items|length }}, {{ low_items|length }}, {{ critical_items|length }}],
+      backgroundColor: ['#2E7D32','#F57C00','#C62828'],
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    cutout: '70%',
+    plugins: { legend: { display: false } },
+  }
+});
+
+function filterCat(cat) {
+  document.querySelectorAll('#stock-table tbody tr').forEach(row => {
+    row.style.display = (cat === 'all' || row.dataset.cat === cat) ? '' : 'none';
+  });
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    const active = btn.dataset.cat === cat;
+    btn.style.background = active ? 'var(--costa-maroon)' : 'transparent';
+    btn.style.color = active ? 'white' : 'var(--costa-maroon)';
+  });
+}
+</script>
+{% endblock %}
