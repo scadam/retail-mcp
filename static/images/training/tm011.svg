@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg_tm011" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7a2029;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d0e14;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg_tm011)"/>
+  <polygon points="230,0 400,0 400,225 290,225" fill="rgba(0,0,0,0.18)"/>
+  <rect width="400" height="40" fill="rgba(0,0,0,0.35)"/>
+  <rect x="0" y="0" width="5" height="225" fill="#C8A951"/>
+  <text x="202" y="26" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#C8A951" text-anchor="middle" letter-spacing="3">COSTA COFFEE®</text>
+  <g opacity="0.75">
+    <path d="M310,60 C310,60 280,90 276,118 C272,148 288,180 310,180 C332,180 348,148 344,118 C340,90 310,60 310,60Z" fill="rgba(255,120,30,0.25)" stroke="rgba(255,160,50,0.7)" stroke-width="2.5"/>
+    <path d="M310,78 C310,78 290,102 288,124 C286,148 298,172 310,172 C322,172 334,148 332,124 C330,102 310,78 310,78Z" fill="rgba(255,160,50,0.2)" stroke="rgba(255,200,80,0.6)" stroke-width="2"/>
+    <path d="M310,100 C310,100 300,116 300,132 C300,148 304,162 310,162 C316,162 320,148 320,132 C320,116 310,100 310,100Z" fill="rgba(255,220,100,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+    <path d="M296,70 C290,80 280,75 285,88 C278,82 272,90 280,98" fill="none" stroke="rgba(255,160,50,0.55)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M324,70 C330,80 340,75 335,88 C342,82 348,90 340,98" fill="none" stroke="rgba(255,160,50,0.55)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="30" y="100" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Fire</text>
+  <text x="30" y="128" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Safety</text>
+  <text x="30" y="162" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="#C8A951">Evacuation &amp; Extinguishers</text>
+  <rect x="24" y="178" width="72" height="20" rx="3" fill="rgba(200,169,81,0.2)"/>
+  <text x="60" y="192" font-family="Arial, sans-serif" font-size="9" fill="#C8A951" text-anchor="middle" letter-spacing="1">MODULE 011</text>
+  <rect y="215" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

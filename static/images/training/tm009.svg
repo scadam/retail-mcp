@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg_tm009" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7a2029;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d0e14;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg_tm009)"/>
+  <polygon points="230,0 400,0 400,225 290,225" fill="rgba(0,0,0,0.18)"/>
+  <rect width="400" height="40" fill="rgba(0,0,0,0.35)"/>
+  <rect x="0" y="0" width="5" height="225" fill="#C8A951"/>
+  <text x="202" y="26" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#C8A951" text-anchor="middle" letter-spacing="3">COSTA COFFEE®</text>
+  <g opacity="0.75">
+    <path d="M296,65 Q330,70 338,100 Q346,132 326,158 Q306,184 280,176 Q306,172 314,148 Q322,124 314,100 Q306,76 284,70 Q290,65 296,65Z" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.6)" stroke-width="2.5"/>
+    <circle cx="350" cy="75" r="3" fill="#C8A951" opacity="0.9"/>
+    <circle cx="362" cy="95" r="2" fill="#C8A951" opacity="0.9"/>
+    <circle cx="345" cy="108" r="2.5" fill="#C8A951" opacity="0.8"/>
+    <circle cx="368" cy="122" r="2" fill="#C8A951" opacity="0.7"/>
+    <line x1="244" y1="112" x2="272" y2="112" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="244" y1="125" x2="272" y2="125" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="244" y1="138" x2="272" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="244" y1="151" x2="264" y2="151" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="238,112 241,115 246,109" fill="none" stroke="#C8A951" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <polyline points="238,125 241,128 246,122" fill="none" stroke="#C8A951" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <polyline points="238,138 241,141 246,135" fill="none" stroke="#C8A951" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  </g>
+  <text x="30" y="100" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Closing</text>
+  <text x="30" y="128" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Procedures</text>
+  <text x="30" y="162" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="#C8A951">End of Day Checklist</text>
+  <rect x="24" y="178" width="72" height="20" rx="3" fill="rgba(200,169,81,0.2)"/>
+  <text x="60" y="192" font-family="Arial, sans-serif" font-size="9" fill="#C8A951" text-anchor="middle" letter-spacing="1">MODULE 009</text>
+  <rect y="215" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

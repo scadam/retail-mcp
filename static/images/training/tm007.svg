@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg_tm007" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7a2029;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d0e14;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg_tm007)"/>
+  <polygon points="230,0 400,0 400,225 290,225" fill="rgba(0,0,0,0.18)"/>
+  <rect width="400" height="40" fill="rgba(0,0,0,0.35)"/>
+  <rect x="0" y="0" width="5" height="225" fill="#C8A951"/>
+  <text x="202" y="26" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#C8A951" text-anchor="middle" letter-spacing="3">COSTA COFFEE®</text>
+  <g opacity="0.75">
+    <rect x="255" y="70" width="110" height="130" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.5)" stroke-width="2.5"/>
+    <rect x="263" y="78" width="94" height="45" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+    <text x="310" y="104" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">&#163; 4.85</text>
+    <rect x="265" y="130" width="90" height="42" rx="2" fill="rgba(0,0,0,0.15)"/>
+    <circle cx="278" cy="141" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="295" cy="141" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="312" cy="141" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="329" cy="141" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="346" cy="141" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="278" cy="157" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="295" cy="157" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="312" cy="157" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="329" cy="157" r="5" fill="rgba(255,255,255,0.3)"/>
+    <rect x="338" y="134" width="16" height="28" rx="3" fill="#C8A951" opacity="0.7"/>
+    <rect x="258" y="178" width="104" height="18" rx="3" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  </g>
+  <text x="30" y="100" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Till</text>
+  <text x="30" y="128" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Operations</text>
+  <text x="30" y="162" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="#C8A951">POS &amp; Cash Handling</text>
+  <rect x="24" y="178" width="72" height="20" rx="3" fill="rgba(200,169,81,0.2)"/>
+  <text x="60" y="192" font-family="Arial, sans-serif" font-size="9" fill="#C8A951" text-anchor="middle" letter-spacing="1">MODULE 007</text>
+  <rect y="215" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

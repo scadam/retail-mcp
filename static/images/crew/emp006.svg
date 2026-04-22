@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <defs>
+    <clipPath id="circle_emp006">
+      <circle cx="30" cy="30" r="30"/>
+    </clipPath>
+  </defs>
+  <circle cx="30" cy="30" r="30" fill="#6B1C23"/>
+  <g clip-path="url(#circle_emp006)">
+    <!-- Shoulders/uniform -->
+    <ellipse cx="30" cy="58" rx="24" ry="14" fill="#4a1219"/>
+    <ellipse cx="30" cy="54" rx="18" ry="10" fill="#3d1018"/>
+    <!-- Face -->
+    <circle cx="30" cy="26" r="13" fill="#FDBCB4"/>
+    <!-- Hair -->
+    <!-- Medium blonde wavy hair -->
+    <ellipse cx="30" cy="17" rx="14" ry="9" fill="#D4AF37"/>
+    <rect x="16" y="16" width="5" height="20" rx="3" fill="#D4AF37"/>
+    <rect x="39" y="16" width="5" height="20" rx="3" fill="#D4AF37"/>
+    <path d="M16,20 Q18,16 21,19 Q23,16 26,19" fill="none" stroke="#BFA030" stroke-width="1.5"/>
+    <path d="M34,19 Q37,16 40,19 Q43,16 44,20" fill="none" stroke="#BFA030" stroke-width="1.5"/>
+    <!-- Eyes -->
+    <circle cx="26" cy="24" r="1.8" fill="#2C1810"/>
+    <circle cx="34" cy="24" r="1.8" fill="#2C1810"/>
+    <!-- Nose -->
+    <circle cx="30" cy="28" r="1" fill="rgba(0,0,0,0.15)"/>
+    <!-- Smile -->
+    <path d="M26,31 Q30,35 34,31" fill="none" stroke="#2C1810" stroke-width="1.5" stroke-linecap="round"/>
+    
+  </g>
+</svg>
