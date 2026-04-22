@@ -1,5 +1,5 @@
 def register_dashboard(mcp, load_json, render_widget):
-    @mcp.resource("widget://daily-dashboard", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/dashboard.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def dashboard_widget() -> str:
         return render_widget("dashboard.html", store_name="Costa Coffee", sales_data={})
@@ -23,7 +23,7 @@ def register_dashboard(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://daily-dashboard",
+                    "widget": "ui://widget/dashboard.html",
                     "html": html,
                     "params": {"store_id": store_id},
                 }

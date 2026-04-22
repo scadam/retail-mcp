@@ -1,5 +1,5 @@
 def register_recipes(mcp, load_json, render_widget):
-    @mcp.resource("widget://recipe-card", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/recipe_card.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def recipe_widget() -> str:
         return render_widget("recipe_card.html", recipe={})
@@ -22,14 +22,14 @@ def register_recipes(mcp, load_json, render_widget):
             return {
                 "data": {"error": f"Recipe not found for '{item_name}'"},
                 "available_recipes": [r["name"] for r in recipes],
-                "_meta": {"ui": {"widget": "widget://recipe-card", "html": "", "params": {}}},
+                "_meta": {"ui": {"widget": "ui://widget/recipe_card.html", "html": "", "params": {}}},
             }
         html = render_widget("recipe_card.html", recipe=recipe)
         return {
             "data": recipe,
             "_meta": {
                 "ui": {
-                    "widget": "widget://recipe-card",
+                    "widget": "ui://widget/recipe_card.html",
                     "html": html,
                     "params": {"item_name": item_name},
                 }

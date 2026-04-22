@@ -1,5 +1,5 @@
 def register_regional(mcp, load_json, render_widget):
-    @mcp.resource("widget://regional-benchmarks", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/regional_benchmarks.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def regional_widget() -> str:
         return render_widget("regional_benchmarks.html", region="South East",
@@ -41,7 +41,7 @@ def register_regional(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://regional-benchmarks",
+                    "widget": "ui://widget/regional_benchmarks.html",
                     "html": html,
                     "params": {"region": region},
                 }

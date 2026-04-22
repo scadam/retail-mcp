@@ -2,7 +2,7 @@ from datetime import date
 import uuid
 
 def register_shift_handover(mcp, load_json, render_widget):
-    @mcp.resource("widget://shift-handover", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/shift_handover.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def handover_widget() -> str:
         return render_widget("shift_handover.html", store_name="Costa Coffee",
@@ -35,7 +35,7 @@ def register_shift_handover(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://shift-handover",
+                    "widget": "ui://widget/shift_handover.html",
                     "html": html,
                     "params": {"store_id": store_id, "shift_date": shift_date, "shift_type": shift_type},
                 }
@@ -65,6 +65,6 @@ def register_shift_handover(mcp, load_json, render_widget):
         return {
             "data": handover,
             "message": f"Shift handover {handover['handover_id']} submitted successfully.",
-            "_meta": {"ui": {"widget": "widget://shift-handover",
+            "_meta": {"ui": {"widget": "ui://widget/shift_handover.html",
                              "params": {"store_id": store_id}}},
         }

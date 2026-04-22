@@ -1,7 +1,7 @@
 from datetime import date
 
 def register_promotions(mcp, load_json, render_widget):
-    @mcp.resource("widget://promotions", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/promotions.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def promotions_widget() -> str:
         return render_widget("promotions.html", promotions=[])
@@ -25,7 +25,7 @@ def register_promotions(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://promotions",
+                    "widget": "ui://widget/promotions.html",
                     "html": html,
                     "params": {"store_id": store_id},
                 }

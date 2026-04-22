@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
 def register_feedback(mcp, load_json, render_widget):
-    @mcp.resource("widget://customer-feedback", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/feedback.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def feedback_widget() -> str:
         return render_widget("feedback.html", store_name="Costa Coffee",
@@ -68,7 +68,7 @@ def register_feedback(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://customer-feedback",
+                    "widget": "ui://widget/feedback.html",
                     "html": html,
                     "params": {"store_id": store_id, "days": days},
                 }

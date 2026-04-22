@@ -7,7 +7,7 @@ CHECKLIST_LABELS = {
 }
 
 def register_compliance(mcp, load_json, render_widget):
-    @mcp.resource("widget://compliance-checklist", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/compliance_checklist.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def compliance_widget() -> str:
         return render_widget("compliance_checklist.html", store_name="Costa Coffee",
@@ -41,7 +41,7 @@ def register_compliance(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://compliance-checklist",
+                    "widget": "ui://widget/compliance_checklist.html",
                     "html": html,
                     "params": {"store_id": store_id, "checklist_type": checklist_type},
                 }

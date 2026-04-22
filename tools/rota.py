@@ -3,7 +3,7 @@ from datetime import date
 DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 
 def register_rota(mcp, load_json, render_widget):
-    @mcp.resource("widget://shift-rota", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/rota.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def rota_widget() -> str:
         return render_widget("rota.html", store_name="Costa Coffee",
@@ -35,7 +35,7 @@ def register_rota(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://shift-rota",
+                    "widget": "ui://widget/rota.html",
                     "html": html,
                     "params": {"store_id": store_id, "date": date_str},
                 }

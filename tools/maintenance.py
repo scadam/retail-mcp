@@ -1,5 +1,5 @@
 def register_maintenance(mcp, load_json, render_widget):
-    @mcp.resource("widget://maintenance-requests", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/maintenance.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def maintenance_widget() -> str:
         return render_widget("maintenance.html", store_name="Costa Coffee", requests=[])
@@ -25,7 +25,7 @@ def register_maintenance(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://maintenance-requests",
+                    "widget": "ui://widget/maintenance.html",
                     "html": html,
                     "params": {"store_id": store_id, "status": status},
                 }

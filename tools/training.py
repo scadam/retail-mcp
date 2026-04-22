@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
 def register_training(mcp, load_json, render_widget):
-    @mcp.resource("widget://training-progress", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/training.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def training_widget() -> str:
         return render_widget("training.html", store_name="Costa Coffee",
@@ -35,7 +35,7 @@ def register_training(mcp, load_json, render_widget):
                                  team_rows=[], team_avg_pct=0, overdue_count=0, due_this_week=0)
             return {
                 "data": {"employee_id": employee_id, "progress": emp_progress, "overall_pct": overall},
-                "_meta": {"ui": {"widget": "widget://training-progress", "html": html,
+                "_meta": {"ui": {"widget": "ui://widget/training.html", "html": html,
                                  "params": {"employee_id": employee_id}}},
             }
 
@@ -72,6 +72,6 @@ def register_training(mcp, load_json, render_widget):
         return {
             "data": {"store_id": store_id, "team_avg_pct": team_avg, "team": team_rows,
                      "overdue_count": overdue_count, "due_this_week": due_this_week},
-            "_meta": {"ui": {"widget": "widget://training-progress", "html": html,
+            "_meta": {"ui": {"widget": "ui://widget/training.html", "html": html,
                              "params": {"store_id": store_id}}},
         }

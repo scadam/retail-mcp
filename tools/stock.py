@@ -1,5 +1,5 @@
 def register_stock(mcp, load_json, render_widget):
-    @mcp.resource("widget://stock-levels", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/stock.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def stock_widget() -> str:
         return render_widget("stock.html", store_name="Costa Coffee", stock_items=[])
@@ -26,7 +26,7 @@ def register_stock(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://stock-levels",
+                    "widget": "ui://widget/stock.html",
                     "html": html,
                     "params": {"store_id": store_id, "category": category},
                 }

@@ -2,7 +2,7 @@ from datetime import date, timedelta
 import uuid
 
 def register_incidents(mcp, load_json, render_widget):
-    @mcp.resource("widget://incident-log", mime_type="text/html+skybridge",
+    @mcp.resource("ui://widget/incident_log.html", mime_type="text/html+skybridge",
                   annotations={"readOnlyHint": True})
     def incident_widget() -> str:
         return render_widget("incident_log.html", store_name="Costa Coffee", incidents=[])
@@ -31,7 +31,7 @@ def register_incidents(mcp, load_json, render_widget):
             },
             "_meta": {
                 "ui": {
-                    "widget": "widget://incident-log",
+                    "widget": "ui://widget/incident_log.html",
                     "html": html,
                     "params": {"store_id": store_id, "days": days},
                 }
@@ -59,6 +59,6 @@ def register_incidents(mcp, load_json, render_widget):
         return {
             "data": incident,
             "message": f"Incident {incident['incident_id']} submitted successfully.",
-            "_meta": {"ui": {"widget": "widget://incident-log",
+            "_meta": {"ui": {"widget": "ui://widget/incident_log.html",
                              "params": {"store_id": store_id}}},
         }
