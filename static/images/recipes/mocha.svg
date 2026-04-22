@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bg_mocha" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="glow_mocha" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5C3317;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg_mocha)"/>
+  <rect width="400" height="200" fill="url(#glow_mocha)"/>
+  <text x="24" y="22" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#C8A951" letter-spacing="2">COSTA COFFEE®</text>
+  <defs>
+    <linearGradient id="mochaliq" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3D1808;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0804;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Cup -->
+  <path d="M266,90 L272,170 L338,170 L344,90 Z" fill="url(#mochaliq)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- Coffee surface with choc swirl -->
+  <ellipse cx="305" cy="90" rx="39" ry="10" fill="#2C1008"/>
+  <!-- Chocolate spiral swirl -->
+  <path d="M305,90 C312,86 318,89 316,93 C314,98 308,99 305,96 C301,93 302,88 306,86 C311,84 317,87 318,93 C319,99 315,104 310,105 C305,106 300,104 298,100 C296,95 298,89 302,86 C306,83 313,83 318,87" fill="none" stroke="#C8A951" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+  <!-- Whipped cream -->
+  <ellipse cx="305" cy="80" rx="28" ry="10" fill="#F8F2E8"/>
+  <ellipse cx="305" cy="74" rx="20" ry="7" fill="white"/>
+  <ellipse cx="305" cy="68" rx="12" ry="5" fill="white"/>
+  <!-- Chocolate dust -->
+  <ellipse cx="305" cy="78" rx="18" ry="5" fill="rgba(60,20,5,0.2)"/>
+  <!-- Handle -->
+  <path d="M344,100 Q360,100 360,128 Q360,155 344,155" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  <text x="24" y="175" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white">Mocha</text>
+  <rect y="190" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

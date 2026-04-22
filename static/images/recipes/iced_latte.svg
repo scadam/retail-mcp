@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bg_iced_latte" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="glow_iced_latte" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5C3317;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg_iced_latte)"/>
+  <rect width="400" height="200" fill="url(#glow_iced_latte)"/>
+  <text x="24" y="22" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#C8A951" letter-spacing="2">COSTA COFFEE®</text>
+  <defs>
+    <linearGradient id="iclatliq" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5A2B;stop-opacity:1"/>
+      <stop offset="60%" style="stop-color:#4A2810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0804;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Tall plastic cup (slightly tapered) -->
+  <path d="M274,42 L280,170 L326,170 L332,42 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <!-- Cup rim -->
+  <ellipse cx="303" cy="42" rx="29" ry="7" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <!-- Coffee with milk gradient -->
+  <path d="M278,50 L281,168 L325,168 L328,50 Z" fill="url(#iclatliq)"/>
+  <!-- Milk swirl at top -->
+  <ellipse cx="303" cy="55" rx="24" ry="7" fill="#D4B896" opacity="0.8"/>
+  <!-- Ice cubes -->
+  <rect x="284" y="68" width="15" height="14" rx="3" fill="rgba(200,230,245,0.4)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <rect x="303" y="65" width="14" height="16" rx="3" fill="rgba(200,230,245,0.45)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <rect x="284" y="88" width="14" height="13" rx="3" fill="rgba(200,230,245,0.35)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <rect x="302" y="86" width="15" height="14" rx="3" fill="rgba(200,230,245,0.4)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <!-- Straw -->
+  <rect x="320" y="30" width="6" height="140" rx="3" fill="#C8A951" opacity="0.85"/>
+  <rect x="321" y="31" width="2" height="138" rx="1" fill="rgba(255,255,255,0.3)"/>
+  <!-- Glass highlights -->
+  <line x1="281" y1="50" x2="283" y2="164" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linecap="round"/>
+  <text x="24" y="175" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white">Iced Latte</text>
+  <rect y="190" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

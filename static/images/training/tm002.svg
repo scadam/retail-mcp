@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg_tm002" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7a2029;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d0e14;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg_tm002)"/>
+  <polygon points="230,0 400,0 400,225 290,225" fill="rgba(0,0,0,0.18)"/>
+  <rect width="400" height="40" fill="rgba(0,0,0,0.35)"/>
+  <rect x="0" y="0" width="5" height="225" fill="#C8A951"/>
+  <text x="202" y="26" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#C8A951" text-anchor="middle" letter-spacing="3">COSTA COFFEE®</text>
+  <g opacity="0.75">
+    <ellipse cx="310" cy="175" rx="52" ry="8" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <path d="M270,135 L276,175 L344,175 L350,135 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.55)" stroke-width="2.5"/>
+    <ellipse cx="310" cy="135" rx="40" ry="10" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+    <ellipse cx="310" cy="135" rx="32" ry="7" fill="rgba(100,30,40,0.6)"/>
+    <path d="M350,148 Q365,148 365,162 Q365,175 350,175" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M290,118 Q285,108 290,98 Q295,88 290,78" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M310,115 Q305,105 310,95 Q315,85 310,75" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M330,118 Q325,108 330,98 Q335,88 330,78" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="30" y="100" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Coffee Mastery</text>
+  <text x="30" y="128" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="white">Level 1</text>
+  <text x="30" y="162" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="#C8A951">Espresso Fundamentals</text>
+  <rect x="24" y="178" width="72" height="20" rx="3" fill="rgba(200,169,81,0.2)"/>
+  <text x="60" y="192" font-family="Arial, sans-serif" font-size="9" fill="#C8A951" text-anchor="middle" letter-spacing="1">MODULE 002</text>
+  <rect y="215" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

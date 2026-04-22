@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bg_latte" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="glow_latte" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5C3317;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg_latte)"/>
+  <rect width="400" height="200" fill="url(#glow_latte)"/>
+  <text x="24" y="22" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#C8A951" letter-spacing="2">COSTA COFFEE®</text>
+  <defs>
+    <linearGradient id="latteliq" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B3A2A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2C1008;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Glass outline -->
+  <rect x="272" y="52" width="66" height="118" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <!-- Coffee liquid gradient -->
+  <rect x="275" y="80" width="60" height="87" rx="2" fill="url(#latteliq)"/>
+  <!-- Foam layer -->
+  <rect x="275" y="55" width="60" height="26" rx="3" fill="#F5F0E8"/>
+  <!-- Heart latte art -->
+  <path d="M305,62 C305,62 297,57 294,62 C291,67 297,73 305,78 C313,73 319,67 316,62 C313,57 305,62 305,62Z" fill="rgba(100,50,20,0.5)" stroke="rgba(100,50,20,0.3)" stroke-width="0.5"/>
+  <!-- Glass highlight -->
+  <line x1="278" y1="58" x2="278" y2="165" stroke="rgba(255,255,255,0.25)" stroke-width="3" stroke-linecap="round"/>
+  <text x="24" y="175" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white">Caffè Latte</text>
+  <rect y="190" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

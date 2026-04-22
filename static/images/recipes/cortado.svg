@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bg_cortado" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="glow_cortado" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5C3317;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg_cortado)"/>
+  <rect width="400" height="200" fill="url(#glow_cortado)"/>
+  <text x="24" y="22" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#C8A951" letter-spacing="2">COSTA COFFEE®</text>
+  <!-- Small glass (narrow) -->
+  <path d="M282,72 L287,165 L323,165 L328,72 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+  <!-- Glass rim ellipse -->
+  <ellipse cx="305" cy="72" rx="23" ry="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <!-- Milk top layer (light creamy) -->
+  <path d="M283,75 L287,116 L323,116 L327,75 Z" fill="#D4B896" opacity="0.9"/>
+  <!-- Foam tiny ellipse -->
+  <ellipse cx="305" cy="75" rx="20" ry="5" fill="#F0E8D8"/>
+  <!-- Espresso bottom layer -->
+  <path d="M287,116 L289,163 L321,163 L323,116 Z" fill="#2C1008"/>
+  <!-- Espresso/milk dividing line -->
+  <line x1="287" y1="116" x2="323" y2="116" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Glass highlights -->
+  <line x1="285" y1="76" x2="289" y2="160" stroke="rgba(255,255,255,0.25)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Saucer -->
+  <ellipse cx="305" cy="168" rx="34" ry="6" fill="#B8A888" stroke="#A09070" stroke-width="1"/>
+  <text x="24" y="175" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white">Cortado</text>
+  <rect y="190" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

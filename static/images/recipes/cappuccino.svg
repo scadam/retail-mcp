@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bg_cappuccino" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="glow_cappuccino" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5C3317;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg_cappuccino)"/>
+  <rect width="400" height="200" fill="url(#glow_cappuccino)"/>
+  <text x="24" y="22" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#C8A951" letter-spacing="2">COSTA COFFEE®</text>
+  <!-- Saucer -->
+  <ellipse cx="305" cy="172" rx="58" ry="9" fill="#C8B89A" stroke="#B0A080" stroke-width="1.5"/>
+  <!-- Cup body -->
+  <path d="M264,120 L270,168 L340,168 L346,120 Z" fill="white" stroke="#E0D0B8" stroke-width="2"/>
+  <!-- Coffee inside -->
+  <path d="M268,123 L273,165 L337,165 L342,123 Z" fill="#5C3317"/>
+  <!-- Foam dome -->
+  <ellipse cx="305" cy="120" rx="41" ry="14" fill="#F8F2E8" stroke="#E8DCC8" stroke-width="1.5"/>
+  <ellipse cx="305" cy="116" rx="38" ry="11" fill="#F5EEE0"/>
+  <!-- Cocoa dusting dots -->
+  <circle cx="294" cy="115" r="2" fill="rgba(80,40,10,0.35)"/>
+  <circle cx="305" cy="112" r="1.5" fill="rgba(80,40,10,0.35)"/>
+  <circle cx="316" cy="115" r="2" fill="rgba(80,40,10,0.35)"/>
+  <circle cx="299" cy="120" r="1.5" fill="rgba(80,40,10,0.3)"/>
+  <circle cx="311" cy="120" r="1.5" fill="rgba(80,40,10,0.3)"/>
+  <circle cx="288" cy="120" r="1.5" fill="rgba(80,40,10,0.25)"/>
+  <circle cx="322" cy="120" r="1.5" fill="rgba(80,40,10,0.25)"/>
+  <!-- Handle -->
+  <path d="M346,128 Q362,128 362,146 Q362,162 346,162" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M346,128 Q356,128 356,146 Q356,162 346,162" fill="none" stroke="#E0D0B8" stroke-width="1.5"/>
+  <text x="24" y="175" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white">Cappuccino</text>
+  <rect y="190" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>

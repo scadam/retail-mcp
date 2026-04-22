@@ -12,6 +12,11 @@
   <i data-lucide="alert-triangle"></i>
   <strong>{{ rota_data.unfilled_shifts|length }} unfilled shift(s):</strong>
   {% for u in rota_data.unfilled_shifts %} {{ u.day }} {{ u.shift }}{% if not loop.last %},{% endif %}{% endfor %}
+  <button data-prompt="I have {{ rota_data.unfilled_shifts|length }} unfilled shifts this week. Help me find cover and suggest who from the team could fill them."
+          onclick="sendDataPrompt(this)"
+          style="margin-left:auto;padding:4px 10px;background:var(--costa-warning);color:white;border:none;border-radius:6px;cursor:pointer;font-size:11px;font-weight:600">
+    Find Cover
+  </button>
 </div>
 {% endif %}
 
@@ -20,9 +25,9 @@
     <table>
       <thead>
         <tr>
-          <th>Employee</th>
+          <th style="min-width:130px">Employee</th>
           {% for day in days %}
-          <th style="{% if day == today_name %}border-bottom:3px solid var(--costa-gold){% endif %}">
+          <th style="{% if day == today_name %}border-bottom:3px solid var(--costa-gold){% endif %};text-align:center">
             {{ day[:3] }}{% if day == today_name %} ★{% endif %}
           </th>
           {% endfor %}
@@ -31,10 +36,20 @@
       <tbody>
         {% for emp_id, schedule in rota_data.schedule.items() %}
         {% set emp = employee_map.get(emp_id, {}) %}
-        <tr>
+        <tr data-prompt="Show me the training progress and any notes for {{ emp.get('first_name','?') }} {{ emp.get('last_name','') }} this week"
+            onclick="sendDataPrompt(this)"
+            style="cursor:pointer">
           <td style="font-weight:600;white-space:nowrap;font-size:12px">
-            {{ emp.get("first_name","?") }} {{ emp.get("last_name","")[:1] }}.
-            <div style="font-size:10px;color:#888">{{ emp.get("role","") }}</div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <img src="/static/images/crew/{{ emp_id | lower }}.svg"
+                   alt="{{ emp.get('first_name', '?') }}"
+                   style="width:32px;height:32px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1.5px solid var(--costa-latte)"
+                   onerror="this.style.display='none'">
+              <div>
+                {{ emp.get("first_name","?") }} {{ emp.get("last_name","")[:1] }}.
+                <div style="font-size:10px;color:#888">{{ emp.get("role","") }}</div>
+              </div>
+            </div>
           </td>
           {% for day in days %}
           {% set cell = schedule.get(day, {"shift":"OFF"}) %}
@@ -75,4 +90,34 @@
   </div>
   <div style="margin-top:8px;font-size:12px;color:#666">Week: {{ rota_data.week_start }} to {{ rota_data.week_end }}</div>
 </div>
+
+<div style="display:flex;gap:8px;margin-bottom:4px">
+  <button onclick="sendPrompt('Help me update the rota for this week. Which shifts need filling and who is available from the team?')"
+          style="flex:1;padding:10px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600">
+    📅 Edit Rota
+  </button>
+  <button onclick="sendPrompt('Show me a summary of this week hours for each team member and flag anyone who is close to their contracted hours limit')"
+          style="flex:1;padding:10px;background:var(--costa-cream);color:var(--costa-espresso);border:1px solid var(--costa-latte);border-radius:8px;cursor:pointer;font-size:12px;font-weight:600">
+    ⏰ Hours Summary
+  </button>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+</script>
 {% endblock %}

@@ -5,12 +5,14 @@
 
 {% block content %}
 {% if employee_view %}
-  {# Single employee view #}
+  {# ── Single employee view ─────────────────────────────────────────────── #}
   {% set emp = employee_view %}
   <div class="card">
     <div style="display:flex;align-items:center;gap:12px">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--costa-maroon);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-heading);font-size:20px;font-weight:700">
-        {{ emp.first_name[0] }}{{ emp.last_name[0] }}
+      <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--costa-gold)">
+        <img src="/static/images/crew/{{ emp.employee_id | lower }}.svg" alt="{{ emp.first_name }}"
+             style="width:100%;height:100%;object-fit:cover"
+             onerror="this.style.display='none'">
       </div>
       <div>
         <div style="font-family:var(--font-heading);font-size:16px;font-weight:700">{{ emp.first_name }} {{ emp.last_name }}</div>
@@ -26,25 +28,77 @@
       </div>
     </div>
   </div>
+
   <div class="card">
-    <div class="card-title"><i data-lucide="book-open"></i> Module Progress</div>
+    <div class="card-title"><i data-lucide="book-open"></i> Module Progress – click to start</div>
     {% for prog in progress_list %}
-    <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--costa-cream)">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-        <span style="font-weight:600;font-size:13px">{{ prog.module_name }}</span>
-        {% if prog.status == "Completed" %}<span class="pill pill-success">✓ Done</span>
-        {% elif prog.status == "Overdue" %}<span class="pill pill-danger" style="animation:pulse 1.5s infinite">⚠ Overdue</span>
-        {% else %}<span class="pill pill-warning">{{ prog.completion_pct }}%</span>{% endif %}
+    <div data-prompt="Play training module {{ prog.module_id }} for employee {{ emp.employee_id }} and show the video player widget"
+         onclick="sendDataPrompt(this)"
+         style="margin-bottom:10px;padding:10px;border-radius:8px;cursor:pointer;transition:background 0.15s;border:1px solid var(--costa-cream);display:flex;align-items:center;gap:10px"
+         onmouseover="this.style.background='var(--costa-cream)'" onmouseout="this.style.background=''">
+      {% if prog.module_image %}
+      <div style="width:64px;height:36px;border-radius:6px;overflow:hidden;flex-shrink:0">
+        <img src="{{ prog.module_image }}" alt="{{ prog.module_name }}" style="width:100%;height:100%;object-fit:cover">
       </div>
-      <div class="progress-bar-wrap">
-        <div class="progress-bar-fill {% if prog.completion_pct == 100 %}gold{% endif %}" style="width:{{ prog.completion_pct }}%"></div>
+      {% endif %}
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+          <span style="font-weight:600;font-size:13px">{{ prog.module_name }}</span>
+          {% if prog.status == "Completed" %}<span class="pill pill-success">✓ Done</span>
+          {% elif prog.status == "Overdue" %}<span class="pill pill-danger" style="animation:pulse 1.5s infinite">⚠ Overdue</span>
+          {% else %}<span class="pill pill-warning">{{ prog.completion_pct }}%</span>{% endif %}
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill {% if prog.completion_pct == 100 %}gold{% endif %}" style="width:{{ prog.completion_pct }}%"></div>
+        </div>
+        <div style="font-size:11px;color:#888;margin-top:3px">Due: {{ prog.due_date }}</div>
       </div>
-      <div style="font-size:11px;color:#888;margin-top:3px">Due: {{ prog.due_date }}</div>
+      <i data-lucide="chevron-right" style="width:16px;height:16px;color:#ccc;flex-shrink:0"></i>
     </div>
     {% endfor %}
   </div>
+
+{% elif modules_view %}
+  {# ── Modules catalogue view ───────────────────────────────────────────── #}
+  <div style="margin-bottom:10px">
+    <input type="text" id="module-search" placeholder="Search modules…" oninput="filterModules()"
+           style="width:100%;padding:8px 12px;border:1px solid var(--costa-latte);border-radius:8px;font-size:13px;background:white;outline:none">
+  </div>
+  <div id="modules-grid" style="display:grid;grid-template-columns:1fr;gap:10px">
+    {% for mod in modules %}
+    <div class="module-card" data-name="{{ mod.name | lower }}" data-level="{{ mod.level | lower }}"
+         data-prompt="{{ mod.follow_on_prompt | default('Guide me through ' ~ mod.name) }}"
+         onclick="sendDataPrompt(this)"
+         style="background:white;border-radius:12px;box-shadow:0 2px 12px rgba(44,24,16,0.08);overflow:hidden;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s"
+         onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(44,24,16,0.15)'"
+         onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(44,24,16,0.08)'">
+      {% if mod.image %}
+      <div style="width:100%;height:130px;overflow:hidden;position:relative">
+        <img src="{{ mod.image }}" alt="{{ mod.name }}" style="width:100%;height:100%;object-fit:cover">
+        {% if mod.video %}
+        <div style="position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.6);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:white;display:flex;align-items:center;gap:4px">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg> Video
+        </div>
+        {% endif %}
+        {% if mod.mandatory %}
+        <div style="position:absolute;top:8px;left:8px;background:var(--costa-danger);border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;color:white">REQUIRED</div>
+        {% endif %}
+      </div>
+      {% endif %}
+      <div style="padding:12px">
+        <div style="font-family:var(--font-heading);font-size:14px;font-weight:700;color:var(--costa-espresso);margin-bottom:4px">{{ mod.name }}</div>
+        <div style="font-size:12px;color:#666;margin-bottom:8px">{{ mod.description }}</div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="pill pill-info" style="font-size:11px">{{ mod.level }}</span>
+          <span style="font-size:11px;color:#888">⏱ {{ mod.duration_mins }} min</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
 {% else %}
-  {# Store overview #}
+  {# ── Store overview ───────────────────────────────────────────────────── #}
   <div class="kpi-grid">
     <div class="kpi-card">
       <div class="kpi-label">Team Completion</div>
@@ -62,14 +116,33 @@
       <div class="kpi-value" style="color:var(--costa-warning)">{{ due_this_week }}</div>
     </div>
   </div>
+
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <button onclick="sendPrompt('Show me all available Costa Coffee training modules as a visual catalogue')"
+            style="flex:1;padding:10px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600">
+      📚 Browse Modules
+    </button>
+    <button onclick="sendPrompt('Which employees have overdue training in this store? Show me the training progress widget for the store.')"
+            style="flex:1;padding:10px;background:{% if overdue_count > 0 %}#FFEBEE{% else %}var(--costa-cream){% endif %};color:{% if overdue_count > 0 %}var(--costa-danger){% else %}var(--costa-espresso){% endif %};border:1px solid {% if overdue_count > 0 %}var(--costa-danger){% else %}var(--costa-latte){% endif %};border-radius:8px;cursor:pointer;font-size:12px;font-weight:600">
+      ⚠️ {{ overdue_count }} Overdue
+    </button>
+  </div>
+
   <div class="card">
-    <div class="card-title"><i data-lucide="users"></i> Team Overview</div>
+    <div class="card-title"><i data-lucide="users"></i> Team Overview – click employee to view details</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Employee</th><th>Role</th><th>Overall %</th><th>Overdue</th><th>Status</th></tr></thead>
+        <thead><tr><th></th><th>Employee</th><th>Role</th><th>Overall %</th><th>Overdue</th><th>Status</th></tr></thead>
         <tbody>
           {% for row in team_rows %}
-          <tr>
+          <tr data-prompt="Show me the full training progress for employee {{ row.employee_id }}"
+              onclick="sendDataPrompt(this)"
+              style="cursor:pointer">
+            <td style="width:36px">
+              <img src="/static/images/crew/{{ row.employee_id | lower }}.svg" alt="{{ row.name }}"
+                   style="width:28px;height:28px;border-radius:50%;object-fit:cover"
+                   onerror="this.style.display='none'">
+            </td>
             <td style="font-weight:600">{{ row.name }}</td>
             <td style="font-size:12px;color:#666">{{ row.role }}</td>
             <td>
@@ -89,4 +162,32 @@
     </div>
   </div>
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+
+function filterModules() {
+  const q = document.getElementById('module-search').value.toLowerCase();
+  document.querySelectorAll('.module-card').forEach(card => {
+    const name = card.dataset.name || '';
+    const level = card.dataset.level || '';
+    card.style.display = (name.includes(q) || level.includes(q)) ? '' : 'none';
+  });
+}
+</script>
 {% endblock %}

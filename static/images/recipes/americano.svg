@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bg_americano" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="glow_americano" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5C3317;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1a0d08;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg_americano)"/>
+  <rect width="400" height="200" fill="url(#glow_americano)"/>
+  <text x="24" y="22" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#C8A951" letter-spacing="2">COSTA COFFEE®</text>
+  <!-- Tall cup -->
+  <path d="M272,65 L278,170 L332,170 L338,65 Z" fill="#1a0a04" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- Coffee surface -->
+  <ellipse cx="305" cy="65" rx="33" ry="8" fill="#2C1008" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <!-- Very dark coffee liquid -->
+  <ellipse cx="305" cy="68" rx="30" ry="6" fill="#1a0804"/>
+  <!-- Steam -->
+  <path d="M292,52 Q288,42 292,32 Q296,22 292,12" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M305,50 Q301,40 305,30 Q309,20 305,10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M318,52 Q314,42 318,32 Q322,22 318,12" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cup highlight -->
+  <line x1="276" y1="70" x2="280" y2="165" stroke="rgba(255,255,255,0.1)" stroke-width="3" stroke-linecap="round"/>
+  <text x="24" y="175" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="white">Americano</text>
+  <rect y="190" width="400" height="10" fill="#C8A951" opacity="0.6"/>
+</svg>
