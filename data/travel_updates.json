@@ -1,0 +1,193 @@
+{
+  "GLD001": {
+    "disruptions": [
+      {
+        "id": "TR001",
+        "type": "train",
+        "icon": "train",
+        "title": "South Western Railway — Signal Failure",
+        "description": "Signal failure at Woking causing significant delays across the Guildford line. Trains running 25–40 minutes late. Service expected to normalise by 09:30.",
+        "affected_routes": ["London Waterloo → Guildford", "Guildford → Portsmouth"],
+        "severity": "high",
+        "status": "active",
+        "start_time": "05:45",
+        "expected_end": "09:30",
+        "footfall_impact_pct": -22,
+        "footfall_note": "Commuter-driven morning rush will be suppressed until 09:30. Expect delayed peak footfall from 09:30–11:00 as disruption resolves.",
+        "source": "National Rail"
+      },
+      {
+        "id": "TR002",
+        "type": "bus",
+        "icon": "bus",
+        "title": "Arriva Bus — Route 36 Diversion",
+        "description": "Route 36 (Guildford–Godalming) diverted via Onslow Village due to burst water main on Epsom Road. Journey times increased by 10–15 minutes.",
+        "affected_routes": ["Route 36: Guildford ↔ Godalming"],
+        "severity": "low",
+        "status": "active",
+        "start_time": "04:00",
+        "expected_end": "18:00",
+        "footfall_impact_pct": -3,
+        "footfall_note": "Minor impact — most affected commuters will use alternative routes or drive.",
+        "source": "Surrey County Council"
+      },
+      {
+        "id": "TR003",
+        "type": "road",
+        "icon": "car",
+        "title": "A25 Roadworks — Shalford Junction",
+        "description": "Overnight roadworks running through today until 08:00. Lane closures lifted — traffic returning to normal.",
+        "affected_routes": ["A25 Shalford Road"],
+        "severity": "low",
+        "status": "resolving",
+        "start_time": "22:00",
+        "expected_end": "08:00",
+        "footfall_impact_pct": 0,
+        "footfall_note": "Roadworks completed — no further impact expected.",
+        "source": "Surrey County Council"
+      }
+    ],
+    "local_events": [
+      {
+        "name": "Guildford Christmas Market",
+        "date": "All this week",
+        "type": "market",
+        "location": "High Street",
+        "distance_m": 80,
+        "expected_attendance": 2500,
+        "footfall_opportunity": "high",
+        "opportunity_note": "Christmas market directly outside store — expect 30–40% higher footfall 10:00–20:00. Maximise takeaway cup stock and ensure seasonal drinks are front-of-house.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "University of Surrey Winter Exams",
+        "date": "This week & next",
+        "type": "education",
+        "location": "Surrey University Campus (2.1km)",
+        "distance_m": 2100,
+        "expected_attendance": 800,
+        "footfall_opportunity": "medium",
+        "opportunity_note": "Exam season drives afternoon study café visits. Students represent ~18% of your afternoon customer base. Activate NUS 10% discount visibility.",
+        "icon": "graduation-cap"
+      }
+    ],
+    "footfall_forecast": {
+      "morning_rush": {"expected": "lower", "pct_vs_normal": -22, "note": "Train disruption suppresses commuter rush until 09:30"},
+      "late_morning": {"expected": "normal", "pct_vs_normal": 5, "note": "Disruption resolves — pent-up demand catches up"},
+      "lunch": {"expected": "higher", "pct_vs_normal": 15, "note": "Christmas market + dry lunchtime spell"},
+      "afternoon": {"expected": "higher", "pct_vs_normal": 25, "note": "Christmas market peak + student exam-break visits"},
+      "evening": {"expected": "higher", "pct_vs_normal": 30, "note": "Christmas market runs until 20:00 — strong takeaway demand"}
+    }
+  },
+  "GLD002": {
+    "disruptions": [
+      {
+        "id": "TR004",
+        "type": "train",
+        "icon": "train",
+        "title": "South Western Railway — Signal Failure Impact",
+        "description": "Signal failure at Woking. Guildford Station seeing large queues of stranded commuters. Trains running again from 09:30.",
+        "affected_routes": ["London Waterloo → Guildford", "All connecting services"],
+        "severity": "high",
+        "status": "active",
+        "start_time": "05:45",
+        "expected_end": "09:30",
+        "footfall_impact_pct": 35,
+        "footfall_note": "Station location BENEFITS from disruption — stranded commuters are seeking hot drinks and food while waiting. Expect significantly above-normal footfall 06:00–09:30.",
+        "source": "National Rail"
+      }
+    ],
+    "local_events": [],
+    "footfall_forecast": {
+      "morning_rush": {"expected": "much higher", "pct_vs_normal": 35, "note": "Stranded commuters from signal failure"},
+      "late_morning": {"expected": "lower", "pct_vs_normal": -10, "note": "Commuters depart once trains resume"},
+      "lunch": {"expected": "normal", "pct_vs_normal": 0, "note": "Standard lunch commuter traffic"},
+      "afternoon": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal"},
+      "evening": {"expected": "higher", "pct_vs_normal": 10, "note": "Evening commuter rush elevated"}
+    }
+  },
+  "RDG001": {
+    "disruptions": [
+      {
+        "id": "TR005",
+        "type": "road",
+        "icon": "car",
+        "title": "Oracle Car Park — Level 3 Closed",
+        "description": "Level 3 of Oracle multi-storey car park closed for maintenance. Shoppers redirected to Level 1, 2, and 4. Increased car park queuing expected.",
+        "affected_routes": ["Oracle Car Park access"],
+        "severity": "low",
+        "status": "active",
+        "start_time": "07:00",
+        "expected_end": "17:00",
+        "footfall_impact_pct": -8,
+        "footfall_note": "Parking frustration may deter some car-born shoppers. Expect 5–10% reduction in midday footfall.",
+        "source": "Oracle Shopping Centre"
+      }
+    ],
+    "local_events": [
+      {
+        "name": "Reading FC Home Match",
+        "date": "Tonight 19:45",
+        "type": "sport",
+        "location": "Select Car Leasing Stadium (1.4km)",
+        "distance_m": 1400,
+        "expected_attendance": 15000,
+        "footfall_opportunity": "high",
+        "opportunity_note": "Pre-match crowd generates strong 17:00–19:30 footfall. Stock up on takeaway cups and quick-serve items. Fans appreciate a warm drink and snack before the game.",
+        "icon": "trophy"
+      }
+    ],
+    "footfall_forecast": {
+      "morning_rush": {"expected": "normal", "pct_vs_normal": -3, "note": "Slight parking suppression"},
+      "late_morning": {"expected": "normal", "pct_vs_normal": -5, "note": "Parking continues to affect car-borne shoppers"},
+      "lunch": {"expected": "normal", "pct_vs_normal": -5, "note": "Slight suppression from parking"},
+      "afternoon": {"expected": "normal", "pct_vs_normal": 5, "note": "Afternoon shoppers arriving"},
+      "evening": {"expected": "higher", "pct_vs_normal": 40, "note": "Reading FC match — pre-match crowd 17:00–19:30"}
+    }
+  },
+  "BRI001": {
+    "disruptions": [],
+    "local_events": [
+      {
+        "name": "Brighton & Hove Food Festival",
+        "date": "This Saturday & Sunday",
+        "type": "festival",
+        "location": "Hove Lawns (0.9km)",
+        "distance_m": 900,
+        "expected_attendance": 8000,
+        "footfall_opportunity": "high",
+        "opportunity_note": "Major food event this weekend — position the store as the pre-festival coffee stop. Consider a branded take-on-the-go promotion. Social media opportunity: tag the festival.",
+        "icon": "utensils"
+      },
+      {
+        "name": "New Pret a Manger Opening",
+        "date": "This Monday",
+        "type": "competitor",
+        "location": "North Street (180m)",
+        "distance_m": 180,
+        "expected_attendance": 500,
+        "footfall_opportunity": "risk",
+        "opportunity_note": "Competitor opening 180m away. Activate loyalty double-points promotion this week to pre-empt customer trial visits to Pret. Brief the team on Costa's points of difference — craft, customisation, Costa Club.",
+        "icon": "alert-triangle"
+      }
+    ],
+    "footfall_forecast": {
+      "morning_rush": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal weekday"},
+      "late_morning": {"expected": "higher", "pct_vs_normal": 10, "note": "Good weather drives town centre footfall"},
+      "lunch": {"expected": "higher", "pct_vs_normal": 12, "note": "Seafront area lunchtime crowd"},
+      "afternoon": {"expected": "higher", "pct_vs_normal": 15, "note": "Post-lunch coastal visitors"},
+      "evening": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal evening"}
+    }
+  },
+  "default": {
+    "disruptions": [],
+    "local_events": [],
+    "footfall_forecast": {
+      "morning_rush": {"expected": "normal", "pct_vs_normal": 0, "note": "No disruptions"},
+      "late_morning": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal"},
+      "lunch": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal"},
+      "afternoon": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal"},
+      "evening": {"expected": "normal", "pct_vs_normal": 0, "note": "Normal"}
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block title %}Weather — {{ store_name }}{% endblock %}
+{% block domain_icon %}cloud-sun{% endblock %}
+{% block widget_title %}Weather & Footfall Forecast{% endblock %}
+
+{% block content %}
+{% set cond = current.get('condition_code', 'overcast') %}
+{% set impact = current.get('footfall_impact', 'normal') %}
+{% set impact_pct = current.get('footfall_impact_pct', 0) %}
+
+<!-- Current Conditions Hero -->
+<div class="card" style="background: linear-gradient(135deg, var(--costa-maroon) 0%, #4a1218 100%); color: var(--costa-white); padding: 20px;">
+  <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <div style="font-size: 48px; line-height:1;">
+        {% if cond == 'sunny' %}☀️
+        {% elif cond == 'sunny_intervals' %}🌤️
+        {% elif cond == 'partly_cloudy' %}⛅
+        {% elif cond == 'overcast' %}☁️
+        {% elif cond == 'rain' %}🌧️
+        {% elif cond == 'heavy_rain' %}🌧️
+        {% elif cond == 'drizzle' %}🌦️
+        {% elif cond == 'snow' %}❄️
+        {% elif cond == 'thunderstorm' %}⛈️
+        {% else %}🌡️{% endif %}
+      </div>
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 36px; font-weight: 700; line-height: 1;">
+          {{ current.get('temp_c', '—') }}°C
+        </div>
+        <div style="font-size: 14px; opacity: 0.85; margin-top: 2px;">{{ current.get('condition', 'Unknown') }}</div>
+        <div style="font-size: 12px; opacity: 0.65; margin-top: 2px;">Feels like {{ current.get('feels_like_c', '—') }}°C &nbsp;·&nbsp; Updated {{ current.get('updated_at', '') }}</div>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family: var(--font-heading); font-size: 13px; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">Footfall Today</div>
+      {% if impact == 'higher' or impact == 'much higher' %}
+        <div style="font-size: 24px; font-weight: 700; color: #81C784;">▲ {{ impact_pct | abs }}%</div>
+        <div style="font-size: 11px; opacity: 0.75;">vs. typical {{ 'today' }}</div>
+      {% elif impact == 'lower' %}
+        <div style="font-size: 24px; font-weight: 700; color: #EF9A9A;">▼ {{ impact_pct | abs }}%</div>
+        <div style="font-size: 11px; opacity: 0.75;">vs. typical day</div>
+      {% else %}
+        <div style="font-size: 24px; font-weight: 700; color: #FFD54F;">→ Normal</div>
+        <div style="font-size: 11px; opacity: 0.75;">no significant change</div>
+      {% endif %}
+    </div>
+  </div>
+  <!-- Weather details strip -->
+  <div style="display:flex; gap:20px; margin-top:16px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.2); flex-wrap:wrap;">
+    <div style="font-size:12px; opacity:0.8;"><span style="opacity:0.6;">💧</span> {{ current.get('humidity', '—') }}% humidity</div>
+    <div style="font-size:12px; opacity:0.8;"><span style="opacity:0.6;">💨</span> {{ current.get('wind_mph', '—') }} mph {{ current.get('wind_dir', '') }}</div>
+    <div style="font-size:12px; opacity:0.8;"><span style="opacity:0.6;">🌂</span> {{ current.get('precip_mm', 0) }} mm rain</div>
+    <div style="font-size:12px; opacity:0.8;"><span style="opacity:0.6;">👁️</span> {{ current.get('visibility_km', '—') }} km visibility</div>
+  </div>
+</div>
+
+<!-- Footfall Impact Note -->
+{% if current.get('footfall_note') %}
+<div class="alert {% if impact == 'lower' %}alert-warning{% elif impact in ['higher','much higher'] %}alert-success{% else %}alert-info{% endif %}" style="margin-bottom: 10px;">
+  <i data-lucide="users" style="width:16px;height:16px;flex-shrink:0;"></i>
+  <span>{{ current.footfall_note }}</span>
+</div>
+{% endif %}
+
+<!-- Drink Demand Adjustments -->
+{% if current.get('drink_demand') %}
+<div class="card">
+  <div class="card-title"><i data-lucide="trending-up" style="width:14px;height:14px;"></i> Weather-Driven Drink Demand</div>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px;">
+    {% for drink, change in current.drink_demand.items() %}
+    <div style="background: var(--costa-cream); border-radius: 8px; padding: 10px; text-align:center;">
+      <div style="font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">{{ drink.replace('_', ' ').title() }}</div>
+      <div style="font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: {% if change.startswith('+') %}var(--costa-success){% elif change.startswith('-') %}var(--costa-danger){% else %}var(--costa-espresso){% endif %};">{{ change }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- Agent Tip -->
+{% if current.get('agent_tip') %}
+<div class="tip-box" style="margin-bottom:12px;">
+  <div class="tip-label">☕ Barista Tip</div>
+  {{ current.agent_tip }}
+</div>
+{% endif %}
+
+<!-- 5-Day Forecast -->
+{% if forecast %}
+<div class="card">
+  <div class="card-title"><i data-lucide="calendar" style="width:14px;height:14px;"></i> {{ forecast | length }}-Day Forecast</div>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px;">
+    {% for day in forecast %}
+    {% set dc = day.get('condition_code', 'overcast') %}
+    <div style="background: var(--costa-cream); border-radius: 10px; padding: 12px 8px; text-align: center;">
+      <div style="font-family: var(--font-heading); font-size: 12px; font-weight: 700; color: var(--costa-maroon); margin-bottom: 6px;">{{ day.get('day', day.get('date', '')) }}</div>
+      <div style="font-size: 22px; margin-bottom: 6px;">
+        {% if dc == 'sunny' %}☀️
+        {% elif dc == 'sunny_intervals' %}🌤️
+        {% elif dc == 'partly_cloudy' %}⛅
+        {% elif dc == 'overcast' %}☁️
+        {% elif dc == 'rain' %}🌧️
+        {% elif dc == 'heavy_rain' %}🌧️
+        {% elif dc == 'drizzle' %}🌦️
+        {% elif dc == 'snow' %}❄️
+        {% else %}🌡️{% endif %}
+      </div>
+      <div style="font-size: 13px; font-weight: 600; color: var(--costa-espresso);">{{ day.get('high_c', '—') }}° / {{ day.get('low_c', '—') }}°</div>
+      <div style="font-size: 11px; color: #888; margin-top: 3px;">{{ day.get('rain_chance', 0) }}% rain</div>
+      {% set fi = day.get('footfall_impact_pct', 0) %}
+      <div style="margin-top: 6px; font-size: 11px; font-weight: 600; color: {% if fi > 0 %}var(--costa-success){% elif fi < 0 %}var(--costa-danger){% else %}#888{% endif %};">
+        {% if fi > 0 %}▲ {{ fi }}%{% elif fi < 0 %}▼ {{ fi | abs }}%{% else %}→ Normal{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- Hourly Today -->
+{% if hourly_today %}
+<div class="card">
+  <div class="card-title"><i data-lucide="clock" style="width:14px;height:14px;"></i> Hourly Today</div>
+  <div style="overflow-x:auto;">
+    <div style="display:flex; gap:8px; min-width: max-content; padding-bottom: 4px;">
+      {% for h in hourly_today %}
+      <div style="background: var(--costa-cream); border-radius: 8px; padding: 8px 10px; text-align:center; min-width: 60px;">
+        <div style="font-size: 11px; color: #666; margin-bottom: 4px;">{{ h.get('hour', '') }}</div>
+        <div style="font-size: 16px;">
+          {% set hc = h.get('condition', '') | lower %}
+          {% if 'heavy rain' in hc %}🌧️{% elif 'rain' in hc %}🌦️{% elif 'drizzle' in hc %}🌦️{% elif 'overcast' in hc %}☁️{% elif 'sun' in hc %}☀️{% else %}⛅{% endif %}
+        </div>
+        <div style="font-size: 12px; font-weight: 600; color: var(--costa-espresso); margin-top: 4px;">{{ h.get('temp_c', '—') }}°</div>
+        <div style="font-size: 10px; color: #1565C0; margin-top: 2px;">{{ h.get('rain_chance', 0) }}%</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>lucide.createIcons();</script>
+{% endblock %}

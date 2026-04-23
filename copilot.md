@@ -605,95 +605,258 @@ async def submit_shift_handover(store_id: str, outgoing_shift: str, notes: str, 
 
 ---
 
+
+
+---
+
+### Tool 13: Weather Forecast
+
+| Property    | Value |
+|-------------|-------|
+| Tool        | `get_weather_forecast(store_id: str, days: int = 3)` |
+| Resource    | `ui://widget/weather.html` |
+| Widget      | `weather.html` |
+| Data File   | `weather.json` |
+| Icon        | `cloud-sun` |
+
+**Widget Content**:
+- Current conditions hero: temperature, feels-like, condition icon (emoji), humidity, wind, precipitation
+- Footfall impact badge: % above/below normal with colour coding (green=higher, red=lower)
+- Drink demand adjustments grid: hot drinks, iced drinks, hot chocolate, pastries vs. baseline
+- Agent tip callout box with weather-specific operational advice
+- 5-day forecast cards: condition icon, high/low temp, rain chance, footfall impact delta
+- Hourly today strip: scrollable horizontal timeline of condition + temp + rain chance
+
+**Data File** (`weather.json`): Generate realistic UK weather for all 5 stores. Include rain/overcast/sunny conditions. Each store has `current` (with footfall_impact, footfall_impact_pct, drink_demand adjustments, agent_tip) and `forecast` (5 days) and `hourly_today` (6am–9pm). Station stores (GLD002) should show positive footfall impact in wet weather. High-street stores (GLD001) show negative impact.
+
+---
+
+### Tool 14: Travel & Footfall Intel
+
+| Property    | Value |
+|-------------|-------|
+| Tool        | `get_travel_updates(store_id: str)` |
+| Resource    | `ui://widget/travel_updates.html` |
+| Widget      | `travel_updates.html` |
+| Data File   | `travel_updates.json` |
+| Icon        | `map-pin` |
+
+**Widget Content**:
+- Disruption summary banner: active/resolving/clear status with severity colour
+- Disruption cards: transport type icon, title, description, affected routes, severity pill, status pill, start–end times, footfall impact %, footfall note
+- Local events cards: event name, date, type icon, location + distance, expected attendance, footfall opportunity rating, opportunity note (with gold border for high-opportunity, red for competitive risk)
+- Footfall forecast by period: morning rush / late morning / lunch / afternoon / evening — horizontal bar chart showing % vs normal with explanatory notes
+
+**Data File** (`travel_updates.json`): Generate for 5 stores. Include realistic disruptions: South Western Railway signal failure (GLD001 — negative, GLD002 — positive since stranded commuters visit), bus diversions, road closures. Include local events: Christmas market outside GLD001 (+25-30% footfall), Reading FC match near RDG001 (+40% evening), Brighton food festival near BRI001, Pret a Manger competitor opening near BRI001 (risk). Include structured `footfall_forecast` by time period.
+
+---
+
+### Tool 15: Social Media & Reputation
+
+| Property    | Value |
+|-------------|-------|
+| Tool        | `get_social_media_mentions(store_id: str, days: int = 7)` |
+| Resource    | `ui://widget/social_media.html` |
+| Widget      | `social_media.html` |
+| Data File   | `social_media.json` |
+| Icon        | `share-2` |
+
+**Widget Content**:
+- Urgent alerts banner: influencer visits requiring immediate action (high-urgency)
+- Unanswered review warning banner
+- Sentiment KPI cards: overall score (/5), positive %, negative %, total mentions (7d) with vs-last-week delta
+- Sentiment breakdown bar: green/grey/red proportional bar
+- Trending hashtags: colour-coded by sentiment (green=positive, red=negative, blue=neutral) with mention count
+- Influencer alerts cards: platform avatar, username, followers, post excerpt, reach estimate, engagement rate, recommended action box, urgency badge
+- Recent mentions scroll list: platform avatar, username, followers, star rating (if applicable), content, sentiment pill, "Response Overdue" pulsing badge if applicable, theme tags
+
+**Data File** (`social_media.json`): Generate for 5 stores. GLD001: positive sentiment, @GuildfordFoodie (12K Instagram) visiting today, @SurreyLiving article, one overdue 1-star review about wait times. GLD002: mixed, disruption-day tweets. BRI001: trending down, @BrightonBites TikToker (45K) doing competitive review ahead of Pret opening, two negative reviews mentioning burnt coffee. Include `response_templates` for common negative themes. Include `influencer_alerts` with `urgency: high` for urgent cases.
+
+
 ## Demo Storyline
 
 ### "A Day at Costa Coffee Guildford High Street"
 
-The demo follows **Sam**, a Shift Manager at Costa Coffee Guildford High Street (GLD001), through a typical day. The AI agent is accessed via a chat interface on a tablet mounted near the back-of-house area.
+The demo follows **Sam**, a Shift Manager at Costa Coffee Guildford High Street (GLD001), through a typical day. The AI agent is accessed via Microsoft Copilot on a tablet mounted near the back-of-house area. The agent has access to:
+
+- **This MCP server** — tools and widgets for store operations
+- **SharePoint** — Costa policy documents, seasonal playbooks, VM standards, allergen updates, area manager visit agendas, HR guides, and training materials
+- **Web search** — local events, competitor activity, FSA guidance, travel news
+- **Image understanding** — Sam can upload photos (stock room, damaged equipment, incidents, displays) and the agent analyses them
+
+> **Why is this better than a dedicated mobile app?**
+> The power is in the *connections the agent makes across multiple data sources in real time* — things no single-purpose app could do. A mobile app shows you your rota. The agent reads your rota, crosses it with today's weather and a train disruption, finds a gap in your staffing, checks the Costa Peak Staffing Playbook on SharePoint, and tells you exactly what to do — before you even thought to ask.
+
+---
 
 #### Scene 1: Morning Open (6:00 AM)
 > **Sam**: "Good morning! What do I need to know for today's open?"
 
-Agent responds with:
-- Shift handover notes from last night's close (any carry-forward issues)
-- Today's rota (who's in, any gaps to fill)
-- Opening compliance checklist ready for completion
-- Stock alerts (overnight delivery status, anything critical)
+**Agent synthesises five sources simultaneously:**
 
-#### Scene 2: Morning Rush Review (9:30 AM)
-> **Sam**: "How's the morning rush going compared to yesterday?"
+1. **`get_shift_handover`** → Shift handover widget: La Cimbali machine 2 running slow (engineer booked for 10am), oat milk delivery did not arrive yesterday — using emergency stock
+2. **`get_shift_rota`** → Rota widget: full team in today, but Marcus is on leave — one barista short for the lunch rush
+3. **`get_compliance_checklist`** → Compliance widget: daily opening checklist ready — temperature logs due
+4. **`get_weather_forecast`** → **Weather widget**: Heavy rain all day — footfall down 18% predicted, hot drink demand up 25%, hot chocolate up 35%
+5. **`get_travel_updates`** → **Travel updates widget**: Signal failure on South Western Railway — Guildford line running 25-40 mins late. Disruption expected to clear by 09:30. Morning commuter rush will be suppressed until then, but pent-up demand from 09:30-11:00.
 
-Agent responds with:
-- Daily dashboard showing live sales vs target
-- Hourly comparison chart
-- Top selling items this morning
+**Agent's joined-up insight** (not possible with any single app):
+> "Morning, Sam! Heavy rain and a signal failure means your 7-9am rush will be about 30% lighter than usual — but when the trains start running again around 09:30, expect a wave of cold, wet commuters. I'd push your coffee prep back 30 minutes and focus on hot drinks. The Toffee Penny Latte is performing really well in wet weather — worth moving it to the front display. Also — your oat milk is critically low from yesterday's delivery miss. Shall I check stock levels now?"
 
-#### Scene 3: Staff Query (10:00 AM)
-> **Sam**: "New barista Priya is asking about the Caramel Latte recipe â€” can you show her?"
-
-Agent responds with:
-- Recipe card widget for Caramel Latte with full prep steps and sizes
-- Allergen info
-- Barista tip for perfect caramel drizzle
-
-#### Scene 4: Stock Issue (11:00 AM)
-> **Sam**: "We're running low on oat milk â€” what's our stock situation?"
-
-Agent responds with:
-- Stock levels widget filtered to Milk & Dairy
-- Shows oat milk as "Critical" with 2 cartons remaining
-- Suggests contacting Reading Station store (RDG002) which has surplus
-
-#### Scene 5: Incident (12:30 PM)
-> **Sam**: "A customer just slipped near the entrance â€” the floor was wet from the rain. They seem OK but I need to log it."
-
-Agent responds with:
-- Guides through incident submission
-- Pre-fills category (Slip/Trip/Fall), severity (Medium)
-- Confirms submission and reminds about wet floor signage
-
-#### Scene 6: Afternoon Lull â€” Training (2:30 PM)
-> **Sam**: "Which team members are overdue on their training?"
-
-Agent responds with:
-- Training progress widget for GLD001
-- Highlights 3 staff overdue on Allergen Awareness refresh
-- Suggests scheduling during quiet periods this week
-
-#### Scene 7: Regional Manager Visit Prep (3:00 PM)
-> **Sam**: "The area manager is visiting tomorrow. How do we compare to other stores in the region?"
-
-Agent responds with:
-- Regional benchmarks widget for South East
-- GLD001 ranked 3rd of 10 â€” strong on NPS, needs improvement on average transaction value
-- Compliance score 94% â€” flag the two items that brought it down
-
-#### Scene 8: Customer Feedback Review (4:00 PM)
-> **Sam**: "Any customer feedback I should be aware of?"
-
-Agent responds with:
-- Customer feedback widget â€” NPS trending up (62 to 67)
-- One 1-star review from yesterday: "waited 15 minutes for a flat white during lunch"
-- Agent suggests reviewing lunch staffing levels
-
-#### Scene 9: Shift Handover (5:00 PM)
-> **Sam**: "I'm handing over to the evening team. Help me do the handover."
-
-Agent responds with:
-- Pre-populated handover template with today's key events
-- Till reading prompt
-- Stock alerts to carry forward
-- Sam reviews and submits
-
-#### Scene 10: Area Manager View (Bonus)
-> **Regional Manager Karen**: "Show me all my stores' performance this week."
-
-Agent responds with:
-- Regional benchmarks widget
-- Highlights top and bottom performers
-- Identifies stores needing support (high incident count, low NPS, staffing gaps)
+**Why this is agent magic**: No app correlates weather + train disruptions + stock + rota + the handover from last night and gives you an integrated action plan. The agent does it in one message.
 
 ---
+
+#### Scene 2: Influencer Alert (7:15 AM)
+> **Agent proactively**: "Sam, quick heads-up — @GuildfordFoodie (12,400 Instagram followers) just posted from your store. They've tagged Costa and mentioned the Toffee Penny Latte. Their reviews typically reach 18,000+ people. I'd recommend the team know they may be being featured today."
+
+**`get_social_media_mentions`** → **Social media widget** shows:
+- @GuildfordFoodie post (positive, 4.8% engagement rate)
+- @SurreyLiving Magazine teasing a "Best Coffee in Guildford" article
+- One overdue 1-star review from yesterday (15-minute wait at lunchtime) that has not been responded to
+- Sentiment score: 4.3/5, trending up
+
+**Agent's action**:
+> "The 1-star review from James K. yesterday is flagged as overdue — it has been sitting 18 hours. Want me to draft a response? I have a response template from the Costa Customer Care Playbook on SharePoint that fits this situation perfectly."
+
+Sam says yes. Agent drafts a personalised response in Costa's brand voice, ready for Sam to approve.
+
+**Why this is agent magic**: A reviews app just shows you the review. The agent reads it, checks SharePoint for the correct response template, drafts the reply, and flags that it has been sitting unanswered — without being asked.
+
+---
+
+#### Scene 3: Stock Issue — With Image Grounding (8:30 AM)
+> **Sam** *[uploads a photo of the stock room]*: "Can you check what's going on in here?"
+
+**Agent analyses the image**:
+> "I can see from the photo that your oat milk is down to approximately 2-3 cartons — that matches the system showing Critical status. I also notice the cleaning products are stored on the same shelf as the Mocha Italia beans — that is a food safety violation under Costa's Food Safety Standards on SharePoint. The beans need to be at least 2 metres from cleaning chemicals.
+>
+> I've logged a compliance note for the storage issue, and I'm pulling up your full stock levels now."
+
+**`get_stock_levels`** → Stock widget: Oat milk Critical (2 cartons), semi-skimmed OK, soya Low.
+
+**Agent continues**:
+> "Guildford Station (GLD002) shows surplus oat milk — they received a double delivery yesterday. Want me to draft a transfer request?"
+
+**Why this is agent magic**: No mobile app can look at a photo, identify both a stock issue AND a compliance violation, cross-reference store policy from SharePoint, and then pull the relevant widget — all in one response to a photo.
+
+---
+
+#### Scene 4: Recipe + Allergen Deep Dive (10:00 AM)
+> **Sam**: "New barista Priya is asking about the Pistachio Iced Latte — she's not sure if it contains peanuts."
+
+**`get_recipe`** → Recipe card widget for Pistachio Iced Latte with full allergen grid.
+
+**Agent**:
+> "Good catch. The Pistachio Iced Latte uses pistachio syrup — that is a tree nut allergen, not peanut. However, I also did a web search for FSA updates on pistachio allergen labelling — there was a guidance update in October 2024 requiring more prominent labelling for tree nuts.
+>
+> I found the updated allergen briefing on SharePoint. Priya's allergen awareness training was last completed 14 months ago — the new FSA guidance recommends annual refreshers. Want me to pull up the training module and schedule her refresher?"
+
+**Why this is agent magic**: The agent connected a recipe question to a live web search for regulatory updates, a SharePoint document, an employee training record, and a recommended action. A recipe app just shows you the recipe.
+
+---
+
+#### Scene 5: Proactive Footfall Management (11:30 AM)
+> **Agent proactively**: "The signal failure has cleared — trains are running again. Based on historical patterns, expect a delayed lunch rush starting around 12:15. The Christmas market outside is picking up — footfall tracking 25% above your typical Tuesday lunch. You're on course to beat yesterday's sales target."
+
+**`get_daily_dashboard`** → Dashboard widget: sales 8% above target by 11:30am.
+
+**Agent**:
+> "The rain is actually working in your favour today — people are seeking shelter and the Christmas market is bringing in visitors. Hot chocolate sales are up 38% vs yesterday. The Costa Seasonal Merchandising Playbook on SharePoint recommends moving the Festive Bundle to front-of-counter on rainy high-street days."
+
+---
+
+#### Scene 6: Incident — With Image (12:30 PM)
+> **Sam**: "A customer just slipped near the entrance — floor was wet from the rain." *[uploads photo of wet entrance area]*
+
+**Agent**:
+> "I can see from the photo this is the main entrance mat area — high risk zone in wet weather. I'm logging this as a Slip/Trip/Fall incident. The photo shows no wet floor sign visible. I'll note that in the incident log."
+
+**`submit_incident`** → Incident INC-0247 logged: Slip/Trip/Fall, Medium severity, GLD001, 12:32pm.
+
+**Agent**:
+> "Done. I've added a reminder: your incident protocol requires a manager countersignature within 2 hours. I'll prompt you at 14:30 if it has not been countersigned. Do you need me to pull the First Aid procedure from SharePoint?"
+
+---
+
+#### Scene 7: Training Gap + Regulatory Update (2:30 PM)
+> **Sam**: "It's quiet — who's overdue on training?"
+
+**`get_training_progress`** → Training widget for GLD001: 3 staff overdue on Allergen Awareness, 1 on Food Safety Level 2.
+
+**Agent**:
+> "Three staff are overdue on Allergen Awareness. I also did a web search and found the FSA updated their recommendation to annual refreshers — this means 2 more staff who show as current are actually due.
+>
+> I found the updated training materials on SharePoint. Want me to schedule a refresher for this Thursday at 2pm? I can check the rota to confirm all 5 staff are on shift."
+
+Agent checks the rota, confirms all 5 are on Thursday 2pm, proposes the booking.
+
+**Why this is agent magic**: The training system just shows who is overdue by old rules. The agent searched for a regulatory update, re-evaluated compliance against the new standard, found the updated materials on SharePoint, and checked the rota for a suitable slot — all in one step.
+
+---
+
+#### Scene 8: Area Manager Visit Prep (3:00 PM)
+> **Sam**: "Area manager Karen is visiting tomorrow. What do I need to know?"
+
+**Agent searches SharePoint** for Karen's visit agenda:
+> "I found Karen's visit agenda on SharePoint. She is focusing on: allergen compliance (training records), waste reduction (you're 12% above regional average), and customer feedback response times. The 1-star review from this morning is now 19 hours old and still unanswered — shall we deal with that before you go home today?"
+
+**`get_regional_benchmarks`** → Regional widget: GLD001 ranked 3rd of 10, strong NPS (67), food waste flagged.
+
+**Agent**:
+> "For the waste issue — I found the Costa Waste Reduction Playbook on SharePoint. The quick wins are portion discipline on syrups and the end-of-day pastry markdown protocol. Want me to pull the specific guidance?"
+
+---
+
+#### Scene 9: Social Media and Promotions (4:00 PM)
+> **Sam**: "Anything else I should be doing this afternoon?"
+
+**Agent proactively surfaces**:
+
+1. **`get_social_media_mentions`** → @GuildfordFoodie review posted — 4.5 stars, reached 14,000 people. @SurreyLiving article live — Costa GLD001 featured as #2 in Guildford.
+2. **`get_customer_feedback`** → NPS up from 62 to 67. "Consistently great" recurring theme.
+3. **Agent web search** for "Guildford events this week" — University of Surrey winter exams start Monday.
+
+> "Exam season starts Monday — Surrey students are about 18% of your afternoon customer base. Based on last year's pattern (found in the Regional Performance Archive on SharePoint), exam season drives a 15% uplift in afternoon cafe visits. I'd recommend activating the NUS 10% discount visibility now."
+
+**`get_current_promotions`** → Promotions widget: NUS discount active, Toffee Penny Latte runs to end of month.
+
+---
+
+#### Scene 10: Shift Handover (5:00 PM)
+> **Sam**: "I'm heading off — help me do the handover."
+
+**Agent pre-populates the handover** with everything observed today:
+> "I've drafted your handover. Key items: La Cimbali machine 2 engineer tomorrow AM, oat milk transfer from GLD002 confirmed for 8am, incident INC-0247 countersigned, @GuildfordFoodie review live (positive — evening team should maintain standards), engineering works on A3 tonight (lower early evening footfall expected), Karen's visit tomorrow (allergen and waste metrics are priority). Anything to add?"
+
+Sam reviews, adds the till reading, and submits.
+
+**`submit_shift_handover`** → Handover logged and visible to the incoming shift manager.
+
+---
+
+#### Scene 11: Area Manager View (Bonus)
+> **Regional Manager Karen**: "Give me an overview of my South East stores this week."
+
+**`get_regional_benchmarks`** → Regional widget: all 10 stores ranked.
+
+> **Karen**: "Brighton's NPS has dropped. What's going on there?"
+
+**`get_social_media_mentions`** → BRI001 social widget:
+- @BrightonBites TikTok (45K followers) did a comparative review ahead of Pret a Manger opening 180m away
+- Two negative Google reviews mentioning "burnt coffee taste"
+- Sentiment down 12% vs last week
+
+**Agent**:
+> "A new Pret a Manger opens on North Street Monday, 180 metres from BRI001. Two Google reviews mention burnt coffee — the Mazzer grinder burr replacement is overdue by 3 weeks. I'd recommend: (1) log an urgent maintenance request for the grinder, and (2) activate Costa Club double points at BRI001 this week to pre-empt customer trial of the new Pret."
+
+> **Karen** *[uploads a photo of the competitor's new store exterior]*: "This is the Pret — what are we dealing with?"
+
+**Agent analyses the image**:
+> "I can see a newly refurbished Pret a Manger with a visible 'Coffee + Sandwich £4.99' promotion in the window. That undercuts our meal deal by 51p. I'd recommend activating the Costa Club double points week at BRI001 immediately — it is already set up in your promotions system. Want me to activate it from here?"
+
+**Why this is agent magic**: A regional dashboard app shows you a KPI drop. The agent connects the KPI drop to social sentiment, a competitor opening, a maintenance issue, and a photo of the competitor's window offer — and proposes a specific counter-promotion, all in one conversation.
+
 
 ## Azure Deployment Script (`deploy.sh`)
 

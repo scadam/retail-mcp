@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block title %}Travel Updates — {{ store_name }}{% endblock %}
+{% block domain_icon %}map-pin{% endblock %}
+{% block widget_title %}Local Travel & Footfall Intel{% endblock %}
+
+{% block content %}
+
+{% set active_disruptions = disruptions | selectattr('status', 'in', ['active', 'resolving']) | list %}
+{% set high_severity = active_disruptions | selectattr('severity', 'equalto', 'high') | list %}
+
+<!-- Summary Banner -->
+{% if high_severity %}
+<div class="alert alert-danger" style="margin-bottom:12px;">
+  <i data-lucide="alert-triangle" style="width:16px;height:16px;flex-shrink:0;"></i>
+  <strong>{{ high_severity | length }} high-severity disruption{{ 's' if high_severity | length > 1 else '' }} active</strong> — footfall patterns will be affected today.
+</div>
+{% elif active_disruptions %}
+<div class="alert alert-warning" style="margin-bottom:12px;">
+  <i data-lucide="info" style="width:16px;height:16px;flex-shrink:0;"></i>
+  <strong>{{ active_disruptions | length }} disruption{{ 's' if active_disruptions | length > 1 else '' }} active</strong> — minor impact on footfall expected.
+</div>
+{% else %}
+<div class="alert alert-success" style="margin-bottom:12px;">
+  <i data-lucide="check-circle" style="width:16px;height:16px;flex-shrink:0;"></i>
+  No active transport disruptions — normal footfall patterns expected.
+</div>
+{% endif %}
+
+<!-- Disruptions -->
+{% if disruptions %}
+<div class="card">
+  <div class="card-title"><i data-lucide="alert-circle" style="width:14px;height:14px;"></i> Transport Disruptions</div>
+  {% for d in disruptions %}
+  <div style="border-left: 4px solid {% if d.severity == 'high' %}var(--costa-danger){% elif d.severity == 'medium' %}var(--costa-warning){% else %}var(--costa-steam){% endif %}; background: {% if d.severity == 'high' %}#FFEBEE{% elif d.severity == 'medium' %}#FFF3E0{% else %}var(--costa-cream){% endif %}; border-radius: 0 8px 8px 0; padding: 12px 14px; margin-bottom: 10px;">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:8px; flex-wrap:wrap;">
+      <div style="flex:1;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom: 6px;">
+          <i data-lucide="{{ d.get('icon', 'map-pin') }}" style="width:15px;height:15px;"></i>
+          <strong style="font-size:13px;">{{ d.title }}</strong>
+          <span class="pill {% if d.severity == 'high' %}pill-danger{% elif d.severity == 'medium' %}pill-warning{% else %}pill-info{% endif %}">{{ d.severity | title }}</span>
+          <span class="pill {% if d.status == 'active' %}pill-danger{% elif d.status == 'resolving' %}pill-warning{% else %}pill-success{% endif %}">{{ d.status | title }}</span>
+        </div>
+        <div style="font-size: 12px; color: var(--costa-espresso); margin-bottom: 6px;">{{ d.description }}</div>
+        {% if d.get('affected_routes') %}
+        <div style="font-size: 11px; color: #666;">
+          <strong>Affected:</strong>
+          {% for route in d.affected_routes %}<span style="background: rgba(0,0,0,0.07); border-radius: 4px; padding: 1px 6px; margin-right: 4px;">{{ route }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div style="text-align:right; flex-shrink:0;">
+        <div style="font-size: 11px; color: #666;">{{ d.get('start_time', '') }} → {{ d.get('expected_end', '') }}</div>
+        {% set fp = d.get('footfall_impact_pct', 0) %}
+        <div style="font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: {% if fp > 0 %}var(--costa-success){% elif fp < 0 %}var(--costa-danger){% else %}#888{% endif %}; margin-top: 4px;">
+          {% if fp > 0 %}▲ {{ fp }}%{% elif fp < 0 %}▼ {{ fp | abs }}%{% else %}→ Neutral{% endif %}
+        </div>
+        <div style="font-size: 10px; color: #888;">footfall impact</div>
+      </div>
+    </div>
+    {% if d.get('footfall_note') %}
+    <div style="margin-top: 8px; font-size: 11px; color: #555; font-style: italic; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 8px;">{{ d.footfall_note }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Local Events -->
+{% if local_events %}
+<div class="card">
+  <div class="card-title"><i data-lucide="calendar-days" style="width:14px;height:14px;"></i> Local Events & Footfall Opportunities</div>
+  {% for ev in local_events %}
+  {% set opp = ev.get('footfall_opportunity', 'medium') %}
+  <div style="border: 1px solid {% if opp == 'high' %}var(--costa-gold){% elif opp == 'risk' %}var(--costa-danger){% else %}var(--costa-steam){% endif %}; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; background: {% if opp == 'high' %}#FFFDE7{% elif opp == 'risk' %}#FFEBEE{% else %}var(--costa-white){% endif %};">
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <div style="width:36px;height:36px;border-radius:8px;background:{% if opp == 'high' %}var(--costa-gold){% elif opp == 'risk' %}var(--costa-danger){% else %}var(--costa-maroon){% endif %};display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <i data-lucide="{{ ev.get('icon', 'calendar') }}" style="width:18px;height:18px;color:white;"></i>
+      </div>
+      <div style="flex:1;">
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:4px;">
+          <strong style="font-size:13px;">{{ ev.name }}</strong>
+          <span class="pill {% if opp == 'high' %}pill-gold{% elif opp == 'risk' %}pill-danger{% else %}pill-info{% endif %}">{{ '🚨 Risk' if opp == 'risk' else ('🎯 High Opportunity' if opp == 'high' else 'Opportunity') }}</span>
+        </div>
+        <div style="font-size: 12px; color: #666; margin-bottom: 6px;">
+          📅 {{ ev.get('date', '') }} &nbsp;·&nbsp; 📍 {{ ev.get('location', '') }} &nbsp;·&nbsp; 👥 ~{{ "{:,}".format(ev.get('expected_attendance', 0)) }} attendees
+        </div>
+        {% if ev.get('opportunity_note') %}
+        <div style="font-size: 12px; color: var(--costa-espresso);">{{ ev.opportunity_note }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Footfall Forecast by Period -->
+{% if footfall_forecast %}
+<div class="card">
+  <div class="card-title"><i data-lucide="users" style="width:14px;height:14px;"></i> Footfall Forecast — Today by Period</div>
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    {% set period_labels = {'morning_rush': '🌅 Morning Rush (6–9am)', 'late_morning': '☀️ Late Morning (9–12pm)', 'lunch': '🥗 Lunch (12–2pm)', 'afternoon': '🍵 Afternoon (2–5pm)', 'evening': '🌆 Evening (5–9pm)'} %}
+    {% for period_key, period_label in period_labels.items() %}
+    {% if footfall_forecast.get(period_key) %}
+    {% set pf = footfall_forecast[period_key] %}
+    {% set pct = pf.get('pct_vs_normal', 0) %}
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div style="width: 160px; font-size: 12px; font-weight: 600; color: var(--costa-espresso); flex-shrink:0;">{{ period_label }}</div>
+      <div style="flex:1; height: 24px; background: var(--costa-cream); border-radius: 6px; overflow:hidden; position:relative;">
+        <div style="position:absolute; left:50%; top:0; bottom:0; width:2px; background: var(--costa-steam);"></div>
+        {% if pct >= 0 %}
+        <div style="position:absolute; left:50%; top:0; bottom:0; width: {{ [pct * 1.5, 50] | min }}%; background: var(--costa-success); opacity: 0.6; border-radius: 0 6px 6px 0;"></div>
+        {% else %}
+        <div style="position:absolute; right:50%; top:0; bottom:0; width: {{ [pct | abs * 1.5, 50] | min }}%; background: var(--costa-danger); opacity: 0.6; border-radius: 6px 0 0 6px;"></div>
+        {% endif %}
+      </div>
+      <div style="width:56px; text-align:right; font-family: var(--font-heading); font-size: 13px; font-weight: 700; color: {% if pct > 0 %}var(--costa-success){% elif pct < 0 %}var(--costa-danger){% else %}#888{% endif %}; flex-shrink:0;">
+        {% if pct > 0 %}+{{ pct }}%{% elif pct < 0 %}{{ pct }}%{% else %}Normal{% endif %}
+      </div>
+    </div>
+    {% if pf.get('note') %}
+    <div style="font-size: 11px; color: #666; margin-left: 172px; margin-top: -4px; margin-bottom: 2px; font-style: italic;">{{ pf.note }}</div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>lucide.createIcons();</script>
+{% endblock %}

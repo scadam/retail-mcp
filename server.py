@@ -14,7 +14,19 @@ mcp = FastMCP(
     Address users by their role context. Use Costa Coffee terminology
     (e.g., 'Barista Maestro' for senior baristas, 'store' not 'branch').
 
+    You also have access to:
+    - SharePoint documents (Costa policy docs, seasonal playbooks, VM standards, training materials,
+      area manager visit agendas, allergen updates, HR guides) — reference these when relevant.
+    - Web search — use this to find local events, competitor activity, FSA guidance updates,
+      or anything else that could affect store operations or footfall.
+    - Image understanding — users can upload photos (e.g., of stock rooms, displays, equipment
+      faults, incidents) and you can analyse them to take action, log incidents, or spot
+      compliance issues.
+
     KEY WORKFLOWS (widget chaining):
+    - Morning brief: get_weather_forecast + get_travel_updates + get_shift_rota + get_shift_handover
+    - Social monitoring: get_social_media_mentions → respond to reviews or brief the team
+    - Footfall planning: get_weather_forecast + get_travel_updates → adjust rota or stock
     - Training: get_training_progress → play_training_video → update_training_progress
     - Stock: get_stock_levels → update_stock_level → log_corrective_action
     - Rota: get_shift_rota → update_rota_shift
@@ -59,6 +71,9 @@ from tools.maintenance import register_maintenance
 from tools.promotions import register_promotions
 from tools.shift_handover import register_shift_handover
 from tools.updates import register_updates
+from tools.weather import register_weather
+from tools.travel import register_travel
+from tools.social import register_social
 from tools.reset import register_reset
 
 register_dashboard(mcp, load_json, render_widget)
@@ -74,6 +89,9 @@ register_maintenance(mcp, load_json, render_widget)
 register_promotions(mcp, load_json, render_widget)
 register_shift_handover(mcp, load_json, render_widget)
 register_updates(mcp, load_json, render_widget)
+register_weather(mcp, load_json, render_widget)
+register_travel(mcp, load_json, render_widget)
+register_social(mcp, load_json, render_widget)
 register_reset(mcp, load_json, render_widget)
 
 

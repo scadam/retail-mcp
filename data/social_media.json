@@ -1,0 +1,274 @@
+{
+  "GLD001": {
+    "sentiment_summary": {
+      "overall_score": 4.3,
+      "positive_pct": 68,
+      "neutral_pct": 20,
+      "negative_pct": 12,
+      "total_mentions_7d": 47,
+      "vs_last_week": "+8%",
+      "trending_direction": "up",
+      "nps_from_social": 62
+    },
+    "influencer_alerts": [
+      {
+        "id": "INF001",
+        "username": "@GuildfordFoodie",
+        "display_name": "Guildford Foodie",
+        "platform": "Instagram",
+        "followers": 12400,
+        "content": "☕ Cosy morning at Costa Coffee Guildford High Street! Their Toffee Penny Latte is absolutely everything right now 🍂 Perfect pre-Christmas treat. Full review on the blog tonight! #CostaLife #GuildfordEats #CoffeeReview",
+        "sentiment": "positive",
+        "timestamp": "08:22 today",
+        "url": "https://instagram.com/p/example",
+        "is_verified": false,
+        "reach_estimate": 18600,
+        "engagement_rate": "4.8%",
+        "action_recommended": "Engage — reply with a thank-you and tag the store. Consider sending a DM to offer a complimentary seasonal drink for the review.",
+        "urgency": "high"
+      },
+      {
+        "id": "INF002",
+        "username": "@SurreyLiving",
+        "display_name": "Surrey Living Magazine",
+        "platform": "Twitter/X",
+        "followers": 28500,
+        "content": "Looking for the best coffee spots in Guildford this Christmas? Our top picks coming later today 👀 @CostaCoffee always delivers 🎄",
+        "sentiment": "positive",
+        "timestamp": "07:45 today",
+        "url": "https://twitter.com/example",
+        "is_verified": true,
+        "reach_estimate": 42000,
+        "engagement_rate": "2.1%",
+        "action_recommended": "Monitor — when the article publishes, share via Costa's social channels. Brief the team to maintain high presentation standards today.",
+        "urgency": "medium"
+      }
+    ],
+    "trending_hashtags": [
+      {"tag": "#ToffeePennyLatte", "count": 8, "sentiment": "positive"},
+      {"tag": "#CostaLife", "count": 14, "sentiment": "positive"},
+      {"tag": "#GuildfordEats", "count": 6, "sentiment": "positive"},
+      {"tag": "#CostaCoffee", "count": 22, "sentiment": "positive"},
+      {"tag": "#GuildfordChristmas", "count": 5, "sentiment": "positive"}
+    ],
+    "mentions": [
+      {
+        "id": "M001",
+        "platform": "Google Reviews",
+        "username": "Emma T.",
+        "followers": null,
+        "rating": 5,
+        "content": "Absolutely love this Costa! The barista Marcus made my oat flat white perfectly today — exactly the right temperature. Will definitely be back.",
+        "sentiment": "positive",
+        "timestamp": "2 hours ago",
+        "requires_response": false,
+        "theme_tags": ["staff", "quality", "oat milk"]
+      },
+      {
+        "id": "M002",
+        "platform": "Google Reviews",
+        "username": "James K.",
+        "followers": null,
+        "rating": 1,
+        "content": "Waited 15 minutes for a flat white at lunchtime. Three people behind the counter chatting. Won't be rushing back.",
+        "sentiment": "negative",
+        "timestamp": "Yesterday 13:12",
+        "requires_response": true,
+        "response_overdue": true,
+        "theme_tags": ["wait time", "staffing", "lunch rush"]
+      },
+      {
+        "id": "M003",
+        "platform": "Twitter/X",
+        "username": "@coffeeaddictuk",
+        "followers": 890,
+        "rating": null,
+        "content": "The Christmas cups at @CostaCoffee Guildford are SO cute this year 😍 It's beginning to feel a lot like Christmas ☕🎄",
+        "sentiment": "positive",
+        "timestamp": "3 hours ago",
+        "requires_response": false,
+        "theme_tags": ["seasonal", "branding", "Christmas"]
+      },
+      {
+        "id": "M004",
+        "platform": "TripAdvisor",
+        "username": "TravellerSophia",
+        "followers": null,
+        "rating": 4,
+        "content": "Great location near the Christmas market. Slightly cramped when busy but the staff were friendly and the Gingerbread Latte was on point.",
+        "sentiment": "positive",
+        "timestamp": "Yesterday 16:30",
+        "requires_response": false,
+        "theme_tags": ["location", "Christmas market", "seasonal drinks", "busy"]
+      },
+      {
+        "id": "M005",
+        "platform": "Instagram",
+        "username": "@morningcoffeeuk",
+        "followers": 2300,
+        "rating": null,
+        "content": "Starting every Monday right ☀️ @CostaCoffee GLD the team there are always so warm and welcoming. The new Pistachio Iced Latte is AMAZING even in winter 🍵 #MondayMotivation",
+        "sentiment": "positive",
+        "timestamp": "2 days ago",
+        "requires_response": false,
+        "theme_tags": ["staff", "new menu", "pistachio"]
+      },
+      {
+        "id": "M006",
+        "platform": "Costa App",
+        "username": "App User 4829",
+        "followers": null,
+        "rating": 2,
+        "content": "Mobile order wasn't ready when I arrived even though the app said it was. Had to wait another 8 minutes. This happens too often at this store.",
+        "sentiment": "negative",
+        "timestamp": "3 days ago",
+        "requires_response": true,
+        "response_overdue": false,
+        "theme_tags": ["mobile order", "wait time", "digital"]
+      },
+      {
+        "id": "M007",
+        "platform": "Google Reviews",
+        "username": "David M.",
+        "followers": null,
+        "rating": 5,
+        "content": "Best Costa in Guildford, hands down. Always consistent. The new Barista Maestro Priya really knows her stuff — got my cortado spot on.",
+        "sentiment": "positive",
+        "timestamp": "4 days ago",
+        "requires_response": false,
+        "theme_tags": ["staff", "quality", "cortado", "consistency"]
+      }
+    ],
+    "response_templates": {
+      "negative_wait_time": "Hi {name}, thank you for your feedback. We're sorry you had to wait longer than expected — this isn't the experience we want for our customers. We've taken this on board with our team. We'd love the chance to make it right — please DM us your Costa Club number and we'll add some points to your account. ☕",
+      "negative_mobile_order": "Hi {name}, we're sorry your mobile order experience wasn't smooth. We're actively working on improving our mobile order preparation times. Thank you for letting us know — your feedback directly helps us improve.",
+      "positive_staff": "Thank you so much for this lovely review, {name}! We'll make sure to pass on your kind words to the team — they'll be thrilled! See you again soon ☕🎄"
+    }
+  },
+  "GLD002": {
+    "sentiment_summary": {
+      "overall_score": 4.1,
+      "positive_pct": 62,
+      "neutral_pct": 22,
+      "negative_pct": 16,
+      "total_mentions_7d": 31,
+      "vs_last_week": "-3%",
+      "trending_direction": "down",
+      "nps_from_social": 54
+    },
+    "influencer_alerts": [],
+    "trending_hashtags": [
+      {"tag": "#CostaCoffee", "count": 15, "sentiment": "positive"},
+      {"tag": "#GuildfordStation", "count": 6, "sentiment": "mixed"},
+      {"tag": "#TrainDelay", "count": 4, "sentiment": "negative"}
+    ],
+    "mentions": [
+      {
+        "id": "M020",
+        "platform": "Twitter/X",
+        "username": "@frustrated_commuter",
+        "followers": 340,
+        "rating": null,
+        "content": "At least @CostaCoffee Guildford Station is keeping us sane during this nightmare signal failure. Queue out the door but moving fast. Good work team 👏",
+        "sentiment": "positive",
+        "timestamp": "47 minutes ago",
+        "requires_response": false,
+        "theme_tags": ["disruption", "speed", "staff praise"]
+      },
+      {
+        "id": "M021",
+        "platform": "Google Reviews",
+        "username": "Commuter Parent",
+        "followers": null,
+        "rating": 3,
+        "content": "The service is great but seating is almost impossible during rush hour. Had to stand with my coffee and briefcase — not ideal.",
+        "sentiment": "neutral",
+        "timestamp": "2 days ago",
+        "requires_response": false,
+        "theme_tags": ["seating", "capacity", "rush hour"]
+      }
+    ],
+    "response_templates": {}
+  },
+  "BRI001": {
+    "sentiment_summary": {
+      "overall_score": 4.0,
+      "positive_pct": 58,
+      "neutral_pct": 24,
+      "negative_pct": 18,
+      "total_mentions_7d": 39,
+      "vs_last_week": "-12%",
+      "trending_direction": "down",
+      "nps_from_social": 48
+    },
+    "influencer_alerts": [
+      {
+        "id": "INF010",
+        "username": "@BrightonBites",
+        "display_name": "Brighton Bites",
+        "platform": "TikTok",
+        "followers": 45200,
+        "content": "Checking out all the coffee spots on North Street before the new Pret opens Monday 👀 First up... @CostaCoffee Brighton North Street. Review TBC! ☕",
+        "sentiment": "neutral",
+        "timestamp": "6 hours ago",
+        "url": "https://tiktok.com/example",
+        "is_verified": false,
+        "reach_estimate": 67000,
+        "engagement_rate": "6.2%",
+        "action_recommended": "HIGH PRIORITY — This influencer is doing a competitive review ahead of Pret opening. Ensure the store is at its absolute best today. Consider briefing the manager to greet them warmly. First impressions matter.",
+        "urgency": "high"
+      }
+    ],
+    "trending_hashtags": [
+      {"tag": "#BrightonCoffee", "count": 9, "sentiment": "positive"},
+      {"tag": "#CostaCoffee", "count": 18, "sentiment": "positive"},
+      {"tag": "#PretVsCosta", "count": 4, "sentiment": "mixed"}
+    ],
+    "mentions": [
+      {
+        "id": "M040",
+        "platform": "Google Reviews",
+        "username": "Local Foodie J",
+        "followers": null,
+        "rating": 2,
+        "content": "Quality has dropped recently. My latte tasted burnt twice in a row. Something wrong with the machine? Used to be my favourite Costa.",
+        "sentiment": "negative",
+        "timestamp": "3 days ago",
+        "requires_response": true,
+        "response_overdue": true,
+        "theme_tags": ["coffee quality", "machine", "consistency"]
+      },
+      {
+        "id": "M041",
+        "platform": "Instagram",
+        "username": "@seaside_sips",
+        "followers": 1800,
+        "rating": null,
+        "content": "Sunny Brighton morning + Costa = life is good ☀️☕ Loving the new cups this season #CostaLife #BrightonVibes",
+        "sentiment": "positive",
+        "timestamp": "Yesterday",
+        "requires_response": false,
+        "theme_tags": ["seasonal", "location", "lifestyle"]
+      }
+    ],
+    "response_templates": {}
+  },
+  "default": {
+    "sentiment_summary": {
+      "overall_score": 4.2,
+      "positive_pct": 65,
+      "neutral_pct": 22,
+      "negative_pct": 13,
+      "total_mentions_7d": 25,
+      "vs_last_week": "+2%",
+      "trending_direction": "up",
+      "nps_from_social": 58
+    },
+    "influencer_alerts": [],
+    "trending_hashtags": [
+      {"tag": "#CostaCoffee", "count": 12, "sentiment": "positive"}
+    ],
+    "mentions": [],
+    "response_templates": {}
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "GLD001": {
+    "current": {
+      "condition": "Heavy Rain",
+      "condition_code": "heavy_rain",
+      "temp_c": 9,
+      "feels_like_c": 6,
+      "humidity": 87,
+      "wind_mph": 18,
+      "wind_dir": "SW",
+      "uv_index": 1,
+      "visibility_km": 6,
+      "precip_mm": 4.2,
+      "updated_at": "06:00",
+      "footfall_impact": "lower",
+      "footfall_impact_pct": -18,
+      "footfall_note": "Heavy rain typically reduces high-street footfall by 15–20%. Expect commuters and shelter-seekers to still visit, but casual browsers will stay home.",
+      "drink_demand": {
+        "hot_drinks": "+25%",
+        "iced_drinks": "-40%",
+        "hot_chocolate": "+35%",
+        "pastries": "+15%"
+      },
+      "agent_tip": "Stock up on takeaway cups — wet weather drives takeaway demand. Consider placing the Toffee Penny Latte display near the door where shelter-seekers will see it immediately."
+    },
+    "forecast": [
+      {
+        "date": "today",
+        "day": "Today",
+        "condition": "Heavy Rain",
+        "condition_code": "heavy_rain",
+        "high_c": 10,
+        "low_c": 6,
+        "rain_chance": 90,
+        "footfall_impact": "lower",
+        "footfall_impact_pct": -18
+      },
+      {
+        "date": "tomorrow",
+        "day": "Tomorrow",
+        "condition": "Overcast",
+        "condition_code": "overcast",
+        "high_c": 11,
+        "low_c": 7,
+        "rain_chance": 50,
+        "footfall_impact": "normal",
+        "footfall_impact_pct": -5
+      },
+      {
+        "date": "in 2 days",
+        "day": "Wednesday",
+        "condition": "Partly Cloudy",
+        "condition_code": "partly_cloudy",
+        "high_c": 13,
+        "low_c": 8,
+        "rain_chance": 20,
+        "footfall_impact": "normal",
+        "footfall_impact_pct": 0
+      },
+      {
+        "date": "in 3 days",
+        "day": "Thursday",
+        "condition": "Sunny",
+        "condition_code": "sunny",
+        "high_c": 15,
+        "low_c": 9,
+        "rain_chance": 5,
+        "footfall_impact": "higher",
+        "footfall_impact_pct": 12
+      },
+      {
+        "date": "in 4 days",
+        "day": "Friday",
+        "condition": "Sunny Intervals",
+        "condition_code": "sunny_intervals",
+        "high_c": 14,
+        "low_c": 8,
+        "rain_chance": 15,
+        "footfall_impact": "higher",
+        "footfall_impact_pct": 8
+      }
+    ],
+    "hourly_today": [
+      {"hour": "06:00", "temp_c": 7, "rain_chance": 80, "condition": "Rain"},
+      {"hour": "07:00", "temp_c": 8, "rain_chance": 90, "condition": "Heavy Rain"},
+      {"hour": "08:00", "temp_c": 8, "rain_chance": 95, "condition": "Heavy Rain"},
+      {"hour": "09:00", "temp_c": 9, "rain_chance": 90, "condition": "Heavy Rain"},
+      {"hour": "10:00", "temp_c": 9, "rain_chance": 85, "condition": "Rain"},
+      {"hour": "11:00", "temp_c": 10, "rain_chance": 75, "condition": "Rain"},
+      {"hour": "12:00", "temp_c": 10, "rain_chance": 70, "condition": "Drizzle"},
+      {"hour": "13:00", "temp_c": 10, "rain_chance": 65, "condition": "Overcast"},
+      {"hour": "14:00", "temp_c": 10, "rain_chance": 60, "condition": "Overcast"},
+      {"hour": "15:00", "temp_c": 9, "rain_chance": 70, "condition": "Rain"},
+      {"hour": "16:00", "temp_c": 9, "rain_chance": 75, "condition": "Rain"},
+      {"hour": "17:00", "temp_c": 8, "rain_chance": 80, "condition": "Heavy Rain"},
+      {"hour": "18:00", "temp_c": 8, "rain_chance": 85, "condition": "Heavy Rain"},
+      {"hour": "19:00", "temp_c": 7, "rain_chance": 80, "condition": "Rain"},
+      {"hour": "20:00", "temp_c": 7, "rain_chance": 70, "condition": "Drizzle"}
+    ]
+  },
+  "GLD002": {
+    "current": {
+      "condition": "Heavy Rain",
+      "condition_code": "heavy_rain",
+      "temp_c": 9,
+      "feels_like_c": 6,
+      "humidity": 87,
+      "wind_mph": 18,
+      "uv_index": 1,
+      "visibility_km": 6,
+      "precip_mm": 4.2,
+      "updated_at": "06:00",
+      "footfall_impact": "normal",
+      "footfall_impact_pct": 5,
+      "footfall_note": "Station location sees higher footfall in wet weather — commuters seek shelter while waiting for trains.",
+      "drink_demand": {
+        "hot_drinks": "+30%",
+        "iced_drinks": "-40%",
+        "hot_chocolate": "+40%",
+        "pastries": "+20%"
+      },
+      "agent_tip": "Station footfall tends to increase in rain. Pre-batch Flat Whites and Americanos ready to go for the rush."
+    },
+    "forecast": [
+      {"date": "today", "day": "Today", "condition": "Heavy Rain", "condition_code": "heavy_rain", "high_c": 10, "low_c": 6, "rain_chance": 90, "footfall_impact": "normal", "footfall_impact_pct": 5},
+      {"date": "tomorrow", "day": "Tomorrow", "condition": "Overcast", "condition_code": "overcast", "high_c": 11, "low_c": 7, "rain_chance": 50, "footfall_impact": "normal", "footfall_impact_pct": 0},
+      {"date": "in 2 days", "day": "Wednesday", "condition": "Partly Cloudy", "condition_code": "partly_cloudy", "high_c": 13, "low_c": 8, "rain_chance": 20, "footfall_impact": "normal", "footfall_impact_pct": 0},
+      {"date": "in 3 days", "day": "Thursday", "condition": "Sunny", "condition_code": "sunny", "high_c": 15, "low_c": 9, "rain_chance": 5, "footfall_impact": "higher", "footfall_impact_pct": 8},
+      {"date": "in 4 days", "day": "Friday", "condition": "Sunny Intervals", "condition_code": "sunny_intervals", "high_c": 14, "low_c": 8, "rain_chance": 15, "footfall_impact": "higher", "footfall_impact_pct": 6}
+    ],
+    "hourly_today": []
+  },
+  "RDG001": {
+    "current": {
+      "condition": "Overcast",
+      "condition_code": "overcast",
+      "temp_c": 11,
+      "feels_like_c": 8,
+      "humidity": 75,
+      "wind_mph": 12,
+      "uv_index": 2,
+      "visibility_km": 10,
+      "precip_mm": 0.5,
+      "updated_at": "06:00",
+      "footfall_impact": "normal",
+      "footfall_impact_pct": -5,
+      "footfall_note": "Overcast but dry — typical weekday footfall expected. Oracle shopping centre insulates from weather effects.",
+      "drink_demand": {
+        "hot_drinks": "+10%",
+        "iced_drinks": "-10%",
+        "hot_chocolate": "+15%",
+        "pastries": "+5%"
+      },
+      "agent_tip": "Oracle mall location is weather-insulated. Focus on the lunchtime meal deal promotion — good opportunity today."
+    },
+    "forecast": [
+      {"date": "today", "day": "Today", "condition": "Overcast", "condition_code": "overcast", "high_c": 11, "low_c": 7, "rain_chance": 40, "footfall_impact": "normal", "footfall_impact_pct": -5},
+      {"date": "tomorrow", "day": "Tomorrow", "condition": "Rain", "condition_code": "rain", "high_c": 10, "low_c": 6, "rain_chance": 70, "footfall_impact": "higher", "footfall_impact_pct": 8},
+      {"date": "in 2 days", "day": "Wednesday", "condition": "Sunny", "condition_code": "sunny", "high_c": 14, "low_c": 8, "rain_chance": 10, "footfall_impact": "higher", "footfall_impact_pct": 10},
+      {"date": "in 3 days", "day": "Thursday", "condition": "Sunny", "condition_code": "sunny", "high_c": 15, "low_c": 9, "rain_chance": 5, "footfall_impact": "higher", "footfall_impact_pct": 12},
+      {"date": "in 4 days", "day": "Friday", "condition": "Partly Cloudy", "condition_code": "partly_cloudy", "high_c": 13, "low_c": 8, "rain_chance": 25, "footfall_impact": "normal", "footfall_impact_pct": 0}
+    ],
+    "hourly_today": []
+  },
+  "BRI001": {
+    "current": {
+      "condition": "Sunny Intervals",
+      "condition_code": "sunny_intervals",
+      "temp_c": 13,
+      "feels_like_c": 11,
+      "humidity": 62,
+      "wind_mph": 14,
+      "uv_index": 3,
+      "visibility_km": 20,
+      "precip_mm": 0.0,
+      "updated_at": "06:00",
+      "footfall_impact": "higher",
+      "footfall_impact_pct": 10,
+      "footfall_note": "Mild and bright for the coast — expect above-average footfall. Iced drink demand will be higher than seasonal norm.",
+      "drink_demand": {
+        "hot_drinks": "+5%",
+        "iced_drinks": "+20%",
+        "hot_chocolate": "-5%",
+        "pastries": "+10%"
+      },
+      "agent_tip": "Brighton benefits disproportionately from good weather. Ensure Frostino machine is ready and iced drink ingredients are fully stocked."
+    },
+    "forecast": [
+      {"date": "today", "day": "Today", "condition": "Sunny Intervals", "condition_code": "sunny_intervals", "high_c": 13, "low_c": 9, "rain_chance": 15, "footfall_impact": "higher", "footfall_impact_pct": 10},
+      {"date": "tomorrow", "day": "Tomorrow", "condition": "Sunny", "condition_code": "sunny", "high_c": 15, "low_c": 10, "rain_chance": 5, "footfall_impact": "higher", "footfall_impact_pct": 18},
+      {"date": "in 2 days", "day": "Wednesday", "condition": "Partly Cloudy", "condition_code": "partly_cloudy", "high_c": 13, "low_c": 9, "rain_chance": 20, "footfall_impact": "normal", "footfall_impact_pct": 0},
+      {"date": "in 3 days", "day": "Thursday", "condition": "Rain", "condition_code": "rain", "high_c": 11, "low_c": 7, "rain_chance": 75, "footfall_impact": "lower", "footfall_impact_pct": -12},
+      {"date": "in 4 days", "day": "Friday", "condition": "Overcast", "condition_code": "overcast", "high_c": 12, "low_c": 8, "rain_chance": 40, "footfall_impact": "normal", "footfall_impact_pct": -5}
+    ],
+    "hourly_today": []
+  },
+  "default": {
+    "current": {
+      "condition": "Overcast",
+      "condition_code": "overcast",
+      "temp_c": 11,
+      "feels_like_c": 8,
+      "humidity": 72,
+      "wind_mph": 10,
+      "uv_index": 2,
+      "visibility_km": 12,
+      "precip_mm": 0.0,
+      "updated_at": "06:00",
+      "footfall_impact": "normal",
+      "footfall_impact_pct": 0,
+      "footfall_note": "Typical mild conditions — standard footfall expected.",
+      "drink_demand": {
+        "hot_drinks": "+5%",
+        "iced_drinks": "-5%",
+        "hot_chocolate": "+5%",
+        "pastries": "+0%"
+      },
+      "agent_tip": "No significant weather-driven adjustments needed today."
+    },
+    "forecast": [
+      {"date": "today", "day": "Today", "condition": "Overcast", "condition_code": "overcast", "high_c": 11, "low_c": 7, "rain_chance": 30, "footfall_impact": "normal", "footfall_impact_pct": 0},
+      {"date": "tomorrow", "day": "Tomorrow", "condition": "Partly Cloudy", "condition_code": "partly_cloudy", "high_c": 12, "low_c": 7, "rain_chance": 20, "footfall_impact": "normal", "footfall_impact_pct": 0},
+      {"date": "in 2 days", "day": "Wednesday", "condition": "Sunny", "condition_code": "sunny", "high_c": 14, "low_c": 8, "rain_chance": 10, "footfall_impact": "higher", "footfall_impact_pct": 8},
+      {"date": "in 3 days", "day": "Thursday", "condition": "Rain", "condition_code": "rain", "high_c": 10, "low_c": 6, "rain_chance": 70, "footfall_impact": "lower", "footfall_impact_pct": -12},
+      {"date": "in 4 days", "day": "Friday", "condition": "Overcast", "condition_code": "overcast", "high_c": 11, "low_c": 7, "rain_chance": 35, "footfall_impact": "normal", "footfall_impact_pct": -3}
+    ],
+    "hourly_today": []
+  }
+}

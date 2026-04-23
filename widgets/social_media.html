@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block title %}Social Media — {{ store_name }}{% endblock %}
+{% block domain_icon %}share-2{% endblock %}
+{% block widget_title %}Social Media & Reputation{% endblock %}
+
+{% block content %}
+
+{% set unresponded = mentions | selectattr('requires_response', 'equalto', true) | selectattr('response_overdue', 'defined') | selectattr('response_overdue', 'equalto', true) | list %}
+{% set high_urgency_influencers = influencer_alerts | selectattr('urgency', 'equalto', 'high') | list %}
+
+<!-- Urgent Alerts -->
+{% if high_urgency_influencers %}
+<div class="alert alert-danger" style="margin-bottom:10px;">
+  <i data-lucide="zap" style="width:16px;height:16px;flex-shrink:0;"></i>
+  <div>
+    <strong>{{ high_urgency_influencers | length }} influencer alert{{ 's' if high_urgency_influencers | length > 1 else '' }} — action required now</strong><br>
+    {% for inf in high_urgency_influencers %}<span style="font-size:12px;">{{ inf.username }} ({{ "{:,}".format(inf.followers) }} followers on {{ inf.platform }})</span>{% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if unresponded %}
+<div class="alert alert-warning" style="margin-bottom:10px;">
+  <i data-lucide="message-circle-warning" style="width:16px;height:16px;flex-shrink:0;"></i>
+  <strong>{{ unresponded | length }} negative review{{ 's' if unresponded | length > 1 else '' }} awaiting response</strong>
+</div>
+{% endif %}
+
+<!-- Sentiment Summary -->
+{% if sentiment %}
+<div class="kpi-grid">
+  <div class="kpi-card" style="border-top-color: var(--costa-gold);">
+    <div class="kpi-label">Overall Score</div>
+    <div class="kpi-value">{{ sentiment.get('overall_score', '—') }}<span style="font-size:14px;font-weight:400;color:#888;">/5</span></div>
+    <div class="kpi-delta {% if sentiment.get('trending_direction') == 'up' %}up{% else %}down{% endif %}">
+      {{ '▲ Trending up' if sentiment.get('trending_direction') == 'up' else '▼ Trending down' }}
+    </div>
+  </div>
+  <div class="kpi-card" style="border-top-color: var(--costa-success);">
+    <div class="kpi-label">Positive</div>
+    <div class="kpi-value">{{ sentiment.get('positive_pct', '—') }}<span style="font-size:14px;font-weight:400;color:#888;">%</span></div>
+    <div class="kpi-delta up">of mentions</div>
+  </div>
+  <div class="kpi-card" style="border-top-color: var(--costa-danger);">
+    <div class="kpi-label">Negative</div>
+    <div class="kpi-value">{{ sentiment.get('negative_pct', '—') }}<span style="font-size:14px;font-weight:400;color:#888;">%</span></div>
+    <div class="kpi-delta {% if sentiment.get('negative_pct', 0) > 20 %}down{% else %}up{% endif %}">of mentions</div>
+  </div>
+  <div class="kpi-card" style="border-top-color: var(--costa-maroon);">
+    <div class="kpi-label">Mentions (7d)</div>
+    <div class="kpi-value">{{ sentiment.get('total_mentions_7d', '—') }}</div>
+    <div class="kpi-delta {% if sentiment.get('vs_last_week', '').startswith('+') %}up{% else %}down{% endif %}">{{ sentiment.get('vs_last_week', '') }} vs last week</div>
+  </div>
+</div>
+
+<!-- Sentiment Bar -->
+<div class="card" style="padding: 12px 16px;">
+  <div class="card-title"><i data-lucide="bar-chart-2" style="width:14px;height:14px;"></i> Sentiment Breakdown</div>
+  <div style="height: 20px; border-radius: 10px; overflow: hidden; display:flex; margin-bottom:8px;">
+    <div style="width:{{ sentiment.get('positive_pct', 0) }}%; background: var(--costa-success);"></div>
+    <div style="width:{{ sentiment.get('neutral_pct', 0) }}%; background: var(--costa-steam);"></div>
+    <div style="width:{{ sentiment.get('negative_pct', 0) }}%; background: var(--costa-danger);"></div>
+  </div>
+  <div style="display:flex; gap:16px; font-size:11px; color:#666;">
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:50%;background:var(--costa-success);display:inline-block;"></span> Positive {{ sentiment.get('positive_pct', 0) }}%</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:50%;background:var(--costa-steam);display:inline-block;"></span> Neutral {{ sentiment.get('neutral_pct', 0) }}%</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:50%;background:var(--costa-danger);display:inline-block;"></span> Negative {{ sentiment.get('negative_pct', 0) }}%</span>
+  </div>
+</div>
+{% endif %}
+
+<!-- Trending Hashtags -->
+{% if trending_hashtags %}
+<div class="card">
+  <div class="card-title"><i data-lucide="hash" style="width:14px;height:14px;"></i> Trending Hashtags</div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    {% for tag in trending_hashtags %}
+    <span style="background: {% if tag.sentiment == 'positive' %}#E8F5E9{% elif tag.sentiment == 'negative' %}#FFEBEE{% else %}#E3F2FD{% endif %}; color: {% if tag.sentiment == 'positive' %}var(--costa-success){% elif tag.sentiment == 'negative' %}var(--costa-danger){% else %}#1565C0{% endif %}; border-radius: 20px; padding: 5px 12px; font-size: 12px; font-weight: 600;">
+      {{ tag.tag }} <span style="opacity:0.6; font-weight:400;">× {{ tag.count }}</span>
+    </span>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- Influencer Alerts -->
+{% if influencer_alerts %}
+<div class="card">
+  <div class="card-title"><i data-lucide="star" style="width:14px;height:14px;"></i> Influencer Alerts</div>
+  {% for inf in influencer_alerts %}
+  <div style="border: 2px solid {% if inf.urgency == 'high' %}var(--costa-danger){% else %}var(--costa-gold){% endif %}; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; background: {% if inf.urgency == 'high' %}#FFEBEE{% else %}#FFFDE7{% endif %};">
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--costa-maroon);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;font-weight:700;font-size:14px;">
+        {{ inf.display_name[0] | upper }}
+      </div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+          <strong style="font-size:13px;">{{ inf.display_name }}</strong>
+          <span style="font-size:11px;color:#666;">{{ inf.username }}</span>
+          <span class="pill pill-maroon">{{ inf.platform }}</span>
+          <span class="pill pill-info">{{ "{:,}".format(inf.followers) }} followers</span>
+          {% if inf.urgency == 'high' %}
+          <span class="pill pill-danger">🚨 Urgent</span>
+          {% endif %}
+        </div>
+        <div style="font-size: 12px; color: var(--costa-espresso); margin-bottom: 8px; font-style: italic;">"{{ inf.content }}"</div>
+        <div style="font-size: 11px; color: #555; background: rgba(0,0,0,0.05); border-radius: 6px; padding: 6px 10px;">
+          <strong>Recommended action:</strong> {{ inf.action_recommended }}
+        </div>
+        <div style="display:flex;gap:12px;margin-top:8px;font-size:11px;color:#666;">
+          <span>📅 {{ inf.timestamp }}</span>
+          <span>👁️ ~{{ "{:,}".format(inf.reach_estimate) }} estimated reach</span>
+          <span>💬 {{ inf.engagement_rate }} engagement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Recent Mentions -->
+{% if mentions %}
+<div class="card">
+  <div class="card-title"><i data-lucide="message-circle" style="width:14px;height:14px;"></i> Recent Mentions</div>
+  <div class="scroll-list-tall">
+    {% for m in mentions %}
+    <div style="border-bottom: 1px solid var(--costa-latte); padding: 10px 0; {% if m.get('requires_response') and m.get('response_overdue') %}background: #FFF8E1; margin: 0 -2px; padding: 10px 2px; border-radius: 6px; border-bottom: none; margin-bottom: 8px;{% endif %}">
+      <div style="display:flex; align-items:flex-start; gap:10px;">
+        <div style="flex-shrink:0;">
+          {% set plat = m.get('platform', '') %}
+          <div style="width:32px;height:32px;border-radius:50%;background:{% if 'Instagram' in plat %}linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888){% elif 'Twitter' in plat or 'X' in plat %}#000{% elif 'TikTok' in plat %}#010101{% elif 'Google' in plat %}#4285F4{% elif 'TripAdvisor' in plat %}#34E0A1{% elif 'Costa' in plat %}var(--costa-maroon){% else %}var(--costa-maroon){% endif %};display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:700;">
+            {% if 'Instagram' in plat %}IG{% elif 'Twitter' in plat or 'X' in plat %}𝕏{% elif 'TikTok' in plat %}TK{% elif 'Google' in plat %}G{% elif 'TripAdvisor' in plat %}TA{% elif 'Costa' in plat %}C{% else %}?{% endif %}
+          </div>
+        </div>
+        <div style="flex:1;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+            <strong style="font-size:12px;">{{ m.get('username', '') }}</strong>
+            {% if m.get('followers') %}
+            <span style="font-size:11px;color:#888;">{{ "{:,}".format(m.followers) }} followers</span>
+            {% endif %}
+            {% if m.get('rating') %}
+            <span style="color:var(--costa-gold);font-size:12px;">{{ '★' * m.rating }}{{ '☆' * (5 - m.rating) }}</span>
+            {% endif %}
+            <span class="pill {% if m.sentiment == 'positive' %}pill-success{% elif m.sentiment == 'negative' %}pill-danger{% else %}pill-info{% endif %}">{{ m.sentiment | title }}</span>
+            {% if m.get('requires_response') and m.get('response_overdue') %}
+            <span class="pill pill-danger" style="animation: pulse 1.5s infinite;">⚠️ Response Overdue</span>
+            {% elif m.get('requires_response') %}
+            <span class="pill pill-warning">Needs Response</span>
+            {% endif %}
+          </div>
+          <div style="font-size: 12px; color: var(--costa-espresso); line-height: 1.5; margin-bottom: 4px;">{{ m.get('content', '') }}</div>
+          <div style="display:flex;gap:10px;font-size:11px;color:#888;flex-wrap:wrap;">
+            <span>{{ m.get('platform', '') }}</span>
+            <span>{{ m.get('timestamp', '') }}</span>
+            {% if m.get('theme_tags') %}
+            <span>{{ m.theme_tags | join(' · ') }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>lucide.createIcons();</script>
+{% endblock %}
