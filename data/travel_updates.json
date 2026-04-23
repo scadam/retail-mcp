@@ -1,0 +1,146 @@
+{
+  "GLD001": {
+    "store_id": "GLD001",
+    "updated_at": "2026-04-22T07:15:00",
+    "nearby_stations": ["Guildford Rail Station (0.4 miles)", "Guildford Bus Station (0.1 miles)"],
+    "disruptions": [
+      {
+        "id": "DIS001",
+        "type": "Rail",
+        "severity": "Major",
+        "title": "South Western Railway – Guildford line delays",
+        "detail": "Signalling fault between Woking and Guildford. Trains running 25–40 minutes late. Replacement buses operating from Woking.",
+        "affected_routes": ["London Waterloo → Guildford", "Portsmouth → Guildford"],
+        "expected_resolution": "11:30",
+        "staff_impact": "2 team members commuting from Woking may be late. Check with Jade (EMP003) and Tariq (EMP007).",
+        "customer_impact": "Commuters diverted through Guildford Bus Station – expect above-normal morning footfall.",
+        "icon": "train",
+        "status": "Active"
+      },
+      {
+        "id": "DIS002",
+        "type": "Road",
+        "severity": "Minor",
+        "title": "A3 Southbound – lane closure near Guildford",
+        "detail": "Emergency roadworks causing 15-minute delays on the A3 southbound between J10 M25 and Guildford. Expect increased town centre footfall as drivers seek alternatives.",
+        "affected_routes": ["A3 Southbound"],
+        "expected_resolution": "13:00",
+        "staff_impact": "No direct staff impact expected.",
+        "customer_impact": "Slight increase in lunchtime walk-in trade from office workers avoiding roads.",
+        "icon": "car",
+        "status": "Active"
+      }
+    ],
+    "overall_impact": "High",
+    "impact_summary": "Rail disruption may delay 2 staff members. Expect higher morning footfall from stranded commuters. Staff up the counter from 7:30am.",
+    "recommended_actions": [
+      "Contact Jade and Tariq to confirm their ETA",
+      "Brief Sam (shift lead) to cover counter solo until 8:15 if needed",
+      "Prepare extra takeaway cups and lid stocks for higher-than-usual grab-and-go demand"
+    ]
+  },
+  "GLD002": {
+    "store_id": "GLD002",
+    "updated_at": "2026-04-22T07:15:00",
+    "nearby_stations": ["Guildford Rail Station (at store)"],
+    "disruptions": [
+      {
+        "id": "DIS001",
+        "type": "Rail",
+        "severity": "Major",
+        "title": "South Western Railway – Guildford line delays",
+        "detail": "Signalling fault between Woking and Guildford. Trains running 25–40 minutes late. Significant passenger build-up on concourse.",
+        "affected_routes": ["London Waterloo → Guildford", "Portsmouth → Guildford"],
+        "expected_resolution": "11:30",
+        "staff_impact": "Jade (EMP003) and Tariq (EMP007) may be significantly late. Call ahead.",
+        "customer_impact": "CRITICAL – Hundreds of stranded commuters on concourse. Expect very long queues from 7:30am onwards. All hands on deck.",
+        "icon": "train",
+        "status": "Active"
+      }
+    ],
+    "overall_impact": "Critical",
+    "impact_summary": "Station store will experience exceptional demand due to stranded commuters. All available staff must be on counter. Consider calling in off-duty staff if possible.",
+    "recommended_actions": [
+      "Call James Okafor (store manager) immediately to assess staffing options",
+      "Pull all available stock from back room to front",
+      "Activate queue management – open both till points",
+      "Prioritise takeaway drinks over dine-in to maximise throughput"
+    ]
+  },
+  "RDG001": {
+    "store_id": "RDG001",
+    "updated_at": "2026-04-22T07:15:00",
+    "nearby_stations": ["Reading Station (0.5 miles)", "Reading West Station (0.8 miles)"],
+    "disruptions": [
+      {
+        "id": "DIS003",
+        "type": "Rail",
+        "severity": "Moderate",
+        "title": "Great Western Railway – reduced service",
+        "detail": "Reduced timetable due to industrial action. Trains running every 30 minutes instead of every 15 minutes on the Reading–London corridor.",
+        "affected_routes": ["Reading → London Paddington", "Bristol → London via Reading"],
+        "expected_resolution": "End of service today",
+        "staff_impact": "No staff impact expected for this store.",
+        "customer_impact": "Fewer commuter-time customers. Oracle shoppers are walk-in and largely unaffected.",
+        "icon": "train",
+        "status": "Active"
+      },
+      {
+        "id": "DIS004",
+        "type": "Event",
+        "severity": "High",
+        "title": "Reading FC Home Match – pre-match traffic",
+        "detail": "Reading FC vs Coventry City kicks off at 15:00. Town centre experiencing above-normal road and pedestrian traffic from 12:00.",
+        "affected_routes": ["A33", "Caversham Road"],
+        "expected_resolution": "18:00",
+        "staff_impact": "No direct staff impact.",
+        "customer_impact": "Pre-match crowd will boost Oracle footfall 12:00–14:00. Expect second surge post-match ~17:00.",
+        "icon": "users",
+        "status": "Active"
+      }
+    ],
+    "overall_impact": "Moderate",
+    "impact_summary": "Rail strike reduces commuter trade but football match more than compensates. Pre-match crowd expected 12–14:00 and post-match 17–18:00.",
+    "recommended_actions": [
+      "Ensure savoury menu items and meal deals are fully stocked for pre-match lunch rush",
+      "Brief team on expected footfall peaks",
+      "Make sure Costa app loyalty promotions are visible at POS"
+    ]
+  },
+  "RDG002": {
+    "store_id": "RDG002",
+    "updated_at": "2026-04-22T07:15:00",
+    "nearby_stations": ["Reading Station (at store)"],
+    "disruptions": [
+      {
+        "id": "DIS003",
+        "type": "Rail",
+        "severity": "Moderate",
+        "title": "Great Western Railway – reduced service",
+        "detail": "Reduced timetable due to industrial action. Trains running every 30 minutes instead of every 15 minutes.",
+        "affected_routes": ["Reading → London Paddington", "Bristol → London via Reading"],
+        "expected_resolution": "End of service today",
+        "staff_impact": "No staff are affected.",
+        "customer_impact": "Reduced throughput of commuters. Expect queues to be longer but volume lower than typical. Longer dwell times on platform – opportunity for upselling loyalty drinks.",
+        "icon": "train",
+        "status": "Active"
+      }
+    ],
+    "overall_impact": "Moderate",
+    "impact_summary": "Strike reduces commuter volume but longer wait times may increase average spend. Push loyalty app sign-ups and meal deals.",
+    "recommended_actions": [
+      "Brief baristas on loyalty app upsell opportunity",
+      "Ensure meal deal signage is prominent",
+      "Adjust staffing to match lower-than-usual peak volumes"
+    ]
+  },
+  "BAS001": {
+    "store_id": "BAS001",
+    "updated_at": "2026-04-22T07:15:00",
+    "nearby_stations": ["Basingstoke Station (0.6 miles)"],
+    "disruptions": [],
+    "overall_impact": "None",
+    "impact_summary": "No travel disruptions in the Basingstoke area today. Normal operations expected.",
+    "recommended_actions": []
+  }
+}

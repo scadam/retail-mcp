@@ -1,0 +1,179 @@
+{
+  "GLD001": {
+    "store_id": "GLD001",
+    "location": "Guildford, Surrey",
+    "updated_at": "2026-04-22T07:00:00",
+    "current": {
+      "condition": "Overcast",
+      "temp_c": 12,
+      "feels_like_c": 9,
+      "humidity_pct": 78,
+      "wind_mph": 14,
+      "icon": "cloud"
+    },
+    "hourly_today": [
+      {"hour": "06:00", "condition": "Cloudy",       "temp_c": 9,  "rain_prob_pct": 10, "icon": "cloud"},
+      {"hour": "07:00", "condition": "Light rain",   "temp_c": 10, "rain_prob_pct": 45, "icon": "cloud-drizzle"},
+      {"hour": "08:00", "condition": "Heavy rain",   "temp_c": 11, "rain_prob_pct": 80, "icon": "cloud-rain"},
+      {"hour": "09:00", "condition": "Heavy rain",   "temp_c": 11, "rain_prob_pct": 85, "icon": "cloud-rain"},
+      {"hour": "10:00", "condition": "Overcast",     "temp_c": 12, "rain_prob_pct": 40, "icon": "cloud"},
+      {"hour": "11:00", "condition": "Overcast",     "temp_c": 13, "rain_prob_pct": 30, "icon": "cloud"},
+      {"hour": "12:00", "condition": "Partly cloudy","temp_c": 14, "rain_prob_pct": 20, "icon": "cloud-sun"},
+      {"hour": "13:00", "condition": "Sunny spells", "temp_c": 15, "rain_prob_pct": 10, "icon": "sun"},
+      {"hour": "14:00", "condition": "Sunny",        "temp_c": 16, "rain_prob_pct": 5,  "icon": "sun"},
+      {"hour": "15:00", "condition": "Sunny",        "temp_c": 16, "rain_prob_pct": 5,  "icon": "sun"},
+      {"hour": "16:00", "condition": "Partly cloudy","temp_c": 15, "rain_prob_pct": 15, "icon": "cloud-sun"},
+      {"hour": "17:00", "condition": "Overcast",     "temp_c": 13, "rain_prob_pct": 35, "icon": "cloud"},
+      {"hour": "18:00", "condition": "Light rain",   "temp_c": 12, "rain_prob_pct": 60, "icon": "cloud-drizzle"},
+      {"hour": "19:00", "condition": "Light rain",   "temp_c": 11, "rain_prob_pct": 65, "icon": "cloud-drizzle"},
+      {"hour": "20:00", "condition": "Cloudy",       "temp_c": 11, "rain_prob_pct": 30, "icon": "cloud"},
+      {"hour": "21:00", "condition": "Cloudy",       "temp_c": 10, "rain_prob_pct": 20, "icon": "cloud"}
+    ],
+    "forecast_3day": [
+      {"date": "Today",     "condition": "Rainy start, sunny afternoon", "high_c": 16, "low_c": 9,  "rain_prob_pct": 70, "footfall_impact": "+18%",  "impact_label": "Rain drives customers in – expect a busy morning rush", "icon": "cloud-rain"},
+      {"date": "Tomorrow",  "condition": "Sunny intervals",               "high_c": 18, "low_c": 10, "rain_prob_pct": 15, "footfall_impact": "+5%",   "impact_label": "Fair weather – steady trade, more takeaways",            "icon": "cloud-sun"},
+      {"date": "Sat 25 Apr","condition": "Sunny and warm",                "high_c": 21, "low_c": 12, "rain_prob_pct": 5,  "footfall_impact": "-8%",   "impact_label": "Warm weekend – customers stay outdoors, plan iced range", "icon": "sun"}
+    ],
+    "local_events": [
+      {
+        "event": "Guildford Live Music Festival",
+        "date": "Sat 25 Apr",
+        "venue": "Stoke Park, 0.4 miles",
+        "expected_attendance": 8000,
+        "footfall_impact": "+35%",
+        "note": "High footfall from festival-goers – stock up on cold drinks and grab-and-go food. Consider extending open hours."
+      },
+      {
+        "event": "Guildford Parkrun",
+        "date": "Sat 25 Apr",
+        "venue": "Stoke Park, 0.4 miles",
+        "expected_attendance": 400,
+        "footfall_impact": "+12%",
+        "note": "Post-run breakfast crowd – pastries and flat whites will be popular from 9:30am."
+      }
+    ]
+  },
+  "GLD002": {
+    "store_id": "GLD002",
+    "location": "Guildford Station",
+    "updated_at": "2026-04-22T07:00:00",
+    "current": {
+      "condition": "Overcast",
+      "temp_c": 12,
+      "feels_like_c": 9,
+      "humidity_pct": 78,
+      "wind_mph": 14,
+      "icon": "cloud"
+    },
+    "hourly_today": [
+      {"hour": "06:00", "condition": "Cloudy",      "temp_c": 9,  "rain_prob_pct": 10, "icon": "cloud"},
+      {"hour": "07:00", "condition": "Light rain",  "temp_c": 10, "rain_prob_pct": 45, "icon": "cloud-drizzle"},
+      {"hour": "08:00", "condition": "Heavy rain",  "temp_c": 11, "rain_prob_pct": 80, "icon": "cloud-rain"},
+      {"hour": "09:00", "condition": "Heavy rain",  "temp_c": 11, "rain_prob_pct": 85, "icon": "cloud-rain"},
+      {"hour": "12:00", "condition": "Overcast",    "temp_c": 13, "rain_prob_pct": 30, "icon": "cloud"},
+      {"hour": "17:00", "condition": "Overcast",    "temp_c": 13, "rain_prob_pct": 35, "icon": "cloud"},
+      {"hour": "18:00", "condition": "Light rain",  "temp_c": 12, "rain_prob_pct": 60, "icon": "cloud-drizzle"}
+    ],
+    "forecast_3day": [
+      {"date": "Today",     "condition": "Rainy start, cloudy afternoon", "high_c": 15, "low_c": 9, "rain_prob_pct": 75, "footfall_impact": "+22%",  "impact_label": "Commuters sheltering from rain – expect surge 7-9am and 5-7pm", "icon": "cloud-rain"},
+      {"date": "Tomorrow",  "condition": "Partly cloudy",                  "high_c": 17, "low_c": 9, "rain_prob_pct": 20, "footfall_impact": "+3%",   "impact_label": "Normal commuter flow",                                        "icon": "cloud-sun"},
+      {"date": "Sat 25 Apr","condition": "Sunny",                          "high_c": 20, "low_c": 11,"rain_prob_pct": 5,  "footfall_impact": "-15%",  "impact_label": "Reduced commuter footfall on weekends – plan staffing accordingly","icon": "sun"}
+    ],
+    "local_events": []
+  },
+  "RDG001": {
+    "store_id": "RDG001",
+    "location": "Reading, Berkshire",
+    "updated_at": "2026-04-22T07:00:00",
+    "current": {
+      "condition": "Light rain",
+      "temp_c": 11,
+      "feels_like_c": 8,
+      "humidity_pct": 82,
+      "wind_mph": 18,
+      "icon": "cloud-drizzle"
+    },
+    "hourly_today": [
+      {"hour": "06:00", "condition": "Light rain",  "temp_c": 8,  "rain_prob_pct": 55, "icon": "cloud-drizzle"},
+      {"hour": "09:00", "condition": "Heavy rain",  "temp_c": 11, "rain_prob_pct": 90, "icon": "cloud-rain"},
+      {"hour": "12:00", "condition": "Overcast",    "temp_c": 13, "rain_prob_pct": 40, "icon": "cloud"},
+      {"hour": "15:00", "condition": "Cloudy",      "temp_c": 14, "rain_prob_pct": 25, "icon": "cloud"},
+      {"hour": "18:00", "condition": "Light rain",  "temp_c": 12, "rain_prob_pct": 55, "icon": "cloud-drizzle"}
+    ],
+    "forecast_3day": [
+      {"date": "Today",     "condition": "Persistent rain",     "high_c": 14, "low_c": 8,  "rain_prob_pct": 90, "footfall_impact": "+25%",  "impact_label": "Shoppers sheltering in Oracle – sustained high footfall all day", "icon": "cloud-rain"},
+      {"date": "Tomorrow",  "condition": "Partly cloudy",       "high_c": 16, "low_c": 9,  "rain_prob_pct": 25, "footfall_impact": "+5%",   "impact_label": "Steady trade, mild weather",                                       "icon": "cloud-sun"},
+      {"date": "Sat 25 Apr","condition": "Sunny and pleasant",  "high_c": 20, "low_c": 11, "rain_prob_pct": 5,  "footfall_impact": "+30%",  "impact_label": "Reading Festival weekend – major footfall boost expected",         "icon": "sun"}
+    ],
+    "local_events": [
+      {
+        "event": "Reading FC Home Match – vs Coventry",
+        "date": "Today",
+        "venue": "Select Car Leasing Stadium, 1.2 miles",
+        "expected_attendance": 18000,
+        "footfall_impact": "+40%",
+        "note": "Pre-match rush from 12:00–14:00. Stock up on hot drinks and savoury items. Expect a second wave post-match (approx 17:00)."
+      }
+    ]
+  },
+  "RDG002": {
+    "store_id": "RDG002",
+    "location": "Reading Station",
+    "updated_at": "2026-04-22T07:00:00",
+    "current": {
+      "condition": "Light rain",
+      "temp_c": 11,
+      "feels_like_c": 8,
+      "humidity_pct": 82,
+      "wind_mph": 18,
+      "icon": "cloud-drizzle"
+    },
+    "hourly_today": [
+      {"hour": "07:00", "condition": "Heavy rain",  "temp_c": 10, "rain_prob_pct": 85, "icon": "cloud-rain"},
+      {"hour": "08:00", "condition": "Heavy rain",  "temp_c": 11, "rain_prob_pct": 90, "icon": "cloud-rain"},
+      {"hour": "17:00", "condition": "Light rain",  "temp_c": 12, "rain_prob_pct": 60, "icon": "cloud-drizzle"},
+      {"hour": "18:00", "condition": "Heavy rain",  "temp_c": 11, "rain_prob_pct": 75, "icon": "cloud-drizzle"}
+    ],
+    "forecast_3day": [
+      {"date": "Today",     "condition": "Heavy rain morning & evening", "high_c": 13, "low_c": 8,  "rain_prob_pct": 85, "footfall_impact": "+30%",  "impact_label": "Commuters sheltering – sustained queue likely 7–9am and 5–7pm", "icon": "cloud-rain"},
+      {"date": "Tomorrow",  "condition": "Overcast",                     "high_c": 15, "low_c": 9,  "rain_prob_pct": 35, "footfall_impact": "+8%",   "impact_label": "Normal commuter flow with slight uplift",                        "icon": "cloud"},
+      {"date": "Sat 25 Apr","condition": "Sunny",                        "high_c": 20, "low_c": 11, "rain_prob_pct": 5,  "footfall_impact": "-20%",  "impact_label": "Weekend – fewer commuters. Festival traffic possible.",           "icon": "sun"}
+    ],
+    "local_events": []
+  },
+  "BAS001": {
+    "store_id": "BAS001",
+    "location": "Basingstoke, Hampshire",
+    "updated_at": "2026-04-22T07:00:00",
+    "current": {
+      "condition": "Partly cloudy",
+      "temp_c": 13,
+      "feels_like_c": 10,
+      "humidity_pct": 70,
+      "wind_mph": 10,
+      "icon": "cloud-sun"
+    },
+    "hourly_today": [
+      {"hour": "06:00", "condition": "Partly cloudy","temp_c": 10, "rain_prob_pct": 15, "icon": "cloud-sun"},
+      {"hour": "09:00", "condition": "Sunny spells", "temp_c": 13, "rain_prob_pct": 10, "icon": "sun"},
+      {"hour": "12:00", "condition": "Sunny",        "temp_c": 16, "rain_prob_pct": 5,  "icon": "sun"},
+      {"hour": "15:00", "condition": "Sunny",        "temp_c": 17, "rain_prob_pct": 5,  "icon": "sun"},
+      {"hour": "18:00", "condition": "Partly cloudy","temp_c": 14, "rain_prob_pct": 20, "icon": "cloud-sun"}
+    ],
+    "forecast_3day": [
+      {"date": "Today",     "condition": "Mostly sunny",       "high_c": 17, "low_c": 10, "rain_prob_pct": 10, "footfall_impact": "+10%",  "impact_label": "Pleasant weather draws shoppers to Festival Place – steady trade",        "icon": "sun"},
+      {"date": "Tomorrow",  "condition": "Sunny",               "high_c": 19, "low_c": 11, "rain_prob_pct": 5,  "footfall_impact": "+15%",  "impact_label": "Warm spring day – push iced drinks and outdoor menu",                    "icon": "sun"},
+      {"date": "Sat 25 Apr","condition": "Warm and sunny",      "high_c": 22, "low_c": 13, "rain_prob_pct": 5,  "footfall_impact": "+25%",  "impact_label": "Warm weekend boosts shopping centre visits – prepare for peak volumes",  "icon": "sun"}
+    ],
+    "local_events": [
+      {
+        "event": "Basingstoke Half Marathon",
+        "date": "Sat 25 Apr",
+        "venue": "Town Centre – passes store",
+        "expected_attendance": 3500,
+        "footfall_impact": "+20%",
+        "note": "Race passes outside. Road closures from 9am. Expect large post-race crowd for hot drinks, water, and snacks."
+      }
+    ]
+  }
+}

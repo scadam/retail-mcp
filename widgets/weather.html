@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}Weather & Footfall – {{ store_name }}{% endblock %}
+{% block domain_icon %}cloud-sun{% endblock %}
+{% block widget_title %}Weather & Footfall – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% set current = weather.get('current', {}) %}
+{% set forecast = weather.get('forecast_3day', []) %}
+{% set events = weather.get('local_events', []) %}
+{% set hourly = weather.get('hourly_today', []) %}
+
+{# Current conditions strip #}
+<div class="card" style="margin-bottom:12px;padding:14px">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div style="font-size:42px;line-height:1">
+        {% if current.get('icon') == 'sun' %}☀️
+        {% elif current.get('icon') == 'cloud-sun' %}⛅
+        {% elif current.get('icon') == 'cloud-rain' %}🌧️
+        {% elif current.get('icon') == 'cloud-drizzle' %}🌦️
+        {% elif current.get('icon') == 'cloud' %}☁️
+        {% else %}🌤️{% endif %}
+      </div>
+      <div>
+        <div style="font-family:var(--font-heading);font-size:32px;font-weight:700;color:var(--costa-espresso);line-height:1">{{ current.get('temp_c', '--') }}°C</div>
+        <div style="font-size:13px;color:#666;margin-top:2px">{{ current.get('condition', 'Unknown') }}</div>
+        <div style="font-size:11px;color:#999;margin-top:1px">Feels like {{ current.get('feels_like_c', '--') }}°C · Wind {{ current.get('wind_mph', '--') }} mph · Humidity {{ current.get('humidity_pct', '--') }}%</div>
+      </div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:0.06em">Updated</div>
+      <div style="font-size:12px;color:#666">{{ weather.get('updated_at', '')[-8:-3] if weather.get('updated_at') else '--' }}</div>
+    </div>
+  </div>
+</div>
+
+{# 3-day forecast with footfall impact #}
+<div class="card-title" style="padding:0 0 6px 0"><i data-lucide="trending-up"></i> Footfall Forecast</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px">
+  {% for day in forecast %}
+  <div class="card" style="margin-bottom:0;padding:12px;text-align:center;cursor:pointer"
+       data-prompt="Based on the weather forecast for {{ day.date }}: {{ day.condition }}, {{ day.high_c }}°C high, {{ day.rain_prob_pct }}% rain – what should I prepare for? Footfall impact is {{ day.footfall_impact }}."
+       onclick="sendDataPrompt(this)">
+    <div style="font-size:11px;font-weight:700;color:var(--costa-maroon);text-transform:uppercase;letter-spacing:0.05em">{{ day.date }}</div>
+    <div style="font-size:26px;margin:6px 0">
+      {% if day.icon == 'sun' %}☀️
+      {% elif day.icon == 'cloud-sun' %}⛅
+      {% elif day.icon == 'cloud-rain' %}🌧️
+      {% elif day.icon == 'cloud-drizzle' %}🌦️
+      {% elif day.icon == 'cloud' %}☁️
+      {% else %}🌤️{% endif %}
+    </div>
+    <div style="font-size:13px;font-weight:600;color:var(--costa-espresso)">{{ day.high_c }}° / {{ day.low_c }}°</div>
+    <div style="font-size:10px;color:#888;margin-top:2px">{{ day.rain_prob_pct }}% rain</div>
+    <div style="margin-top:8px">
+      <span class="pill {% if day.footfall_impact.startswith('+') %}pill-success{% else %}pill-danger{% endif %}" style="font-size:10px">
+        👣 {{ day.footfall_impact }}
+      </span>
+    </div>
+    <div style="font-size:10px;color:#777;margin-top:6px;font-style:italic;line-height:1.3">{{ day.impact_label }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+{# Hourly strip for today #}
+{% if hourly %}
+<div class="card" style="padding:12px;margin-bottom:12px">
+  <div class="card-title" style="margin-bottom:8px"><i data-lucide="clock"></i> Hourly Today</div>
+  <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px">
+    {% for h in hourly %}
+    <div style="text-align:center;min-width:52px;flex-shrink:0">
+      <div style="font-size:10px;color:#888;font-weight:600">{{ h.hour[:5] }}</div>
+      <div style="font-size:18px;margin:4px 0">
+        {% if h.icon == 'sun' %}☀️
+        {% elif h.icon == 'cloud-sun' %}⛅
+        {% elif h.icon == 'cloud-rain' %}🌧️
+        {% elif h.icon == 'cloud-drizzle' %}🌦️
+        {% elif h.icon == 'cloud' %}☁️
+        {% else %}🌤️{% endif %}
+      </div>
+      <div style="font-size:12px;font-weight:600;color:var(--costa-espresso)">{{ h.temp_c }}°</div>
+      <div style="font-size:10px;color:{% if h.rain_prob_pct > 60 %}var(--costa-danger){% elif h.rain_prob_pct > 30 %}var(--costa-warning){% else %}var(--costa-success){% endif %}">{{ h.rain_prob_pct }}%</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{# Local events #}
+{% if events %}
+<div class="card-title" style="padding:0 0 6px 0"><i data-lucide="calendar-clock"></i> Nearby Events</div>
+{% for event in events %}
+<div class="card" style="margin-bottom:8px;padding:12px;cursor:pointer;border-left:3px solid var(--costa-gold)"
+     data-prompt="There's a nearby event: {{ event.event }} on {{ event.date }} at {{ event.venue }} with {{ event.expected_attendance }} expected attendees. Footfall impact is {{ event.footfall_impact }}. What should I do to prepare? Note: {{ event.note }}"
+     onclick="sendDataPrompt(this)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+    <div style="font-weight:700;font-size:13px;color:var(--costa-espresso)">🎉 {{ event.event }}</div>
+    <span class="pill pill-gold" style="font-size:10px;white-space:nowrap;margin-left:8px">{{ event.footfall_impact }}</span>
+  </div>
+  <div style="font-size:12px;color:#666;margin-bottom:4px">📅 {{ event.date }} · 📍 {{ event.venue }}</div>
+  <div style="font-size:12px;color:#555;font-style:italic">{{ event.note }}</div>
+  <div style="font-size:10px;color:#aaa;margin-top:6px">Tap for preparation advice →</div>
+</div>
+{% endfor %}
+{% endif %}
+
+{# Ask me button #}
+<button onclick="sendPrompt('Given the weather and local events, what should I prioritise today for staffing, stock, and the menu at {{ store_name }}?')"
+        style="width:100%;padding:12px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px">
+  <i data-lucide="sparkles"></i> What should I prepare today?
+</button>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+</script>
+{% endblock %}
