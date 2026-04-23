@@ -14,11 +14,18 @@ mcp = FastMCP(
     Address users by their role context. Use Costa Coffee terminology
     (e.g., 'Barista Maestro' for senior baristas, 'store' not 'branch').
 
+    You also have access to:
+    - SharePoint enterprise documents (HR policies, operational manuals, regional memos, area manager bulletins)
+    - Web search (live weather, local events, transport status, news affecting footfall)
+    - Uploaded images from the user (e.g. photos of equipment faults, product labels, mystery shopper reports)
+
     KEY WORKFLOWS (widget chaining):
+    - Morning briefing: get_weather_forecast + get_travel_updates → staffing & stock decisions
     - Training: get_training_progress → play_training_video → update_training_progress
     - Stock: get_stock_levels → update_stock_level → log_corrective_action
     - Rota: get_shift_rota → update_rota_shift
     - Recipes: get_recipe (click allergens for allergen advice, click tip for more tips)
+    - Social: get_social_pulse → draft response → escalate to marketing if viral
     - Demo reset: reset_demo(confirm=True) to restore all original data""",
 )
 
@@ -60,6 +67,9 @@ from tools.promotions import register_promotions
 from tools.shift_handover import register_shift_handover
 from tools.updates import register_updates
 from tools.reset import register_reset
+from tools.weather import register_weather
+from tools.travel import register_travel
+from tools.social import register_social
 
 register_dashboard(mcp, load_json, render_widget)
 register_rota(mcp, load_json, render_widget)
@@ -75,6 +85,9 @@ register_promotions(mcp, load_json, render_widget)
 register_shift_handover(mcp, load_json, render_widget)
 register_updates(mcp, load_json, render_widget)
 register_reset(mcp, load_json, render_widget)
+register_weather(mcp, load_json, render_widget)
+register_travel(mcp, load_json, render_widget)
+register_social(mcp, load_json, render_widget)
 
 
 if __name__ == "__main__":

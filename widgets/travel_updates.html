@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}Travel Updates – {{ store_name }}{% endblock %}
+{% block domain_icon %}train{% endblock %}
+{% block widget_title %}Travel Updates – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% set disruptions = travel.get('disruptions', []) %}
+{% set impact = travel.get('overall_impact', 'Unknown') %}
+{% set summary = travel.get('impact_summary', '') %}
+{% set actions = travel.get('recommended_actions', []) %}
+{% set stations = travel.get('nearby_stations', []) %}
+
+{# Overall impact banner #}
+<div class="alert {% if impact == 'Critical' %}alert-danger{% elif impact == 'High' %}alert-warning{% elif impact in ('Moderate', 'None') %}alert-info{% else %}alert-success{% endif %}" style="margin-bottom:12px">
+  <i data-lucide="{% if impact == 'Critical' %}alert-octagon{% elif impact in ('High', 'Moderate') %}alert-triangle{% else %}check-circle{% endif %}"></i>
+  <div>
+    <div style="font-weight:700">Travel Impact: {{ impact }}</div>
+    <div style="font-size:12px;margin-top:2px">{{ summary }}</div>
+  </div>
+</div>
+
+{# Nearby transport hubs #}
+{% if stations %}
+<div style="margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px">
+  {% for s in stations %}
+  <span class="pill pill-info" style="font-size:11px"><i data-lucide="map-pin" style="width:12px;height:12px"></i> {{ s }}</span>
+  {% endfor %}
+</div>
+{% endif %}
+
+{# No disruptions state #}
+{% if not disruptions %}
+<div class="card" style="text-align:center;padding:32px 16px">
+  <div style="font-size:36px;margin-bottom:8px">✅</div>
+  <div style="font-family:var(--font-heading);font-size:14px;font-weight:700;color:var(--costa-success)">All Clear</div>
+  <div style="font-size:13px;color:#666;margin-top:4px">No travel disruptions reported near {{ store_name }} today.</div>
+</div>
+{% else %}
+
+{# Disruption cards #}
+<div class="card-title" style="padding:0 0 6px 0"><i data-lucide="alert-triangle"></i> Active Disruptions ({{ disruptions|length }})</div>
+{% for d in disruptions %}
+<div class="card" style="margin-bottom:10px;padding:14px;border-left:4px solid {% if d.severity == 'Major' %}var(--costa-danger){% elif d.severity == 'High' %}var(--costa-warning){% elif d.severity == 'Moderate' %}#1565C0{% else %}var(--costa-success){% endif %}">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px">
+    <div style="display:flex;align-items:center;gap:8px">
+      <i data-lucide="{{ d.icon }}" style="width:20px;height:20px;flex-shrink:0;color:{% if d.severity == 'Major' %}var(--costa-danger){% elif d.severity == 'High' %}var(--costa-warning){% else %}#1565C0{% endif %}"></i>
+      <div>
+        <div style="font-weight:700;font-size:13px;color:var(--costa-espresso)">{{ d.title }}</div>
+        <span class="pill {% if d.severity == 'Major' %}pill-danger{% elif d.severity == 'High' %}pill-warning{% elif d.severity == 'Moderate' %}pill-info{% else %}pill-success{% endif %}" style="font-size:10px;margin-top:4px">{{ d.severity }}</span>
+        <span class="pill" style="background:#F5F5F5;color:#555;font-size:10px;margin-left:4px">{{ d.type }}</span>
+      </div>
+    </div>
+    {% if d.expected_resolution %}
+    <div style="text-align:right;flex-shrink:0">
+      <div style="font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:0.05em">Resolves</div>
+      <div style="font-size:13px;font-weight:600;color:var(--costa-espresso)">{{ d.expected_resolution }}</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div style="font-size:13px;color:#555;margin-bottom:8px">{{ d.detail }}</div>
+
+  {% if d.affected_routes %}
+  <div style="margin-bottom:8px;display:flex;flex-wrap:wrap;gap:4px">
+    {% for r in d.affected_routes %}
+    <span class="pill" style="background:var(--costa-latte);color:var(--costa-espresso);font-size:10px">🛤️ {{ r }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {# Staff impact #}
+  {% if d.staff_impact %}
+  <div style="background:#FFF9EC;border-radius:6px;padding:8px 10px;margin-bottom:6px;border:1px solid var(--costa-gold)">
+    <div style="font-size:10px;font-weight:700;color:var(--costa-gold);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">👥 Staff Impact</div>
+    <div style="font-size:12px;color:var(--costa-espresso)">{{ d.staff_impact }}</div>
+  </div>
+  {% endif %}
+
+  {# Customer impact #}
+  {% if d.customer_impact %}
+  <div style="background:#E3F2FD;border-radius:6px;padding:8px 10px;margin-bottom:8px;border:1px solid #90CAF9">
+    <div style="font-size:10px;font-weight:700;color:#1565C0;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px">☕ Customer Impact</div>
+    <div style="font-size:12px;color:var(--costa-espresso)">{{ d.customer_impact }}</div>
+  </div>
+  {% endif %}
+
+  <button onclick="sendPrompt('There is a {{ d.severity }} {{ d.type }} disruption: {{ d.title }}. Staff impact: {{ d.staff_impact }}. Customer impact: {{ d.customer_impact }}. What should I do right now to manage the store?')"
+          style="width:100%;padding:8px;background:var(--costa-maroon);color:white;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px">
+    <i data-lucide="message-circle"></i> How should I respond to this?
+  </button>
+</div>
+{% endfor %}
+{% endif %}
+
+{# Recommended actions #}
+{% if actions %}
+<div class="card" style="padding:12px;margin-top:4px;background:#E8F5E9;border:1px solid #A5D6A7">
+  <div class="card-title" style="color:var(--costa-success);margin-bottom:8px"><i data-lucide="check-circle"></i> Recommended Actions</div>
+  {% for action in actions %}
+  <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:13px;color:var(--costa-espresso)">
+    <span style="color:var(--costa-success);font-size:14px;flex-shrink:0;margin-top:1px">✓</span>
+    <span>{{ action }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<button onclick="sendPrompt('What are the full implications of today\'s travel situation for {{ store_name }}? Consider staffing cover, footfall changes, and any operational adjustments I should make.')"
+        style="width:100%;padding:12px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px">
+  <i data-lucide="sparkles"></i> Full operational impact analysis
+</button>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+</script>
+{% endblock %}

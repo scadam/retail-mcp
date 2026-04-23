@@ -1,0 +1,310 @@
+{
+  "GLD001": {
+    "store_id": "GLD001",
+    "updated_at": "2026-04-22T08:00:00",
+    "period_days": 7,
+    "summary": {
+      "total_mentions": 47,
+      "sentiment_positive": 68,
+      "sentiment_neutral": 21,
+      "sentiment_negative": 11,
+      "nps_social": 62,
+      "trending_topic": "Iced Caramel Latte",
+      "alert_count": 2
+    },
+    "platform_breakdown": [
+      {"platform": "Google Reviews", "mentions": 12, "avg_rating": 4.3, "icon": "star"},
+      {"platform": "Instagram",      "mentions": 18, "avg_rating": null, "icon": "camera"},
+      {"platform": "TikTok",         "mentions": 9,  "avg_rating": null, "icon": "video"},
+      {"platform": "X (Twitter)",    "mentions": 6,  "avg_rating": null, "icon": "twitter"},
+      {"platform": "TripAdvisor",    "mentions": 2,  "avg_rating": 4.1, "icon": "map-pin"}
+    ],
+    "trending_posts": [
+      {
+        "id": "POST001",
+        "platform": "Instagram",
+        "author": "@guildford_foodie",
+        "followers": 12400,
+        "content": "The new Iced Caramel Latte at @CostaCoffee Guildford is absolutely STUNNING ☕✨ Tried it this morning and it honestly made my commute. #CostaCoffee #IcedLatte #GuildfordEats",
+        "likes": 847,
+        "comments": 43,
+        "shares": 28,
+        "sentiment": "Positive",
+        "date": "2026-04-21",
+        "opportunity": "Influencer post going viral. Consider reaching out to offer a collaboration or complimentary tasting."
+      },
+      {
+        "id": "POST002",
+        "platform": "TikTok",
+        "author": "@surrey_sips",
+        "followers": 34200,
+        "content": "POV: you discover Costa Guildford does the BEST latte art in Surrey 🎨 Watch this barista! #CostaCoffee #BaristaLife #LatteArt",
+        "likes": 5600,
+        "comments": 189,
+        "shares": 312,
+        "sentiment": "Positive",
+        "date": "2026-04-20",
+        "opportunity": "Viral barista art video – 5.6k likes. Great brand moment. Share internally with team to celebrate."
+      },
+      {
+        "id": "POST003",
+        "platform": "X (Twitter)",
+        "author": "@commuter_dave",
+        "followers": 890,
+        "content": "Waited 12 minutes for a flat white at Costa Guildford this morning. Lovely coffee but the queue was out the door – need more staff! @CostaCoffee",
+        "likes": 14,
+        "comments": 3,
+        "shares": 2,
+        "sentiment": "Mixed",
+        "date": "2026-04-22",
+        "opportunity": "Queue complaint during morning rush. Likely linked to today's rail disruption. Respond promptly and acknowledge."
+      },
+      {
+        "id": "POST004",
+        "platform": "Google Reviews",
+        "author": "Sarah M.",
+        "followers": null,
+        "content": "Always my go-to before work. Staff are so friendly and the coffee is always perfect. The new seasonal menu is fab! ⭐⭐⭐⭐⭐",
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "sentiment": "Positive",
+        "date": "2026-04-21",
+        "opportunity": null
+      },
+      {
+        "id": "POST005",
+        "platform": "Google Reviews",
+        "author": "James T.",
+        "followers": null,
+        "content": "Ordered oat milk and got regular milk. Told staff and they were apologetic and remade it, so good recovery – but should have been right first time.",
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "sentiment": "Mixed",
+        "date": "2026-04-19",
+        "opportunity": "Allergen/milk preference error. Worth reviewing at team huddle and reinforcing correct milk labelling at the bar."
+      }
+    ],
+    "alerts": [
+      {
+        "alert_id": "ALT001",
+        "severity": "Medium",
+        "title": "Queue complaint during morning rush",
+        "description": "Customer complaint about 12-minute wait – likely linked to today's rail disruption increasing footfall. Consider social media response.",
+        "suggested_response": "Hi @commuter_dave – really sorry for the wait this morning! We had an unexpectedly busy rush and are doing our best to get everyone served quickly. Hope we can make it up to you ☕",
+        "platform": "X (Twitter)",
+        "post_id": "POST003"
+      },
+      {
+        "alert_id": "ALT002",
+        "severity": "Low",
+        "title": "Milk allergy near-miss mentioned publicly",
+        "description": "Customer noted they received wrong milk type. Good recovery by staff but warrants internal review.",
+        "suggested_response": null,
+        "platform": "Google Reviews",
+        "post_id": "POST005"
+      }
+    ]
+  },
+  "GLD002": {
+    "store_id": "GLD002",
+    "updated_at": "2026-04-22T08:00:00",
+    "period_days": 7,
+    "summary": {
+      "total_mentions": 31,
+      "sentiment_positive": 55,
+      "sentiment_neutral": 29,
+      "sentiment_negative": 16,
+      "nps_social": 48,
+      "trending_topic": "Train delays & queue length",
+      "alert_count": 3
+    },
+    "platform_breakdown": [
+      {"platform": "Google Reviews", "mentions": 8,  "avg_rating": 3.9, "icon": "star"},
+      {"platform": "X (Twitter)",    "mentions": 14, "avg_rating": null, "icon": "twitter"},
+      {"platform": "Instagram",      "mentions": 7,  "avg_rating": null, "icon": "camera"},
+      {"platform": "TripAdvisor",    "mentions": 2,  "avg_rating": 3.7, "icon": "map-pin"}
+    ],
+    "trending_posts": [
+      {
+        "id": "POST010",
+        "platform": "X (Twitter)",
+        "author": "@guildfordcommuter",
+        "followers": 2100,
+        "content": "Absolute chaos at Guildford station. Train delayed, queue at Costa goes back to the barriers. Still worth it for the coffee though! @CostaCoffee #SWR #Delays",
+        "likes": 67,
+        "comments": 8,
+        "shares": 12,
+        "sentiment": "Mixed",
+        "date": "2026-04-22",
+        "opportunity": "Live situation today. Acknowledge the disruption and thank customers for their patience."
+      },
+      {
+        "id": "POST011",
+        "platform": "X (Twitter)",
+        "author": "@frustrated_commuter_99",
+        "followers": 560,
+        "content": "45 min queue at @CostaCoffee Guildford station this morning. Trains are broken AND the coffee shop can't cope. Not ideal guys.",
+        "likes": 23,
+        "comments": 5,
+        "shares": 3,
+        "sentiment": "Negative",
+        "date": "2026-04-22",
+        "opportunity": "Needs urgent response. Acknowledge situation, explain the exceptional volume."
+      }
+    ],
+    "alerts": [
+      {
+        "alert_id": "ALT010",
+        "severity": "High",
+        "title": "Multiple negative queue-length complaints – live today",
+        "description": "At least 3 posts today about extreme queue length due to rail disruption. Immediate social response recommended.",
+        "suggested_response": "Hi – we're really sorry for the long wait today. Like many of you, we've been caught out by the rail delays bringing in an exceptional number of customers. Our team are working flat out – thank you so much for your patience ☕❤️",
+        "platform": "X (Twitter)",
+        "post_id": "POST011"
+      }
+    ]
+  },
+  "RDG001": {
+    "store_id": "RDG001",
+    "updated_at": "2026-04-22T08:00:00",
+    "period_days": 7,
+    "summary": {
+      "total_mentions": 62,
+      "sentiment_positive": 72,
+      "sentiment_neutral": 18,
+      "sentiment_negative": 10,
+      "nps_social": 71,
+      "trending_topic": "New seasonal menu & latte art",
+      "alert_count": 1
+    },
+    "platform_breakdown": [
+      {"platform": "Instagram",      "mentions": 28, "avg_rating": null, "icon": "camera"},
+      {"platform": "TikTok",         "mentions": 16, "avg_rating": null, "icon": "video"},
+      {"platform": "Google Reviews", "mentions": 11, "avg_rating": 4.5, "icon": "star"},
+      {"platform": "X (Twitter)",    "mentions": 5,  "avg_rating": null, "icon": "twitter"},
+      {"platform": "TripAdvisor",    "mentions": 2,  "avg_rating": 4.3, "icon": "map-pin"}
+    ],
+    "trending_posts": [
+      {
+        "id": "POST020",
+        "platform": "TikTok",
+        "author": "@readingfoodie",
+        "followers": 89000,
+        "content": "We tried EVERY drink on the new Costa spring menu so you don't have to ☕🌸 Reading Oracle is where it's AT. Which one should I try next? #CostaCoffee #SpringMenu #ReadingUK",
+        "likes": 24800,
+        "comments": 612,
+        "shares": 1840,
+        "sentiment": "Positive",
+        "date": "2026-04-21",
+        "opportunity": "Major viral TikTok – 24.8k likes, 1840 shares. Tag the creator in a reply and consider inviting them back for a behind-the-scenes."
+      },
+      {
+        "id": "POST021",
+        "platform": "Google Reviews",
+        "author": "Preethi K.",
+        "followers": null,
+        "content": "Best Costa I've been to. Priya and the team are brilliant. Always get my order right and the baristas chat with you like you're a regular even if you're new.",
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "sentiment": "Positive",
+        "date": "2026-04-20",
+        "opportunity": "Shout out to manager Priya by name. Share with team."
+      }
+    ],
+    "alerts": [
+      {
+        "alert_id": "ALT020",
+        "severity": "Opportunity",
+        "title": "Viral TikTok – consider influencer follow-up",
+        "description": "@readingfoodie's video has 24.8k likes. This is a significant brand moment for Reading Oracle. Recommend escalating to regional marketing team.",
+        "suggested_response": "Hey @readingfoodie – this made our whole team's day! 🙌 We'd love to have you back for a proper behind-the-scenes barista session – DM us! ☕",
+        "platform": "TikTok",
+        "post_id": "POST020"
+      }
+    ]
+  },
+  "RDG002": {
+    "store_id": "RDG002",
+    "updated_at": "2026-04-22T08:00:00",
+    "period_days": 7,
+    "summary": {
+      "total_mentions": 24,
+      "sentiment_positive": 58,
+      "sentiment_neutral": 25,
+      "sentiment_negative": 17,
+      "nps_social": 52,
+      "trending_topic": "GWR strike & wait times",
+      "alert_count": 1
+    },
+    "platform_breakdown": [
+      {"platform": "X (Twitter)",    "mentions": 11, "avg_rating": null, "icon": "twitter"},
+      {"platform": "Google Reviews", "mentions": 7,  "avg_rating": 4.0, "icon": "star"},
+      {"platform": "Instagram",      "mentions": 6,  "avg_rating": null, "icon": "camera"}
+    ],
+    "trending_posts": [
+      {
+        "id": "POST030",
+        "platform": "X (Twitter)",
+        "author": "@readingstationlife",
+        "followers": 4200,
+        "content": "GWR strike today so obviously I'm at Costa Reading Station for the duration ☕📚 Could be here a while. At least the coffee is excellent. #GWRStrike #ReadingStation",
+        "likes": 89,
+        "comments": 12,
+        "shares": 7,
+        "sentiment": "Positive",
+        "date": "2026-04-22",
+        "opportunity": "Positive sentiment despite disruption. Like and reply to build goodwill."
+      }
+    ],
+    "alerts": [
+      {
+        "alert_id": "ALT030",
+        "severity": "Low",
+        "title": "Rail strike sparking social chatter",
+        "description": "Multiple posts about GWR strike using Costa as refuge. Mostly positive – engage with warmth.",
+        "suggested_response": "We're here for you! ☕ Hope your journey sorts itself out soon. Drop us a message if you need anything while you wait 🙏",
+        "platform": "X (Twitter)",
+        "post_id": "POST030"
+      }
+    ]
+  },
+  "BAS001": {
+    "store_id": "BAS001",
+    "updated_at": "2026-04-22T08:00:00",
+    "period_days": 7,
+    "summary": {
+      "total_mentions": 38,
+      "sentiment_positive": 76,
+      "sentiment_neutral": 16,
+      "sentiment_negative": 8,
+      "nps_social": 74,
+      "trending_topic": "Drive-through speed & seasonal drinks",
+      "alert_count": 0
+    },
+    "platform_breakdown": [
+      {"platform": "Instagram",      "mentions": 15, "avg_rating": null, "icon": "camera"},
+      {"platform": "Google Reviews", "mentions": 13, "avg_rating": 4.6, "icon": "star"},
+      {"platform": "X (Twitter)",    "mentions": 6,  "avg_rating": null, "icon": "twitter"},
+      {"platform": "TripAdvisor",    "mentions": 4,  "avg_rating": 4.4, "icon": "map-pin"}
+    ],
+    "trending_posts": [
+      {
+        "id": "POST040",
+        "platform": "Google Reviews",
+        "author": "Mark L.",
+        "followers": null,
+        "content": "Drive-through was lightning fast this morning – in and out in under 3 minutes. Perfect coffee too. The staff are always cheerful. Best Costa around! ⭐⭐⭐⭐⭐",
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "sentiment": "Positive",
+        "date": "2026-04-21",
+        "opportunity": "Shout out drive-through team for speed. Share with store manager Leila."
+      }
+    ],
+    "alerts": []
+  }
+}

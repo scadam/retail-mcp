@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %}Social Pulse – {{ store_name }}{% endblock %}
+{% block domain_icon %}trending-up{% endblock %}
+{% block widget_title %}Social Pulse – {{ store_name }}{% endblock %}
+
+{% block content %}
+{% set summary = pulse.get('summary', {}) %}
+{% set platforms = pulse.get('platform_breakdown', []) %}
+{% set posts = pulse.get('trending_posts', []) %}
+{% set alerts = pulse.get('alerts', []) %}
+
+{# KPI row #}
+<div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:12px">
+  <div class="kpi-card">
+    <div class="kpi-label">Mentions</div>
+    <div class="kpi-value">{{ summary.get('total_mentions', '--') }}</div>
+    <div style="font-size:10px;color:#888">last {{ days or 7 }} days</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Positive</div>
+    <div class="kpi-value" style="color:var(--costa-success)">{{ summary.get('sentiment_positive', '--') }}%</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Negative</div>
+    <div class="kpi-value" style="color:var(--costa-danger)">{{ summary.get('sentiment_negative', '--') }}%</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Social NPS</div>
+    <div class="kpi-value" style="color:{% if summary.get('nps_social', 0) >= 60 %}var(--costa-success){% elif summary.get('nps_social', 0) >= 40 %}var(--costa-warning){% else %}var(--costa-danger){% endif %}">{{ summary.get('nps_social', '--') }}</div>
+  </div>
+</div>
+
+{# Alerts #}
+{% if alerts %}
+{% for alert in alerts %}
+<div class="alert {% if alert.severity == 'High' %}alert-danger{% elif alert.severity == 'Medium' %}alert-warning{% elif alert.severity == 'Opportunity' %}alert-success{% else %}alert-info{% endif %}" style="margin-bottom:8px;flex-direction:column;align-items:flex-start;gap:4px;cursor:pointer"
+     data-prompt="Social media alert: {{ alert.title }}. {{ alert.description }} {% if alert.suggested_response %}Suggested response: {{ alert.suggested_response }}{% endif %} Should I post this response or would you suggest changes?"
+     onclick="sendDataPrompt(this)">
+  <div style="display:flex;align-items:center;gap:8px;width:100%">
+    <i data-lucide="{% if alert.severity == 'Opportunity' %}zap{% elif alert.severity == 'High' %}alert-octagon{% else %}alert-triangle{% endif %}"></i>
+    <strong style="flex:1">{{ alert.title }}</strong>
+    <span class="pill {% if alert.severity == 'High' %}pill-danger{% elif alert.severity == 'Opportunity' %}pill-success{% else %}pill-warning{% endif %}" style="font-size:9px">{{ alert.severity }}</span>
+  </div>
+  <div style="font-size:12px;padding-left:28px">{{ alert.description }}</div>
+  {% if alert.suggested_response %}
+  <div style="font-size:11px;padding-left:28px;font-style:italic;opacity:0.85">"{{ alert.suggested_response }}"</div>
+  {% endif %}
+  <div style="font-size:10px;color:#aaa;padding-left:28px">Tap to draft a response with Copilot →</div>
+</div>
+{% endfor %}
+{% endif %}
+
+{# Trending topic pill #}
+{% if summary.get('trending_topic') %}
+<div style="margin-bottom:10px;display:flex;align-items:center;gap:8px">
+  <span style="font-size:12px;color:#666">Trending this week:</span>
+  <span class="pill pill-gold"><i data-lucide="flame" style="width:12px;height:12px"></i> {{ summary.trending_topic }}</span>
+</div>
+{% endif %}
+
+{# Platform breakdown #}
+<div class="card" style="padding:12px;margin-bottom:12px">
+  <div class="card-title"><i data-lucide="bar-chart-2"></i> By Platform</div>
+  {% for p in platforms %}
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <i data-lucide="{{ p.icon }}" style="width:16px;height:16px;flex-shrink:0;color:var(--costa-maroon)"></i>
+    <div style="flex:1">
+      <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+        <span style="font-size:12px;font-weight:600;color:var(--costa-espresso)">{{ p.platform }}</span>
+        <span style="font-size:12px;color:#888">{{ p.mentions }} mentions{% if p.avg_rating %} · ⭐ {{ p.avg_rating }}{% endif %}</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" style="width:{{ [(p.mentions / (summary.get('total_mentions', 1) or 1) * 100) | int, 100] | min }}%"></div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{# Trending posts #}
+<div class="card-title" style="padding:0 0 6px 0"><i data-lucide="message-square"></i> Trending Posts</div>
+{% for post in posts %}
+<div class="card" style="margin-bottom:8px;padding:12px;border-left:3px solid {% if post.sentiment == 'Positive' %}var(--costa-success){% elif post.sentiment == 'Negative' %}var(--costa-danger){% else %}var(--costa-warning){% endif %};cursor:pointer"
+     data-prompt="A customer posted about our store on {{ post.platform }}: '{{ post.content }}' Sentiment: {{ post.sentiment }}. {% if post.opportunity %}Opportunity: {{ post.opportunity }}{% endif %} How should we respond or act on this?"
+     onclick="sendDataPrompt(this)">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+    <div style="display:flex;align-items:center;gap:6px">
+      <i data-lucide="{% if post.platform == 'Instagram' %}camera{% elif post.platform == 'TikTok' %}video{% elif 'Twitter' in post.platform or post.platform == 'X (Twitter)' %}twitter{% elif 'Google' in post.platform %}star{% else %}map-pin{% endif %}" style="width:14px;height:14px;color:var(--costa-maroon)"></i>
+      <span style="font-size:12px;font-weight:700;color:var(--costa-maroon)">{{ post.author or 'Anonymous' }}</span>
+      <span class="pill" style="background:#F5F5F5;color:#555;font-size:9px">{{ post.platform }}</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="pill {% if post.sentiment == 'Positive' %}pill-success{% elif post.sentiment == 'Negative' %}pill-danger{% else %}pill-warning{% endif %}" style="font-size:9px">{{ post.sentiment }}</span>
+      <span style="font-size:10px;color:#aaa">{{ post.date }}</span>
+    </div>
+  </div>
+
+  <div style="font-size:13px;color:#444;line-height:1.5;margin-bottom:8px">{{ post.content }}</div>
+
+  {% if post.likes is not none or post.shares is not none %}
+  <div style="display:flex;gap:12px;font-size:11px;color:#888;margin-bottom:6px">
+    {% if post.likes is not none %}<span>❤️ {{ "{:,}".format(post.likes) }}</span>{% endif %}
+    {% if post.comments is not none %}<span>💬 {{ post.comments }}</span>{% endif %}
+    {% if post.shares is not none %}<span>🔁 {{ post.shares }}</span>{% endif %}
+    {% if post.followers is not none %}<span>👥 {{ "{:,}".format(post.followers) }} followers</span>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if post.opportunity %}
+  <div class="tip-box" style="padding:8px 10px;margin-top:4px">
+    <div class="tip-label">💡 Opportunity</div>
+    <div style="font-size:12px">{{ post.opportunity }}</div>
+  </div>
+  {% endif %}
+
+  <div style="font-size:10px;color:#aaa;margin-top:6px">Tap to discuss with Copilot →</div>
+</div>
+{% endfor %}
+
+<button onclick="sendPrompt('Summarise the social media sentiment for {{ store_name }} this week and tell me what actions I should take – including any viral posts to capitalise on and any complaints to address urgently.')"
+        style="width:100%;padding:12px;background:var(--costa-maroon);color:white;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px">
+  <i data-lucide="sparkles"></i> Give me a social media action plan
+</button>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function sendPrompt(prompt) {
+  if (typeof openai !== 'undefined' && openai.apps && openai.apps.sendMessage) {
+    try { await openai.apps.sendMessage({ content: prompt }); } catch(e) {
+      console.warn('sendMessage not available:', e);
+    }
+  } else {
+    console.log('Copilot prompt:', prompt);
+  }
+}
+function sendDataPrompt(el) {
+  const prompt = el.dataset.prompt;
+  if (prompt) sendPrompt(prompt);
+}
+</script>
+{% endblock %}
