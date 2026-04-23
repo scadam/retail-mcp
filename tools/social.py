@@ -33,7 +33,7 @@ def register_social(mcp, load_json, render_widget):
         trending_hashtags = store_social.get("trending_hashtags", [])
         response_templates = store_social.get("response_templates", {})
 
-        unresponded_negative = [
+        response_overdue_mentions = [
             m for m in mentions
             if m.get("requires_response") and m.get("response_overdue")
         ]
@@ -56,8 +56,8 @@ def register_social(mcp, load_json, render_widget):
                 "trending_hashtags": trending_hashtags,
                 "response_templates": response_templates,
                 "total_mentions": len(mentions),
-                "unresponded_negative_count": len(unresponded_negative),
-                "unresponded_negative": unresponded_negative,
+                "response_overdue_count": len(response_overdue_mentions),
+                "response_overdue_mentions": response_overdue_mentions,
                 "high_urgency_influencers": [
                     a for a in influencer_alerts if a.get("urgency") == "high"
                 ],
